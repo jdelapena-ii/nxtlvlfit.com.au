@@ -26,7 +26,6 @@ module.exports = {
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
-    'gatsby-transformer-json',
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-plugin-canonical-urls',
@@ -37,13 +36,13 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Gatsby Starter TailwindCSS',
-        short_name: 'Gatsby Starter',
+        name: 'NXT LVL Fitness',
+        short_name: 'NXT LVL',
         start_url: '/',
-        background_color: fullConfig.theme.colors.teal['600'],
-        theme_color: fullConfig.theme.colors.teal['600'],
+        background_color: fullConfig.theme.colors.black,
+        theme_color: fullConfig.theme.colors.black,
         display: 'minimal-ui',
-        icon: 'src/images/favicon.png', // This path is relative to the root of the site.
+        // icon: 'src/images/favicon.png', // This path is relative to the root of the site.
       },
     },
     {
@@ -55,13 +54,6 @@ module.exports = {
           autoprefixer,
           ...(process.env.NODE_ENV === 'production' ? [cssnano] : []),
         ],
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'data',
-        path: 'src/data',
       },
     },
     {
