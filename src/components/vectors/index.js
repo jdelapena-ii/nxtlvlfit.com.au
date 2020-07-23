@@ -5,4 +5,5 @@ export * from './github-icon';
 export * from './home-icon';
 export * from './instagram-icon';
 export * from './logo';
+export * from './logo-l';
 export * from './twitter-icon';
