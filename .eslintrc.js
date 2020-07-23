@@ -5,9 +5,9 @@
 
 module.exports = {
   root: true,
-  extends: ['wesbos'],
-  rules: {
-    'arrow-body-style': 0,
-    'react/no-danger': 0,
-  },
+  extends: ['lukebennett'],
+  // rules: {
+  //   'arrow-body-style': 0,
+  //   'react/no-danger': 0,
+  // },
 };
