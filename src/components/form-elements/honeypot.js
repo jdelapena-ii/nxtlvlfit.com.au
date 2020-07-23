@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export function BotField({ handleChange }) {
+function Honeypot({ register }) {
   return (
     <>
       {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
@@ -9,13 +9,15 @@ export function BotField({ handleChange }) {
       <div hidden>
         <label htmlFor="bot-field">
           Don’t fill this out:{' '}
-          <input id="bot-field" name="bot-field" onChange={handleChange} />
+          <input id="bot-field" name="bot-field" ref={register} />
         </label>
       </div>
     </>
   );
 }
 
-BotField.propTypes = {
-  handleChange: PropTypes.func.isRequired,
+Honeypot.propTypes = {
+  register: PropTypes.func.isRequired,
 };
+
+export { Honeypot };

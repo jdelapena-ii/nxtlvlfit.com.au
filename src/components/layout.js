@@ -6,23 +6,36 @@
  */
 
 import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import GatsbyImage from 'gatsby-image';
 import PropTypes from 'prop-types';
 
-import { Header } from './header';
-import { Sidebar } from './sidebar';
 import { Footer } from './footer';
 
 export function Layout({ children }) {
+  const { file } = useStaticQuery(graphql`
+    {
+      file(relativePath: { eq: "background-image.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920) {
+            ...GatsbyImageSharpFluid_withWebp_noBase64
+          }
+        }
+      }
+    }
+  `);
   return (
-    <div className="flex flex-col min-h-screen bg-white border-t-4 border-teal-500">
-      <Header />
-      <main className="flex-1 w-full max-w-3xl px-6 mx-auto lg:max-w-7xl">
-        <article className="grid py-12 border-gray-100 lg:grid-cols-3 lg:gap-16">
-          <Sidebar />
-          <div className="col-span-2 space-y-12 lg:py-6">{children}</div>
-        </article>
-      </main>
-      <Footer />
+    <div className="text-white bg-black">
+      <div className="flex flex-col w-full max-w-3xl min-h-screen mx-auto lg:max-w-7xl">
+        <div className="absolute inset-0">
+          <GatsbyImage
+            fluid={file.childImageSharp.fluid}
+            className="w-full h-full"
+          />
+        </div>
+        <main className="relative flex flex-1">{children}</main>
+        <Footer />
+      </div>
     </div>
   );
 }

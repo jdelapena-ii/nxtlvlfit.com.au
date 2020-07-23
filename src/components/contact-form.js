@@ -1,82 +1,71 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
-import { useForm } from '../hooks';
-import { Form, Input, TextArea } from './form-elements';
+import { useForm } from 'react-hook-form';
+import { Form, Input } from './form-elements';
 
-export function ContactForm() {
-  const { state, handleSubmit, handleChange } = useForm({
-    first_name: '',
-    last_name: '',
-    email_address: '',
-    phone_number: '',
-    message: '',
-  });
-
+function ContactForm() {
+  const { register, handleSubmit, errors } = useForm({ mode: 'onBlur' });
   return (
-    <Form action="/success/" handleSubmit={handleSubmit}>
-      <div className="md:grid md:grid-cols-3 md:gap-6">
-        <div className="md:col-span-1">
-          <h3 className="text-lg font-medium leading-6 text-gray-900">
-            Contact form
-          </h3>
-          <p className="mt-1 text-sm leading-5 text-gray-500">
-            Please fill in the contact form and we will get back to you shortly.
+    <article className="relative mx-auto mt-12">
+      <div className="relative max-w-xl px-4 py-12 mx-auto border-4 border-white lg:my-12 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h2 className="font-semibold uppercase">
+            You don't want to miss out
+          </h2>
+          <p className="mt-2 uppercase">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit quo
+            culpa quod. Neque nesciunt voluptates eum a hic nisi voluptatibus,
+            aperiam, architecto ullam omnis atque quae laudantium quos
+            voluptatem odit.
           </p>
         </div>
-        <div className="mt-5 md:mt-0 md:col-span-2">
-          <div className="grid grid-cols-6 gap-6">
-            <div className="col-span-6 sm:col-span-4 md:col-span-3">
-              <Input
-                label="First name"
-                name="first_name"
-                value={state.first_name}
-                required
-                handleChange={handleChange}
-              />
+        <div className="mt-12">
+          <Form
+            handleSubmit={handleSubmit}
+            register={register}
+            action="/success/"
+            name="contact-form"
+            className="grid grid-cols-1 row-gap-6 sm:grid-cols-2 sm:col-gap-8"
+          >
+            <Input
+              name="full_name"
+              label="Full name"
+              isFullWidth
+              register={register}
+              errors={errors}
+            />
+            <Input
+              name="contact_number"
+              label="Contact number"
+              type="tel"
+              isFullWidth
+              register={register}
+              errors={errors}
+            />
+            <Input
+              name="email_address"
+              label="Email address"
+              type="email"
+              isFullWidth
+              register={register}
+              errors={errors}
+            />
+            <div className="col-start-2">
+              <span className="inline-flex w-full shadow-sm">
+                <button
+                  type="submit"
+                  className="inline-flex items-center justify-center w-full px-6 py-3 font-semibold uppercase border border-white rounded-none focus:outline-none focus:shadow-outline"
+                >
+                  Submit
+                </button>
+              </span>
             </div>
-
-            <div className="col-span-6 sm:col-span-4 md:col-span-3">
-              <Input
-                label="Last name"
-                name="last_name"
-                value={state.last_name}
-                required
-                handleChange={handleChange}
-              />
-            </div>
-
-            <div className="col-span-6 sm:col-span-4 md:col-span-3">
-              <Input
-                label="Phone number"
-                name="phone_number"
-                value={state.phone_number}
-                required
-                handleChange={handleChange}
-              />
-            </div>
-
-            <div className="col-span-6 sm:col-span-4 md:col-span-3">
-              <Input
-                label="Email address"
-                name="email_address"
-                value={state.email_address}
-                required
-                handleChange={handleChange}
-              />
-            </div>
-
-            <div className="col-span-4 md:col-span-6">
-              <TextArea
-                label="Message"
-                name="message"
-                value={state.message}
-                required
-                handleChange={handleChange}
-              />
-            </div>
-          </div>
+          </Form>
         </div>
       </div>
-    </Form>
+    </article>
   );
 }
+
+export { ContactForm };
