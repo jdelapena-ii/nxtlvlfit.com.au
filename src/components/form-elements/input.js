@@ -3,8 +3,7 @@ import React from 'react';
 
 import { Error } from './error';
 
-export function Input({
-  isFullWidth,
+function Input({
   label,
   name,
   required = true,
@@ -14,11 +13,11 @@ export function Input({
 }) {
   const minLength = type === 'tel' ? 8 : 2;
   return (
-    <div className={isFullWidth ? 'sm:col-span-2' : ''}>
+    <div className="col-span-2">
       {errors[name]?.message}
       <label
         htmlFor={name}
-        className="block text-sm font-medium leading-5 text-gray-700"
+        className="block text-sm font-semibold tracking-widest text-gray-700"
       >
         <span className="sr-only">{label}</span>
       </label>
@@ -31,7 +30,7 @@ export function Input({
           placeholder={label}
           aria-invalid={errors[name] ? 'true' : 'false'}
           ref={register({
-            required: <Error message={`${label} cannot be empty`} />,
+            required: <Error message={`${label} is a required field`} />,
             minLength: {
               value: minLength,
               message: (
@@ -41,7 +40,7 @@ export function Input({
               ),
             },
           })}
-          className={`block w-full px-4 py-3 text-white placeholder-white uppercase transition duration-150 ease-in-out bg-transparent border-white rounded-none form-input ${
+          className={`block w-full px-4 py-3 text-white placeholder-white uppercase transition duration-150 ease-in-out bg-transparent border-white rounded-none tracking-widest form-input ${
             errors[name]
               ? 'border-red-300 focus:border-red-300 focus:shadow-outline-red'
               : ''
@@ -54,10 +53,11 @@ export function Input({
 
 Input.propTypes = {
   errors: PropTypes.object,
-  isFullWidth: PropTypes.bool,
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   register: PropTypes.func.isRequired,
   required: PropTypes.bool,
   type: PropTypes.string,
 };
+
+export { Input };

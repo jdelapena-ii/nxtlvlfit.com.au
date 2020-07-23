@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import { Honeypot } from './honeypot';
 
-export function Form({
+function Form({
   action = '/success/',
   children,
   className,
@@ -22,18 +22,17 @@ export function Form({
 
   const onSubmit = (data, event) => {
     event.preventDefault();
-    // const form = event.target;
-    // fetch('/', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    //   body: encode({
-    //     'form-name': form.getAttribute('name'),
-    //     ...data,
-    //   }),
-    // })
-    //   .then(() => navigate(form.getAttribute('action')))
-    //   .catch((error) => alert(error));
-    console.log(data);
+    const form = event.target;
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({
+        'form-name': form.getAttribute('name'),
+        ...data,
+      }),
+    })
+      .then(() => navigate(form.getAttribute('action')))
+      .catch((error) => alert(error));
   };
 
   return (
@@ -58,4 +57,7 @@ Form.propTypes = {
   className: PropTypes.string,
   handleSubmit: PropTypes.func.isRequired,
   name: PropTypes.string,
+  register: PropTypes.func.isRequired,
 };
+
+export { Form };
