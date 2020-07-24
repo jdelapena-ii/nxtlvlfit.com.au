@@ -15,10 +15,10 @@ dotenv.config({
 
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Starter Tailwind',
-    description: 'Gatsby starter styled with Tailwind.',
-    author: '@luke_bennett_',
-    siteUrl: 'https://gatsby-starter-tailwindcss.netlify.com',
+    title: 'NXT LVL Fitness',
+    description: '',
+    author: '',
+    siteUrl: 'https://www.nxtlvlfit.com.au',
   },
   plugins: [
     'gatsby-plugin-netlify',
@@ -30,7 +30,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'https://gatsby-starter-tailwindcss.netlify.com',
+        siteUrl: 'https://www.nxtlvlfit.com.au',
       },
     },
     {
