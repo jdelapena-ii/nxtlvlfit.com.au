@@ -5,7 +5,7 @@ import { Layout, SEO, ContactForm } from '../components';
 export default function IndexPage() {
   return (
     <Layout>
-      <SEO title="Home" />
+      <SEO title="Coming soon" />
       <ContactForm />
     </Layout>
   );
