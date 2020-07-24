@@ -10,10 +10,6 @@ module.exports = {
       },
     },
   },
-  variants: { margin: ['responsive', 'first'] },
-  plugins: [
-    tailwindUI({
-      layout: 'sidebar',
-    }),
-  ],
+  variants: { boxShadow: ['responsive', 'hover', 'focus', 'focus-within'] },
+  plugins: [tailwindUI],
 };
