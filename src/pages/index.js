@@ -4,7 +4,7 @@ import { Layout, SEO, ContactForm } from '../components';
 
 export default function IndexPage() {
   return (
-    <Layout>
+    <Layout heroHasH1>
       <SEO title="Coming soon" />
       <ContactForm />
     </Layout>
