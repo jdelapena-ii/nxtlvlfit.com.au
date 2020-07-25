@@ -42,7 +42,7 @@ module.exports = {
         background_color: fullConfig.theme.colors.black,
         theme_color: fullConfig.theme.colors.black,
         display: 'minimal-ui',
-        // icon: 'src/images/favicon.png', // This path is relative to the root of the site.
+        icon: 'src/images/favicon.png', // This path is relative to the root of the site.
       },
     },
     {
