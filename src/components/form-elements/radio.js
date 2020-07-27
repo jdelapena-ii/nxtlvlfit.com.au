@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { Error } from './error';
+import { YesIcon, NoIcon } from '../vectors';
 
 function Radio({ label, name, register, errors }) {
   const [selection, setSelection] = useState(null);
@@ -27,11 +28,15 @@ function Radio({ label, name, register, errors }) {
                   id={`${name}-yes`}
                   value="yes"
                   name={name}
-                  ref={register({ required: true })}
+                  ref={register({
+                    required: <Error message="This field is required" />,
+                  })}
                   onClick={() => setSelection('yes')}
                   className="sr-only"
                 />
-                <span aria-label="Yes">Y</span>
+                <span aria-label="Yes">
+                  <YesIcon className="w-4 h-4" />
+                </span>
               </span>
             </label>
             <label
@@ -54,7 +59,9 @@ function Radio({ label, name, register, errors }) {
                   onClick={() => setSelection('no')}
                   className="sr-only"
                 />
-                <span aria-label="No">N</span>
+                <span aria-label="No">
+                  <NoIcon className="w-4 h-4" />
+                </span>
               </span>
             </label>
           </div>

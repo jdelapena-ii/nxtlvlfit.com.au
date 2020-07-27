@@ -1,7 +1,8 @@
 import React from 'react';
-
 import { useForm } from 'react-hook-form';
-import { Form, Input, Radio } from './form-elements';
+
+import { Link } from 'gatsby';
+import { Form, Input, Radio, Checkbox } from './form-elements';
 
 function ContactForm() {
   const { register, handleSubmit, errors } = useForm({ mode: 'onBlur' });
@@ -68,10 +69,26 @@ function ContactForm() {
             <Radio
               name="sign_up"
               label="Would you like to stay up to date with the latest NXT LVL Fitness news"
-              isFullWidth
               register={register}
               errors={errors}
             />
+            <div className="flex items-center justify-between space-x-4">
+              <Checkbox
+                name="privacy_policy"
+                label={
+                  <>
+                    By selecting this, you agree to the{' '}
+                    <Link
+                      to="/privacy-policy/"
+                      className="inline-block underline"
+                    >
+                      Privacy Policy
+                    </Link>
+                  </>
+                }
+                register={register}
+                errors={errors}
+              />
               <span className="inline-flex shadow-sm">
                 <button
                   type="submit"
