@@ -27,7 +27,7 @@ function Input({
           name={name}
           type={type}
           required={required}
-          placeholder={label}
+          placeholder={`${label}${required ? '*' : ''}`}
           aria-invalid={errors[name] ? 'true' : 'false'}
           ref={register({
             required: <Error message={`${label} is a required field`} />,
