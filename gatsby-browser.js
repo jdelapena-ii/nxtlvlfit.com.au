@@ -5,6 +5,6 @@
  */
 
 // Self host fonts using Typefaces.js https://github.com/KyleAMathews/typefaces
-import 'typeface-inter';
+import 'typeface-josefin-sans';
 
 import './src/css/tailwind.css';

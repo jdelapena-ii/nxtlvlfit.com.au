@@ -34,7 +34,7 @@ module.exports = {
     }),
     extend: {
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
+        sans: ['Josefin Sans', ...defaultTheme.fontFamily.sans],
       },
     },
   },
