@@ -13,7 +13,7 @@ function Input({
 }) {
   const minLength = type === 'tel' ? 8 : 2;
   return (
-    <div className="col-span-2">
+    <div>
       {errors[name]?.message}
       <label
         htmlFor={name}

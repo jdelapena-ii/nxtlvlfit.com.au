@@ -77,8 +77,7 @@ function ContactForm() {
               register={register}
               errors={errors}
             />
-            <div className="col-start-2">
-              <span className="inline-flex w-full shadow-sm">
+              <span className="inline-flex shadow-sm">
                 <button
                   type="submit"
                   className="inline-flex items-center justify-center w-full px-6 py-3 font-semibold tracking-widest uppercase border border-white rounded-none focus:outline-none focus:shadow-outline"

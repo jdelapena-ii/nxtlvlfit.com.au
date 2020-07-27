@@ -6,7 +6,7 @@ import { Error } from './error';
 function Radio({ label, name, register, errors }) {
   const [selection, setSelection] = useState(null);
   return (
-    <div className="col-span-2">
+    <div>
       {errors[name]?.message}
       <fieldset>
         <div className="items-center justify-between sm:space-x-4 sm:flex">
