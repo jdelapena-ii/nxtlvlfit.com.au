@@ -7,15 +7,16 @@ function NotFoundPage() {
   return (
     <Layout>
       <SEO title="404: Not found" />
-      <article className="w-full max-w-2xl mx-auto mt-24 sm:mt-40">
-        <div className="space-y-6 tracking-widest text-center uppercase">
-          <h1 className="font-semibold">404: Page Not Found</h1>
-          <Link
-            to="/"
-            className="inline-flex items-center justify-center px-6 py-3 text-sm font-semibold tracking-widest uppercase bg-black bg-opacity-50 border border-white rounded-none focus:outline-none focus:shadow-outline"
-          >
-            &larr; Home
-          </Link>
+      <article className="w-full max-w-md mx-auto mt-24 sm:mt-40">
+        <div className="px-4 space-y-8 tracking-widest text-center uppercase">
+          <h2 className="relative text-2xl font-semibold leading-none tracking-widest text-center uppercase sm:text-4xl">
+            404: Page Not Found
+          </h2>
+          <p>
+            <Link to="/" className="hover:underline">
+              &larr; home
+            </Link>
+          </p>
         </div>
       </article>
     </Layout>
