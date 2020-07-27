@@ -26,7 +26,7 @@ function Background({ isHome }) {
   `);
   return (
     <div className="fixed inset-0 pointer-events-none">
-      <div className="w-full mx-auto max-w-7xl">
+      <div className="w-full h-full mx-auto max-w-7xl">
         <GatsbyImage
           fluid={
             isHome
