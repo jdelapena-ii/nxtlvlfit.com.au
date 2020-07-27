@@ -37,7 +37,6 @@ function ContactForm() {
               name="contact_number"
               label="Contact number"
               type="tel"
-              isFullWidth
               register={register}
               errors={errors}
             />
@@ -45,28 +44,24 @@ function ContactForm() {
               name="email_address"
               label="Email address"
               type="email"
-              isFullWidth
               register={register}
               errors={errors}
             />
             <Radio
               name="are_you_interested_in_membership"
               label="Are you interested in membership"
-              isFullWidth
               register={register}
               errors={errors}
             />
             <Radio
               name="have_you_taken_part_in_crossfit_before"
               label="Have you taken part in Crossfit before"
-              isFullWidth
               register={register}
               errors={errors}
             />
             <Radio
               name="have_you_taken_part_in_calisthenics_before"
               label="Have you taken part in Calisthenics before"
-              isFullWidth
               register={register}
               errors={errors}
             />
