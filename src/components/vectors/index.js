@@ -6,4 +6,6 @@ export * from './home-icon';
 export * from './instagram-icon';
 export * from './logo';
 export * from './logo-l';
+export * from './no-icon';
 export * from './twitter-icon';
+export * from './yes-icon';
