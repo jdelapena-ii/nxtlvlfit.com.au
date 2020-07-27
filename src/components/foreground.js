@@ -15,7 +15,7 @@ function Foreground() {
     }
   `);
   return (
-    <div className="fixed inset-0 pointer-events-none">
+    <div aria-hidden className="fixed inset-0 pointer-events-none">
       <div className="w-full mx-auto max-w-7xl">
         <GatsbyImage
           fluid={file.childImageSharp.fluid}

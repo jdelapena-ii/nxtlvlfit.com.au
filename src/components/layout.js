@@ -12,12 +12,12 @@ import { Background } from './background';
 import { Hero } from './hero';
 import { Footer } from './footer';
 
-export function Layout({ children, heroHasH1 }) {
+export function Layout({ children, isHome }) {
   return (
-    <div className="text-white bg-black">
-      <Background />
+    <div className="font-sans antialiased text-white bg-black">
+      <Background isHome={isHome} />
       <div className="flex flex-col w-full min-h-screen mx-auto max-w-7xl">
-        <Hero hasH1={heroHasH1} />
+        <Hero isHome={isHome} />
         <main className="relative flex flex-1">{children}</main>
         <Footer />
       </div>
@@ -27,5 +27,5 @@ export function Layout({ children, heroHasH1 }) {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  heroHasH1: PropTypes.bool,
+  isHome: PropTypes.bool,
 };

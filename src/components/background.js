@@ -1,13 +1,23 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import GatsbyImage from 'gatsby-image';
 
-function Background() {
-  const { file } = useStaticQuery(graphql`
+function Background({ isHome }) {
+  const { background, backgroundBlack } = useStaticQuery(graphql`
     {
-      file(relativePath: { eq: "background-image.png" }) {
+      background: file(relativePath: { eq: "background-image.png" }) {
         childImageSharp {
-          fluid(maxWidth: 1920) {
+          fluid(maxWidth: 1920, quality: 90) {
+            ...GatsbyImageSharpFluid_withWebp_noBase64
+          }
+        }
+      }
+      backgroundBlack: file(
+        relativePath: { eq: "background-image-black.png" }
+      ) {
+        childImageSharp {
+          fluid(maxWidth: 1920, quality: 90) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }
@@ -18,7 +28,11 @@ function Background() {
     <div className="fixed inset-0 pointer-events-none">
       <div className="w-full mx-auto max-w-7xl">
         <GatsbyImage
-          fluid={file.childImageSharp.fluid}
+          fluid={
+            isHome
+              ? background.childImageSharp.fluid
+              : backgroundBlack.childImageSharp.fluid
+          }
           imgStyle={{ objectPosition: 'top' }}
           className="w-full h-full"
         />
@@ -26,5 +40,9 @@ function Background() {
     </div>
   );
 }
+
+Background.propTypes = {
+  isHome: PropTypes.bool,
+};
 
 export { Background };
