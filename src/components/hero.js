@@ -18,7 +18,7 @@ function Hero({ isHome }) {
         </Link>
         {isHome && <Foreground />}
         <LogoL aria-hidden className="absolute top-0 pointer-events-none" />
-        <p className="relative mt-4 text-2xl tracking-widest text-center uppercase">
+        <p className="relative mt-4 text-2xl font-bold tracking-widest text-center uppercase">
           Functional movement centre
         </p>
       </div>

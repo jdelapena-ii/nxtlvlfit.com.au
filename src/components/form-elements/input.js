@@ -17,7 +17,7 @@ function Input({
       {errors[name]?.message}
       <label
         htmlFor={name}
-        className="block text-sm font-semibold tracking-widest text-gray-700"
+        className="block font-bold tracking-widest text-gray-700"
       >
         <span className="sr-only">{label}</span>
       </label>
