@@ -10,7 +10,7 @@ function Checkbox({ label, name, register, errors }) {
     <div>
       {errors[name]?.message}
       <fieldset>
-        <div className="items-start justify-between sm:space-x-4 sm:flex">
+        <div className="flex items-center justify-between space-x-4">
           <div className="flex-shrink-0 mt-2 space-x-4 sm:mt-0">
             <label
               htmlFor={name}
@@ -42,7 +42,7 @@ function Checkbox({ label, name, register, errors }) {
               </span>
             </label>
           </div>
-          <legend className="tracking-widest">{label}</legend>
+          <legend className="text-sm tracking-widest">{label}</legend>
         </div>
       </fieldset>
     </div>

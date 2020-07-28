@@ -11,7 +11,9 @@ function Radio({ label, name, register, errors }) {
       {errors[name]?.message}
       <fieldset>
         <div className="items-center justify-between sm:space-x-4 sm:flex">
-          <legend className="tracking-widest uppercase">{label}?*</legend>
+          <legend className="text-sm tracking-widest uppercase">
+            {label}?*
+          </legend>
 
           <div className="flex-shrink-0 mt-2 space-x-4 sm:mt-0">
             <label

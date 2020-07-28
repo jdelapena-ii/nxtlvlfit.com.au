@@ -71,7 +71,7 @@ function ContactForm() {
               register={register}
               errors={errors}
             />
-            <div className="flex items-center justify-between space-x-4">
+            <div className="items-center justify-between space-y-6 sm:space-x-4 sm:flex sm:space-y-0">
               <Checkbox
                 name="privacy_policy"
                 label={
