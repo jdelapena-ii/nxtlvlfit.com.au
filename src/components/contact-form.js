@@ -10,14 +10,13 @@ function ContactForm() {
     <article className="relative px-4 mx-auto mt-24 sm:mt-40">
       <div className="relative w-full max-w-2xl px-4 py-12 mx-auto bg-black bg-opacity-50 border-4 border-white lg:my-12 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h2 className="font-semibold tracking-widest uppercase">
-            You don't want to miss out
+          <h2 className="text-xl font-bold tracking-widest uppercase">
+            Exciting news!
           </h2>
           <p className="mt-2 tracking-widest uppercase">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit quo
-            culpa quod. Neque nesciunt voluptates eum a hic nisi voluptatibus,
-            aperiam, architecto ullam omnis atque quae laudantium quos
-            voluptatem odit.
+            nXtLvL Functional Movement Centre is opening soon in Port Macquarie!
+            Our team are excited to offer you a leading-edge facility where
+            you're challenged and supported to chase nXtLvL goals.
           </p>
         </div>
         <div className="mt-12">
@@ -68,7 +67,7 @@ function ContactForm() {
             />
             <Radio
               name="sign_up"
-              label="Would you like to stay up to date with the latest NXT LVL Fitness news"
+              label="Would you like to stay up to date with the latest nXtLvL Fitness news"
               register={register}
               errors={errors}
             />
@@ -92,7 +91,7 @@ function ContactForm() {
               <span className="inline-flex shadow-sm">
                 <button
                   type="submit"
-                  className="inline-flex items-center justify-center w-full px-6 py-3 font-semibold tracking-widest uppercase border border-white rounded-none focus:outline-none focus:shadow-outline"
+                  className="inline-flex items-center justify-center w-full px-6 py-3 font-bold tracking-widest uppercase border border-white rounded-none focus:outline-none focus:shadow-outline"
                 >
                   Submit
                 </button>
