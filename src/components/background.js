@@ -34,7 +34,7 @@ function Background({ isHome }) {
               : backgroundBlack.childImageSharp.fluid
           }
           imgStyle={{ objectPosition: 'top' }}
-          className="w-full h-full"
+          className={isHome ? 'w-full' : 'w-full h-full'}
         />
       </div>
     </div>

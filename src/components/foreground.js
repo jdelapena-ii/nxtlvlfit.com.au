@@ -15,12 +15,12 @@ function Foreground() {
     }
   `);
   return (
-    <div aria-hidden className="fixed inset-0 pointer-events-none">
-      <div className="w-full mx-auto max-w-7xl">
+    <div className="fixed inset-0 pointer-events-none">
+      <div className="w-full h-full mx-auto max-w-7xl">
         <GatsbyImage
           fluid={file.childImageSharp.fluid}
           imgStyle={{ objectPosition: 'top' }}
-          className="w-full h-full"
+          className="w-full"
         />
       </div>
     </div>
