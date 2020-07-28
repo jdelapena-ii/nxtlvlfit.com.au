@@ -12,7 +12,7 @@ function Hero({ isHome }) {
       <div className="relative w-full max-w-3xl mx-auto">
         <Link to="/">
           <Heading>
-            <span className="sr-only">NXT LVL Fitness</span>
+            <span className="sr-only">nXtLvL Fitness</span>
             <Logo aria-hidden className="w-full pointer-events-none" />
           </Heading>
         </Link>

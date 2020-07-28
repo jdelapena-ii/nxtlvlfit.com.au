@@ -15,7 +15,7 @@ dotenv.config({
 
 module.exports = {
   siteMetadata: {
-    title: 'NXT LVL Fitness',
+    title: 'nXtLvL Fitness',
     description: '',
     author: '',
     siteUrl: 'https://www.nxtlvlfit.com.au',
@@ -36,8 +36,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'NXT LVL Fitness',
-        short_name: 'NXT LVL',
+        name: 'nXtLvL Fitness',
+        short_name: 'nXtLvL',
         start_url: '/',
         background_color: fullConfig.theme.colors.black,
         theme_color: fullConfig.theme.colors.black,
