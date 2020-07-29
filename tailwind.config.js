@@ -22,6 +22,8 @@ module.exports = {
           },
           'h1, h2, h3, h4': {
             color: theme('colors.white'),
+            fontWeight: '700',
+            textTransform: 'uppercase',
           },
           'ol > li:before': {
             color: theme('colors.white'),
