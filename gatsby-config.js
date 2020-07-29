@@ -15,10 +15,17 @@ dotenv.config({
 
 module.exports = {
   siteMetadata: {
-    title: 'nXtLvL Fitness',
+    title: 'nXtLvL Functional Movement Centre',
     description: '',
     author: '',
     siteUrl: 'https://www.nxtlvlfit.com.au',
+    email: 'enquiries@nxtlvlfit.com.au',
+    address: {
+      street: '31 Jindalee Road',
+      suburb: 'Port Macquarie',
+      state: 'NSW',
+      postcode: '2444',
+    },
   },
   plugins: [
     'gatsby-plugin-netlify',

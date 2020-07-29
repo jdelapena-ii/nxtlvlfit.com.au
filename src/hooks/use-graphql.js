@@ -12,16 +12,15 @@ export function useGraphQL() {
   const data = useStaticQuery(
     graphql`
       {
-        placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
-          childImageSharp {
-            fluid(maxWidth: 300) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
         site {
           siteMetadata {
             title
+            address {
+              street
+              suburb
+              state
+              postcode
+            }
           }
         }
       }
