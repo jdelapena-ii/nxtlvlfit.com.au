@@ -41,6 +41,13 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-mailchimp',
+      options: {
+        endpoint:
+          'https://nxtlvlfit.us17.list-manage.com/subscribe/post?u=ca5b6b064f586cd60687deb2e&amp;id=609586fc1b',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-manifest',
       options: {
         name: 'nXtLvL Fitness',

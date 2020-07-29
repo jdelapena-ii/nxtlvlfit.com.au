@@ -1,8 +1,7 @@
 import React from 'react';
 import { navigate } from 'gatsby';
+import addToMailchimp from 'gatsby-plugin-mailchimp';
 import PropTypes from 'prop-types';
-
-import { Honeypot } from './honeypot';
 
 function Form({
   action = '/success/',
@@ -10,42 +9,43 @@ function Form({
   className,
   handleSubmit,
   name = 'contact_form',
-  register,
+  setIsSubmitting,
+  setMessage,
 }) {
-  function encode(data) {
-    return Object.keys(data)
-      .map(
-        (key) => `${encodeURIComponent(key)}=${encodeURIComponent(data[key])}`
-      )
-      .join('&');
-  }
-
   const onSubmit = (data, event) => {
     event.preventDefault();
     const form = event.target;
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({
-        'form-name': form.getAttribute('name'),
-        ...data,
-      }),
+    setIsSubmitting(true);
+    addToMailchimp(data.email_address, {
+      FNAME: data.first_name,
+      LNAME: data.last_name,
+      PHONE: data.contact_number,
+      MEMBERSHIP: data.are_you_interested_in_membership,
+      CROSSFIT: data.have_you_taken_part_in_crossfit_before,
+      CALISTHENI: data.have_you_taken_part_in_calisthenics_before,
+      SIGN_UP: data.sign_up,
     })
-      .then(() => navigate(form.getAttribute('action')))
-      .catch((error) => alert(error));
+      .then(({ msg, result }) => {
+        if (result !== 'success') {
+          throw msg;
+        }
+        setMessage(msg);
+        navigate(form.getAttribute('action'));
+      })
+      .catch((err) => {
+        setMessage(err);
+        setIsSubmitting(true);
+      });
   };
 
   return (
     <form
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
       onSubmit={handleSubmit(onSubmit)}
       action={action}
       className={className}
       method="POST"
       name={name}
     >
-      <Honeypot register={register} />
       {children}
     </form>
   );
@@ -57,7 +57,8 @@ Form.propTypes = {
   className: PropTypes.string,
   handleSubmit: PropTypes.func.isRequired,
   name: PropTypes.string,
-  register: PropTypes.func.isRequired,
+  setIsSubmitting: PropTypes.func.isRequired,
+  setMessage: PropTypes.func.isRequired,
 };
 
 export { Form };

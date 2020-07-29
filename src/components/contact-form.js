@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 import { Link } from 'gatsby';
@@ -6,6 +6,8 @@ import { Form, Input, Radio, Checkbox } from './form-elements';
 
 function ContactForm() {
   const { register, handleSubmit, errors } = useForm({ mode: 'onBlur' });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [message, setMessage] = useState(null);
   return (
     <article className="relative px-4 mx-auto mt-24 sm:mt-40">
       <div className="relative w-full max-w-2xl px-4 py-12 mx-auto bg-black bg-opacity-50 border-4 border-white lg:my-12 sm:px-6 lg:px-8">
@@ -23,16 +25,26 @@ function ContactForm() {
           <Form
             handleSubmit={handleSubmit}
             register={register}
+            setIsSubmitting={setIsSubmitting}
+            setMessage={setMessage}
             action="/success/"
             name="contact-form"
             className="grid grid-cols-1 row-gap-6"
           >
-            <Input
-              name="full_name"
-              label="Full name"
-              register={register}
-              errors={errors}
-            />
+            <div className="grid gap-6 sm:grid-cols-2">
+              <Input
+                name="first_name"
+                label="First name"
+                register={register}
+                errors={errors}
+              />
+              <Input
+                name="last_name"
+                label="Last name"
+                register={register}
+                errors={errors}
+              />
+            </div>
             <Input
               name="contact_number"
               label="Contact number"
@@ -91,12 +103,19 @@ function ContactForm() {
               <span className="inline-flex shadow-sm">
                 <button
                   type="submit"
+                  disabled={isSubmitting}
                   className="inline-flex items-center justify-center w-full px-6 py-3 font-bold tracking-widest uppercase border border-white rounded-none focus:outline-none focus:shadow-outline"
                 >
                   Submit
                 </button>
               </span>
             </div>
+            {message && (
+              <p
+                dangerouslySetInnerHTML={{ __html: message }}
+                className="mt-6 prose text-center"
+              />
+            )}
           </Form>
         </div>
       </div>
