@@ -1,6 +1,11 @@
 import React from 'react';
 
+import { useGraphQL } from '../hooks';
+
 function PrivacyPolicy() {
+  const {
+    site: { siteMetadata },
+  } = useGraphQL();
   return (
     <>
       <p className="lead">
@@ -47,14 +52,8 @@ function PrivacyPolicy() {
         Additionally when you make a purchase or attempt to make a purchase
         through the Site, we collect certain information from you, including
         your name, billing address, shipping address, payment information
-        (including credit card numbers [[INSERT ANY OTHER PAYMENT TYPES
-        ACCEPTED]]), email address, and phone number. We refer to this
-        information as “Order Information.”
-      </p>
-
-      <p>
-        [[INSERT ANY OTHER INFORMATION YOU COLLECT: OFFLINE DATA, PURCHASED
-        MARKETING DATA/LISTS]]
+        (including credit card numbers, email address, and phone number. We
+        refer to this information as “Order Information.”
       </p>
 
       <p>
@@ -72,28 +71,15 @@ function PrivacyPolicy() {
         to: Communicate with you; Screen our orders for potential risk or fraud;
         and When in line with the preferences you have shared with us, provide
         you with information or advertising relating to our products or
-        services. [[INSERT OTHER USES OF ORDER INFORMATION]] We use the Device
-        Information that we collect to help us screen for potential risk and
-        fraud (in particular, your IP address), and more generally to improve
-        and optimize our Site (for example, by generating analytics about how
-        our customers browse and interact with the Site, and to assess the
-        success of our marketing and advertising campaigns). [[INSERT OTHER USES
-        OF DEVICE INFORMATION, INCLUDING: ADVERTISING/RETARGETING]]
+        services. We use the Device Information that we collect to help us
+        screen for potential risk and fraud (in particular, your IP address),
+        and more generally to improve and optimize our Site (for example, by
+        generating analytics about how our customers browse and interact with
+        the Site, and to assess the success of our marketing and advertising
+        campaigns).
       </p>
 
       <h2>Sharing your personal information</h2>
-
-      <p>
-        We share your Personal Information with third parties to help us use
-        your Personal Information, as described above. For example, we use
-        Shopify to power our online store--you can read more about how Shopify
-        uses your Personal Information here:
-        https://www.shopify.com/legal/privacy. We also use Google Analytics to
-        help us understand how our customers use the Site--you can read more
-        about how Google uses your Personal Information here:
-        https://www.google.com/intl/en/policies/privacy/. You can also opt-out
-        of Google Analytics here: https://tools.google.com/dlpage/gaoptout.
-      </p>
 
       <p>
         Finally, we may also share your Personal Information to comply with
@@ -101,8 +87,6 @@ function PrivacyPolicy() {
         warrant or other lawful request for information we receive, or to
         otherwise protect our rights.
       </p>
-
-      <p>[[INCLUDE IF USING REMARKETING OR TARGETED ADVERTISING]]</p>
 
       <h2>Behavioural advertising</h2>
 
@@ -116,34 +100,16 @@ function PrivacyPolicy() {
       </p>
 
       <p>
-        You can opt out of targeted advertising by: [[ INCLUDE OPT-OUT LINKS
-        FROM WHICHEVER SERVICES BEING USED. COMMON LINKS INCLUDE: FACEBOOK -
-        https://www.facebook.com/settings/?tab=ads GOOGLE -
-        https://www.google.com/settings/ads/anonymous BING -
-        https://advertise.bingads.microsoft.com/en-us/resources/policies/personalized-ads
-        ]]
-      </p>
-
-      <p>
         Additionally, you can opt out of some of these services by visiting the
         Digital Advertising Alliance’s opt-out portal at:
         http://optout.aboutads.info/.
       </p>
 
-      <h1>Do not track</h1>
+      <h2>Do not track</h2>
 
       <p>
         Please note that we do not alter our Site’s data collection and use
         practices when we see a Do Not Track signal from your browser.
-      </p>
-
-      <p>
-        [[INCLUDE IF LOCATED IN OR IF STORE HAS CUSTOMERS IN EUROPE]] YOUR
-        RIGHTS If you are a European resident, you have the right to access
-        personal information we hold about you and to ask that your personal
-        information be corrected, updated, or deleted. If you would like to
-        exercise this right, please contact us through the contact information
-        below.
       </p>
 
       <p>
@@ -163,15 +129,6 @@ function PrivacyPolicy() {
         information.
       </p>
 
-      <p>[[INSERT IF AGE RESTRICTION IS REQUIRED]]</p>
-
-      <h2>Minors</h2>
-
-      <p>
-        The Site is not intended for individuals under the age of [[INSERT
-        AGE]].
-      </p>
-
       <h2>Changes</h2>
 
       <p>
@@ -184,12 +141,12 @@ function PrivacyPolicy() {
 
       <p>
         For more information about our privacy practices, if you have questions,
-        or if you would like to make a complaint, please contact us by e-mail at
-        l.bennett@phirannodesigns.com.au or by mail using the details provided
-        below:
+        or if you would like to make a complaint, please contact us by e-mail at{' '}
+        <a href={`mailto:${siteMetadata.email}`}>{siteMetadata.email}</a> or by
+        mail using the details provided below:
       </p>
 
-      <p>[[INSERT ADDRESS]]</p>
+      <p>31 Jindalee Road, Port Macquarie NSW 2444</p>
     </>
   );
 }

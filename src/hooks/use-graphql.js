@@ -21,6 +21,7 @@ export function useGraphQL() {
               state
               postcode
             }
+            email
           }
         }
       }
