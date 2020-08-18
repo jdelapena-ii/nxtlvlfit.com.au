@@ -7,12 +7,12 @@ export default function ServicesPage() {
   return (
     <Layout isHome>
       <SEO title="Services" />
-      <ServiceTypes />
+      <FunctionalFitness />
     </Layout>
   );
 }
 
-function ServiceTypes() {
+function FunctionalFitness() {
   // Query GraphQL for image so we can use it in `gatsby-image`
   const { file } = useStaticQuery(graphql`
     {
