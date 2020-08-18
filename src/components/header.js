@@ -13,10 +13,10 @@ export function Header() {
                         <Link to="/membership">Membership</Link>
                     </li>
                     <li>
-                        <Link to="/meet-us">Timetable</Link>
+                        <Link to="/timetable">Timetable</Link>
                     </li>
                     <li>
-                        <Link to="/meet-us">Contact</Link>
+                        <Link to="/contact">Contact</Link>
                     </li>
                 </ul>
             </nav>
