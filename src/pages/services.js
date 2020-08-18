@@ -1,28 +1,43 @@
 import React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 
-import { Layout, SEO } from '../components';
-import { TextWithImage } from '../components/text-with-image';
+import { Layout, SEO, TextWithImage } from '../components';
 
 export default function ServicesPage() {
   return (
     <Layout isHome>
-      <SEO title="Services" />   
+      <SEO title="Services" />
       <ServiceTypes />
     </Layout>
   );
 }
 
-
 function ServiceTypes() {
-    return (
-       <TextWithImage>
-        <p>
-            Omnicare proudly upholds its responsibilities as a not-for-profit
-            organisation - focussing primarily on the communities we serve. We
-            consider ourselves also as profit-for-purpose, reinvesting in programs
-            and developing our staff to benefit those communities. Our operational
-            priority is to deliver high-quality support that adds value.
-        </p>
-       </TextWithImage>
-    )
+  // Query GraphQL for image so we can use it in `gatsby-image`
+  const { file } = useStaticQuery(graphql`
+    {
+      file(relativePath: { eq: "background-image.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 1920, quality: 90) {
+            ...GatsbyImageSharpFluid_withWebp_noBase64
+          }
+        }
+      }
+    }
+  `);
+
+  return (
+    <TextWithImage
+      heading="How It Works"
+      image={file.childImageSharp.fluid}
+      reverse
+    >
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+        architecto modi, ratione blanditiis quis facere nulla repudiandae, quia
+        perspiciatis quae aspernatur iusto laudantium itaque nesciunt molestias,
+        in vel doloribus earum!
+      </p>
+    </TextWithImage>
+  );
 }
