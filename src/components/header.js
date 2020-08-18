@@ -3,19 +3,19 @@ import { Link } from 'gatsby'
 
 export function Header() {
     return (
-        <header>
-            <nav>
+        <header className="relative">
+            <nav> 
                 <ul>
-                    <li>
+                    <li className="mt-8">
                         <Link to="/meet-us">Meet Us</Link>
                     </li>
-                    <li>
+                    <li className="mt-8">
                         <Link to="/membership">Membership</Link>
                     </li>
-                    <li>
+                    <li className="mt-8">
                         <Link to="/timetable">Timetable</Link>
                     </li>
-                    <li>
+                    <li className="mt-8">
                         <Link to="/contact">Contact</Link>
                     </li>
                 </ul>
