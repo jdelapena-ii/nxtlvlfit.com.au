@@ -10,11 +10,13 @@ import PropTypes from 'prop-types';
 
 import { Background } from './background';
 import { Hero } from './hero';
+import { Header } from './header';
 import { Footer } from './footer';
 
 export function Layout({ children, isHome }) {
   return (
     <div className="font-sans antialiased text-white bg-black">
+      <Header />
       <Background isHome={isHome} />
       <div className="flex flex-col w-full min-h-screen mx-auto max-w-7xl">
         <Hero isHome={isHome} />
