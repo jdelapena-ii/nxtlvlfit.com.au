@@ -2,24 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { nanoid } from 'nanoid';
 
-function SideBySide({
-  heading,
-  children,
-  cta,
-  component,
-  reverse,
-  youtube,
-  paddingTop,
-}) {
-  let padding = 'pt-0';
-  if (paddingTop === 'Small') padding = 'pt-12';
-  if (paddingTop === 'Medium') padding = 'pt-24';
-  if (paddingTop === 'Large') padding = 'pt-48';
-
+function SideBySide({ heading, children, cta, component, reverse }) {
   function Copy() {
     return (
       <div className="flex flex-col justify-center max-w-lg space-y-8">
-        <h2 className="heading-1">{heading}</h2>
+        <h2>{heading}</h2>
         <div key={nanoid()} className="prose">
           {children}
         </div>
@@ -32,20 +19,10 @@ function SideBySide({
     );
   }
   function SecondaryComponent() {
-    return (
-      <div
-        className={`${
-          youtube ? 'flex flex-col justify-center' : ''
-        } order-last md:order-none`}
-      >
-        {component}
-      </div>
-    );
+    return <div className="order-last md:order-none">{component}</div>;
   }
   return (
-    <article
-      className={`relative grid gap-12 px-4 md:grid-cols-2 sm:px-6 lg:px-8 ${padding}`}
-    >
+    <article className="relative grid gap-12 px-4 md:grid-cols-2 sm:px-6 lg:px-8">
       {reverse && <SecondaryComponent />}
       <Copy key={nanoid()} />
       {!reverse && <SecondaryComponent />}
@@ -59,8 +36,6 @@ SideBySide.propTypes = {
   cta: PropTypes.node,
   component: PropTypes.node.isRequired,
   reverse: PropTypes.bool,
-  youtube: PropTypes.bool,
-  paddingTop: PropTypes.string,
 };
 
 export { SideBySide };
