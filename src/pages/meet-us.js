@@ -1,5 +1,6 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import { useGraphQL } from '../hooks'
 
 import { Layout, SEO, TextWithImage } from '../components';
 
@@ -15,23 +16,29 @@ export default function MeetUsPage() {
 
 
 function FirstImage() {
-  const { file } = useStaticQuery(graphql`
-  {
-    file(relativePath: { eq: "background-image.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 1920, quality: 90) {
-          ...GatsbyImageSharpFluid_withWebp_noBase64
-        }
-      }
-    }
-  }
-`);
-
+  const { kateBlush } = useGraphQL();
   return (
     <TextWithImage  
-      heading="How It Works"
-      image={file.childImageSharp.fluid}
+      heading="Kate Blush"
+      image={kateBlush.childImageSharp.fluid}
       reverse
+    >
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+        architecto modi, ratione blanditiis quis facere nulla repudiandae, quia
+        perspiciatis quae aspernatur iusto laudantium itaque nesciunt molestias,
+        in vel doloribus earum!
+      </p>
+    </TextWithImage>
+  )
+}
+
+function SecondImage() {
+  const { kateBlush } = useGraphQL();
+  return (
+    <TextWithImage  
+      heading="Kate Blush"
+      image={kateBlush.childImageSharp.fluid}
     >
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam

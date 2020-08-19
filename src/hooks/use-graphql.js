@@ -24,6 +24,15 @@ export function useGraphQL() {
             email
           }
         }
+        kateBlush: file(
+          relativePath: { eq: "kate-blush.jpg" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     `
   );

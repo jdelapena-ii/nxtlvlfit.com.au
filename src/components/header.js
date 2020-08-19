@@ -1,14 +1,25 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, navigate } from 'gatsby'
 
+
+const onChange = (e) => navigate(e.target.value);
 
 export function Header() {
     return (
-        <header className="relative flex content-center">
+        <header className="relative flex">
             <nav> 
-                <ul className="flex items-center tracking-widest uppercase">
-                    <li className="mt-12 mr-24">
-                        <Link to="/">nXtLvL</Link>
+                <ul className="flex content-center tracking-widest uppercase">
+                    <li className="mt-12 mr-24">                                      
+                        <div>
+                            <select 
+                                onChange={onChange}
+                                defaultValue="NXTLVL"
+                            >    
+                                <option value="/facility">nXtLvL Facility</option>
+                                <option value="/services">nXtLvL Services</option>
+                                <option value="/classes">nXtLvl Classes</option>
+                            </select>
+                        </div>                    
                     </li>
                     <li className="mt-12 mr-24">
                         <Link to="/meet-us">Meet Us</Link>
