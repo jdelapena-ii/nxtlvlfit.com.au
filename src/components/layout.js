@@ -16,8 +16,8 @@ import { Footer } from './footer';
 export function Layout({ children, isHome }) {
   return (
     <div className="font-sans antialiased text-white bg-black">
-      <Header />
       <Background isHome={isHome} />
+      <Header />
       <div className="flex flex-col w-full min-h-screen mx-auto max-w-7xl">
         <Hero isHome={isHome} />
         <main className="relative flex flex-1">{children}</main>
