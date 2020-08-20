@@ -2,6 +2,14 @@ import React from 'react'
 import { Link, navigate } from 'gatsby'
 
 import DropdownSelect from './dropdown-select'
+import {
+    Menu,
+    MenuButton,
+    MenuItem,
+    MenuPopover,
+    MenuLink,
+    MenuList
+  } from '@reach/menu-button';
 
 // const onChange = (e) => navigate(e.target.value);
 
@@ -11,7 +19,7 @@ export function Header() {
             <nav> 
                 <ul className="flex content-center tracking-widest uppercase">
                     <li className="mt-12 mr-24">                                      
-                        <DropdownSelect />                   
+                        <NxtlvlSubMenu />                   
                     </li>
                     <li className="mt-12 mr-24">
                         <Link to="/meet-us">Meet Us</Link>
@@ -31,3 +39,17 @@ export function Header() {
     )
 }
 
+function NxtlvlSubMenu() {
+    return (
+      <Menu className="overflow-hidden font-bold">
+        <MenuButton>
+          NXTLVL <span aria-hidden>▾</span>
+        </MenuButton>
+        <MenuList className="text-white uppercase">
+          <MenuLink as="a" href="/facility">nXtLvL Facility</MenuLink>
+          <MenuLink as="a" href="/services">nXtLvL Services</MenuLink>
+          <MenuLink as="a" href="/classes">nXtLvL Classes</MenuLink>
+        </MenuList>
+      </Menu>
+    );
+  }

@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Luke Bennett <l.bennett@phirannodesigns.com.au>",
   "dependencies": {
+    "@reach/menu-button": "^0.10.5",
     "@tailwindcss/ui": "^0.4.0",
     "autoprefixer": "^9.8.5",
     "cssnano": "^4.1.10",

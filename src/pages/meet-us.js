@@ -1,8 +1,8 @@
 import React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import { useGraphQL } from '../hooks'
 
 import { Layout, SEO, TextWithImage } from '../components';
+import { useGraphQL } from '../hooks'
 
 export default function MeetUsPage() {
   return (
@@ -34,12 +34,24 @@ function FirstImage() {
 }
 
 function SecondImage() {
-  const { kateBlush } = useGraphQL();
+  const { svenMieke } = useGraphQL();
   return (
     <TextWithImage  
-      heading="Kate Blush"
-      image={kateBlush.childImageSharp.fluid}
+      heading="Sven Mieke"
+      image={svenMieke.childImageSharp.fluid}
     >
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+        architecto modi, ratione blanditiis quis facere nulla repudiandae, quia
+        perspiciatis quae aspernatur iusto laudantium itaque nesciunt molestias,
+        in vel doloribus earum!
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
+        architecto modi, ratione blanditiis quis facere nulla repudiandae, quia
+        perspiciatis quae aspernatur iusto laudantium itaque nesciunt molestias,
+        in vel doloribus earum!
+      </p>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
         architecto modi, ratione blanditiis quis facere nulla repudiandae, quia
