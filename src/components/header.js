@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link, navigate } from 'gatsby'
 
+import DropdownSelect from './dropdown-select'
 
-const onChange = (e) => navigate(e.target.value);
+// const onChange = (e) => navigate(e.target.value);
 
 export function Header() {
     return (
@@ -10,16 +11,7 @@ export function Header() {
             <nav> 
                 <ul className="flex content-center tracking-widest uppercase">
                     <li className="mt-12 mr-24">                                      
-                        <div>
-                            <select 
-                                onChange={onChange}
-                                defaultValue="NXTLVL"
-                            >    
-                                <option value="/facility">nXtLvL Facility</option>
-                                <option value="/services">nXtLvL Services</option>
-                                <option value="/classes">nXtLvl Classes</option>
-                            </select>
-                        </div>                    
+                        <DropdownSelect />                   
                     </li>
                     <li className="mt-12 mr-24">
                         <Link to="/meet-us">Meet Us</Link>
@@ -38,3 +30,4 @@ export function Header() {
         </header>
     )
 }
+
