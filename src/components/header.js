@@ -10,7 +10,7 @@ import {
 
 export function Header() {
     return (
-        <header className="relative flex content-center">
+        <header className="relative flex items-center justify-center">
             <nav> 
                 <ul className="flex content-center tracking-widest uppercase">
                     <li className="mt-12 mr-24">                                      

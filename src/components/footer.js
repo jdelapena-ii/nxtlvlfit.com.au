@@ -6,8 +6,10 @@ export function Footer() {
   return (
     <footer className="relative">
       <nav>
-        <ul className="flex content-center tracking-widest uppercase"> 
-          <li className="mt-12 mr-24">Links</li>
+        <ul className="flex items-center justify-center tracking-widest uppercase"> 
+          <li className="mt-12 mr-24">Links
+            <Links />
+          </li>
           <li className="mt-12 mr-24">Contact</li>
           <li className="mt-12 mr-24">Join us</li>
         </ul>
@@ -27,4 +29,19 @@ export function Footer() {
       </div>
     </footer>
   );
+}
+
+
+function Links(){
+  return (
+    <div>
+      <ul>
+        <li><Link to="/membership">Membership</Link></li>
+        <li><Link to="/meet-us">Meet us</Link></li>
+        <li><Link to="/services">Services</Link></li>
+        <li><Link to="/classes">News</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
+      </ul>
+    </div>
+  )
 }
