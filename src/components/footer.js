@@ -10,7 +10,9 @@ export function Footer() {
           <li className="mt-12 mr-24">Links
             <Links />
           </li>
-          <li className="mt-12 mr-24">Contact</li>
+          <li className="mt-12 mr-24">
+            <Contact />
+          </li>
           <li className="mt-12 mr-24">Join us</li>
         </ul>
       </nav>
@@ -42,6 +44,18 @@ function Links(){
         <li><Link to="/classes">News</Link></li>
         <li><Link to="/contact">Contact</Link></li>
       </ul>
+    </div>
+  )
+}
+
+function Contact() {
+  return (
+    <div>
+      <h1>Contact</h1>
+      <p>Rich 0422 767 889</p>
+      <p>Kez 0402 322 131</p>
+      <p>Address:</p>
+      <p>Email:</p>
     </div>
   )
 }
