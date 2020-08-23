@@ -27,10 +27,7 @@ function FunctionalFitness() {
   `);
 
   return (
-    <TextWithImage
-      heading="How It Works"
-      image={file.childImageSharp.fluid}
-    >
+    <TextWithImage heading="How It Works" image={file.childImageSharp.fluid}>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
         architecto modi, ratione blanditiis quis facere nulla repudiandae, quia

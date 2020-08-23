@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Layout, SEO, ContactForm, TextWithImage } from '../components';
-import { useGraphQL } from '../hooks'
+import { useGraphQL } from '../hooks';
 
 export default function ContactPage() {
   return (
@@ -16,7 +16,7 @@ export default function ContactPage() {
 function FirstImage() {
   const { marcosPaulo } = useGraphQL();
   return (
-    <TextWithImage  
+    <TextWithImage
       heading="Marcos Paulo"
       image={marcosPaulo.childImageSharp.fluid}
       reverse
@@ -28,5 +28,5 @@ function FirstImage() {
         in vel doloribus earum!
       </p>
     </TextWithImage>
-  )
+  );
 }

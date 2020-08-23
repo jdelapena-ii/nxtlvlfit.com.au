@@ -1,8 +1,7 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
 
 import { Layout, SEO, TextWithImage } from '../components';
-import { useGraphQL } from '../hooks'
+import { useGraphQL } from '../hooks';
 
 export default function MeetUsPage() {
   return (
@@ -15,11 +14,10 @@ export default function MeetUsPage() {
   );
 }
 
-
 function FirstImage() {
   const { kateBlush } = useGraphQL();
   return (
-    <TextWithImage  
+    <TextWithImage
       heading="Kate Blush"
       image={kateBlush.childImageSharp.fluid}
       reverse
@@ -31,16 +29,13 @@ function FirstImage() {
         in vel doloribus earum!
       </p>
     </TextWithImage>
-  )
+  );
 }
 
 function SecondImage() {
   const { svenMieke } = useGraphQL();
   return (
-    <TextWithImage  
-      heading="Sven Mieke"
-      image={svenMieke.childImageSharp.fluid}
-    >
+    <TextWithImage heading="Sven Mieke" image={svenMieke.childImageSharp.fluid}>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
         architecto modi, ratione blanditiis quis facere nulla repudiandae, quia
@@ -60,17 +55,13 @@ function SecondImage() {
         in vel doloribus earum!
       </p>
     </TextWithImage>
-  )
+  );
 }
-
 
 function ThirdImage() {
   const { hayleyKim } = useGraphQL();
   return (
-    <TextWithImage  
-      heading="Hayley Kim"
-      image={hayleyKim.childImageSharp.fluid}
-    >
+    <TextWithImage heading="Hayley Kim" image={hayleyKim.childImageSharp.fluid}>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
         architecto modi, ratione blanditiis quis facere nulla repudiandae, quia
@@ -90,5 +81,5 @@ function ThirdImage() {
         in vel doloribus earum!
       </p>
     </TextWithImage>
-  )
+  );
 }
