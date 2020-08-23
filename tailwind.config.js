@@ -3,6 +3,9 @@ const tailwindUI = require('@tailwindcss/ui');
 
 module.exports = {
   purge: ['./src/**/*.js'],
+  future: {
+    removeDeprecatedGapUtilities: true,
+  },
   theme: {
     typography: (theme) => ({
       default: {
