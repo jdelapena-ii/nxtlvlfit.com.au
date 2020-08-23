@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 
 export function Footer() {
   return (
-    <footer className="relative">
+    <footer className="relative z-40">
       <nav>
         <ul className="flex items-center justify-center tracking-widest uppercase"> 
           <li className="mt-12 mr-24">Links
