@@ -1,52 +1,67 @@
-import React from 'react'
-import { Link } from 'gatsby'
+import PropTypes from 'prop-types';
+import React from 'react';
+import { Link } from 'gatsby';
+import { Menu, MenuButton, MenuList } from '@reach/menu-button';
 
-import {
-    Menu,
-    MenuButton,
-    MenuLink,
-    MenuList
-  } from '@reach/menu-button';
+import { mainNavigation, socialLinks } from '../data';
 
 export function Header() {
-    return (
-        <header className="relative flex items-center justify-center">
-            <nav> 
-                <ul className="flex content-center tracking-widest uppercase">
-                    <li className="mt-12 mr-24">                                      
-                        <NxtlvlSubMenu />                   
-                    </li>
-                    <li className="mt-12 mr-24">
-                        <Link to="/meet-us">Meet Us</Link>
-                    </li>
-                    <li className="mt-12 mr-24">
-                        <Link to="/membership">Membership</Link>
-                    </li>
-                    <li className="mt-12 mr-24">
-                        <Link to="/timetable">Timetable</Link>
-                    </li>
-                    <li className="mt-12 mr-24">
-                        <Link to="/contact">Contact</Link>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-    )
+  return (
+    <header className="relative z-10 flex">
+      <nav className="flex items-center mx-auto mt-12 space-x-12 whitespace-no-wrap">
+        <ul className="flex w-full space-x-12 leading-none tracking-widest">
+          {mainNavigation.map((navItem) =>
+            navItem.submenu ? (
+              <SubMenu key={navItem.id} navItem={navItem} />
+            ) : (
+              <li key={navItem.id}>
+                <Link to={navItem.slug} className="uppercase">
+                  {navItem.label}
+                </Link>
+              </li>
+            )
+          )}
+        </ul>
+        <ul className="flex w-full space-x-4 text-xl tracking-widest uppercase">
+          {socialLinks.map((link) => (
+            <li key={link.id}>
+              <a href={link.url} className="inline-block rounded-full">
+                <span className="sr-only">{link.label}</span>
+                <link.icon />
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </header>
+  );
 }
 
-function NxtlvlSubMenu() {
-    return (
+function SubMenu({ navItem }) {
+  return (
+    <li>
       <Menu>
-        <MenuButton>
-          NXTLVL <span aria-hidden>▾</span>
+        <MenuButton className="uppercase">
+          {navItem.label} <span aria-hidden>▾</span>
         </MenuButton>
-        <MenuList className="text-white uppercase">
+        <MenuList className="mt-4 text-white uppercase bg-black border-2 border-white outline-none">
+          <nav className="py-1">
             <ul>
-                <li><Link as="a" to="/facility">nXtLvL Facility</Link></li>
-                <li><Link as="a" to="/services">nXtLvL Services</Link></li>
-                <li><Link as="a" to="/classes">nXtLvL Classes</Link></li>
+              {navItem.submenu.map((submenu) => (
+                <li key={submenu.id}>
+                  <Link to={submenu.slug} className="px-3 py-1">
+                    {submenu.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
+          </nav>
         </MenuList>
       </Menu>
-    );
-  }
+    </li>
+  );
+}
+
+SubMenu.propTypes = {
+  navItem: PropTypes.object.isRequired,
+};
