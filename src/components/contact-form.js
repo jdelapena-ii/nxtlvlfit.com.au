@@ -29,7 +29,7 @@ function ContactForm() {
             setMessage={setMessage}
             action="/success/"
             name="contact-form"
-            className="grid grid-cols-1 row-gap-6"
+            className="grid grid-cols-1 gap-y-6"
           >
             <div className="grid gap-6 sm:grid-cols-2">
               <Input
