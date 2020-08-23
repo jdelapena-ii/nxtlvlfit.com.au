@@ -33,6 +33,7 @@
     "react-helmet": "^6.1.0",
     "react-hook-form": "^6.0.8",
     "react-icons": "^3.11.0",
+    "tailwindcss": "^1.7.3",
     "typeface-josefin-sans": "^0.0.75"
   },
   "devDependencies": {
