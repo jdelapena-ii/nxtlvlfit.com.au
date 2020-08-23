@@ -26,6 +26,10 @@ module.exports = {
       state: 'NSW',
       postcode: '2444',
     },
+    phone: {
+      rich: '0422 767 889',
+      kez: '0402 322 131',
+    },
   },
   plugins: [
     'gatsby-plugin-netlify',
