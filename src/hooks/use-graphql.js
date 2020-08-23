@@ -22,6 +22,73 @@ export function useGraphQL() {
               postcode
             }
             email
+            phone {
+              rich
+              kez
+            }
+          }
+        }
+        kateBlush: file(relativePath: { eq: "kate-blush.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        allefVinicius: file(relativePath: { eq: "allef-vinicius-do.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        backgroundImage: file(relativePath: { eq: "background-image.png" }) {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        brigitteTohm: file(relativePath: { eq: "brigitte-tohm.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        hayleyKim: file(relativePath: { eq: "hayley-kim.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        marcosPaulo: file(relativePath: { eq: "marcos-paulo-prado.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        massageImage: file(relativePath: { eq: "massage.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        meghanHolmes: file(relativePath: { eq: "meghan-holmes.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        svenMieke: file(relativePath: { eq: "sven-mieke.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
           }
         }
       }
