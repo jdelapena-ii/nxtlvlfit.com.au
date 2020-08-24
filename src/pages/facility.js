@@ -3,9 +3,9 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 import { Layout, SEO, TextWithImage } from '../components';
 
-export default function FacilityPage() {
+function FacilityPage() {
   return (
-    <Layout isHome>
+    <Layout>
       <SEO title="Services" />
       <FunctionalFitness />
     </Layout>
@@ -37,3 +37,5 @@ function FunctionalFitness() {
     </TextWithImage>
   );
 }
+
+export { FacilityPage };

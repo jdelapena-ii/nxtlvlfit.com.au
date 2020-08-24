@@ -5,7 +5,7 @@ import { Layout, SEO, TextWithImage } from '../components';
 
 export default function ServicesPage() {
   return (
-    <Layout isHome>
+    <Layout>
       <SEO title="Services" />
       <FunctionalFitness />
     </Layout>

@@ -4,7 +4,7 @@ import { Layout, SEO } from '../components';
 
 export default function MembershipPage() {
   return (
-    <Layout isHome>
+    <Layout>
       <SEO title="Coming soon" />
     </Layout>
   );

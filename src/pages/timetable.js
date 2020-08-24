@@ -4,7 +4,7 @@ import { Layout, SEO } from '../components';
 
 export default function TimetablePage() {
   return (
-    <Layout isHome>
+    <Layout>
       <SEO title="Coming soon" />
     </Layout>
   );

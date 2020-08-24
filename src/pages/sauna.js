@@ -5,7 +5,7 @@ import { Layout, SEO, TextWithImage } from '../components';
 
 export default function SaunaPage() {
   return (
-    <Layout isHome>
+    <Layout>
       <SEO title="Sauna" />
       <HowItWorks />
     </Layout>

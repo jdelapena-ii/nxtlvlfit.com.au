@@ -3,9 +3,9 @@ import React from 'react';
 import { Layout, SEO, TextWithImage } from '../components';
 import { useGraphQL } from '../hooks';
 
-export default function MeetUsPage() {
+function MeetUsPage() {
   return (
-    <Layout isHome>
+    <Layout>
       <SEO title="Coming soon" />
       <FirstImage />
       <SecondImage />
@@ -83,3 +83,5 @@ function ThirdImage() {
     </TextWithImage>
   );
 }
+
+export { MeetUsPage };
