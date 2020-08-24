@@ -17,6 +17,7 @@ function Foreground() {
   return (
     <div className="fixed inset-0 pointer-events-none">
       <div className="w-full h-full mx-auto max-w-7xl">
+      <div className="fixed inset-0 z-20 pointer-events-none bg-gradient-to-t via-transparent from-black" />
         <GatsbyImage
           fluid={file.childImageSharp.fluid}
           imgStyle={{ objectPosition: 'top' }}
