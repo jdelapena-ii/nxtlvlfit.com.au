@@ -31,4 +31,4 @@ function FirstImage() {
   );
 }
 
-export { ContactPage };
+export default ContactPage;

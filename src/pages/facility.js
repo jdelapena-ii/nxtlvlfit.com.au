@@ -38,4 +38,4 @@ function FunctionalFitness() {
   );
 }
 
-export { FacilityPage };
+export default FacilityPage;

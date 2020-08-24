@@ -84,4 +84,4 @@ function ThirdImage() {
   );
 }
 
-export { MeetUsPage };
+export default MeetUsPage;

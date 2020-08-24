@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Layout, SEO, ContactForm } from '../components';
 
-export default function PromoPage() {
+function PromoPage() {
   return (
     <Layout isHome>
       <SEO title="Coming soon" />
@@ -10,3 +10,5 @@ export default function PromoPage() {
     </Layout>
   );
 }
+
+export default PromoPage;

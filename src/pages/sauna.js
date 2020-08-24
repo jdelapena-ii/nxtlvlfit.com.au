@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 import { Layout, SEO, TextWithImage } from '../components';
 
-export default function SaunaPage() {
+function SaunaPage() {
   return (
     <Layout>
       <SEO title="Sauna" />
@@ -36,3 +36,5 @@ function HowItWorks() {
     </TextWithImage>
   );
 }
+
+export default SaunaPage;

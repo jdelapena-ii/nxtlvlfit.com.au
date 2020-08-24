@@ -42,4 +42,4 @@ function FunctionalFitness() {
   );
 }
 
-export { ClassesPage };
+export default ClassesPage;

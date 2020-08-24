@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 
 import { Layout, SEO, TextWithImage } from '../components';
 
-export default function ServicesPage() {
+function ServicesPage() {
   return (
     <Layout>
       <SEO title="Services" />
@@ -41,3 +41,5 @@ function FunctionalFitness() {
     </TextWithImage>
   );
 }
+
+export default ServicesPage;
