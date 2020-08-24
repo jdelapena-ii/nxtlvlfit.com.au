@@ -16,7 +16,8 @@ function Form({
     event.preventDefault();
     const form = event.target;
     setIsSubmitting(true);
-    addToMailchimp(data.email_address, {
+
+    const subData = {
       FNAME: data.first_name,
       LNAME: data.last_name,
       PHONE: data.contact_number,
@@ -24,7 +25,14 @@ function Form({
       CROSSFIT: data.have_you_taken_part_in_crossfit_before,
       CALISTHENI: data.have_you_taken_part_in_calisthenics_before,
       SIGN_UP: data.sign_up,
-    })
+    };
+
+    if (data.have_you_taken_part_in_crossfit_before === 'yes')
+      subData['group[10928][1]'] = '1';
+    if (data.have_you_taken_part_in_calisthenics_before === 'yes')
+      subData['group[10928][2]'] = '2';
+
+    addToMailchimp(data.email_address, subData)
       .then(({ msg, result }) => {
         if (result !== 'success') {
           throw msg;
