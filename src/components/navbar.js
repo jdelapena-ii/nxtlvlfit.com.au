@@ -4,11 +4,15 @@ import { Link } from 'gatsby';
 import { Menu, MenuButton, MenuList } from '@reach/menu-button';
 
 import { mainNavigation, socialLinks } from '../data';
+import { LogoWithText } from './vectors';
 
-export function Header() {
+function NavBar() {
   return (
-    <header className="relative z-10 flex">
-      <nav className="flex items-center mx-auto mt-12 space-x-12 whitespace-no-wrap">
+    <header className="sticky inset-x-0 top-0 z-10 flex items-center w-full px-4 overflow-hidden bg-black bg-opacity-75 sm:px-6 lg:px-8">
+      <nav className="flex items-center h-20 mx-auto space-x-12 whitespace-no-wrap">
+        <Link to="/">
+          <LogoWithText className="h-12" />
+        </Link>
         <ul className="flex w-full space-x-12 leading-none tracking-widest">
           {mainNavigation.map((navItem) =>
             navItem.submenu ? (
@@ -44,7 +48,7 @@ function SubMenu({ navItem }) {
         <MenuButton className="uppercase">
           {navItem.label} <span aria-hidden>▾</span>
         </MenuButton>
-        <MenuList className="mt-4 text-white uppercase bg-black border-2 border-white outline-none">
+        <MenuList className="relative z-10 mt-4 text-white uppercase bg-black border-2 border-white outline-none">
           <nav className="py-1">
             <ul>
               {navItem.submenu.map((submenu) => (
@@ -65,3 +69,5 @@ function SubMenu({ navItem }) {
 SubMenu.propTypes = {
   navItem: PropTypes.object.isRequired,
 };
+
+export { NavBar };

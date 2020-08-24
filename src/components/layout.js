@@ -10,7 +10,7 @@ import PropTypes from 'prop-types';
 
 import { Background } from './background';
 import { Hero } from './hero';
-import { Header } from './header';
+import { HeroNav } from './hero-nav';
 import { Footer } from './footer';
 
 export function Layout({ children, isHome }) {
@@ -23,7 +23,7 @@ export function Layout({ children, isHome }) {
             aria-hidden
             className="absolute inset-0 pointer-events-none bg-gradient-to-t via-transparent from-black to-black"
           />
-          <Header />
+          <HeroNav />
           <Hero isHome={isHome} />
           <main className="flex flex-col flex-1">{children}</main>
         </div>

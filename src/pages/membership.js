@@ -2,10 +2,12 @@ import React from 'react';
 
 import { Layout, SEO } from '../components';
 
-export default function MembershipPage() {
+function MembershipPage() {
   return (
-    <Layout isHome>
+    <Layout>
       <SEO title="Coming soon" />
     </Layout>
   );
 }
+
+export default MembershipPage;

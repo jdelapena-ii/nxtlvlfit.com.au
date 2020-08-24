@@ -34,6 +34,7 @@
     "react-hook-form": "^6.0.8",
     "react-icons": "^3.11.0",
     "tailwindcss": "^1.7.3",
+    "tailwindcss-aspect-ratio": "^3.0.0",
     "typeface-josefin-sans": "^0.0.75"
   },
   "devDependencies": {

@@ -9,7 +9,7 @@ export function Footer() {
     site: { siteMetadata },
   } = useGraphQL();
   return (
-    <footer className="relative px-4 py-12 bg-black sm:px-6 lg:px-8">
+    <footer className="relative px-4 py-12 bg-black bg-opacity-50 sm:px-6 lg:px-8">
       <div className="grid w-full max-w-3xl grid-cols-3 gap-4 mx-auto uppercase">
         <nav className="space-y-2">
           <h2 className="text-xl font-bold tracking-widest uppercase">Links</h2>

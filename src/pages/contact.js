@@ -3,9 +3,9 @@ import React from 'react';
 import { Layout, SEO, ContactForm, TextWithImage } from '../components';
 import { useGraphQL } from '../hooks';
 
-export default function ContactPage() {
+function ContactPage() {
   return (
-    <Layout isHome>
+    <Layout>
       <SEO title="Coming soon" />
       <FirstImage />
       <ContactForm />
@@ -30,3 +30,5 @@ function FirstImage() {
     </TextWithImage>
   );
 }
+
+export default ContactPage;
