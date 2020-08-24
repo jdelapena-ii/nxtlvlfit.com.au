@@ -12,9 +12,12 @@ function NotFoundPage() {
           <h2 className="relative text-2xl font-bold leading-none tracking-widest text-center uppercase sm:text-4xl">
             404: Page Not Found
           </h2>
+          <p className="text-gray-200">Sorry, the page you were looking for
+           <br />
+           could not be found</p>
           <p>
             <Link to="/" className="hover:underline">
-              &larr; home
+              &larr; Return Home
             </Link>
           </p>
         </div>
