@@ -17,12 +17,16 @@ export function Layout({ children, isHome }) {
   return (
     <div className="font-sans antialiased text-white bg-black">
       <div className="flex flex-col w-full min-h-screen mx-auto max-w-7xl">
-        <Background isHome={isHome} />
-        <HeroNav />
-        {isHome && <Hero />}
-        <main className="relative flex flex-col justify-end flex-1">
-          {children}
-        </main>
+        <div className="relative flex flex-col flex-1">
+          <Background isHome={isHome} />
+          <div
+            aria-hidden
+            className="absolute inset-0 pointer-events-none bg-gradient-to-t via-transparent from-black to-black"
+          />
+          <HeroNav />
+          <Hero isHome={isHome} />
+          <main className="flex flex-col flex-1">{children}</main>
+        </div>
         <Footer />
       </div>
     </div>
