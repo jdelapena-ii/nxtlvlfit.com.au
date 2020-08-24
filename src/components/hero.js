@@ -14,7 +14,7 @@ function Hero({ isHome }) {
   } = useGraphQL();
 
   return (
-    <header className="px-4 mt-12">
+    <div className="px-4 mt-12">
       <div className="relative w-full max-w-3xl mx-auto">
         <Link to="/">
           <Heading>
@@ -31,7 +31,7 @@ function Hero({ isHome }) {
           Functional movement centre
         </p>
       </div>
-    </header>
+    </div>
   );
 }
 
