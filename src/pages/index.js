@@ -7,6 +7,7 @@ import {
   MeetTheTeam,
   BlogPosts,
   TrueProtein,
+  Instagram,
 } from '../components/home';
 
 function IndexPage() {
@@ -22,6 +23,7 @@ function IndexPage() {
           <MeetTheTeam />
           <BlogPosts />
           <TrueProtein />
+          <Instagram />
         </div>
       </div>
     </Layout>

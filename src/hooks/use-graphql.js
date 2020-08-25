@@ -26,6 +26,12 @@ export function useGraphQL() {
               rich
               kez
             }
+            social {
+              instagram {
+                handle
+                url
+              }
+            }
           }
         }
         kateBlush: file(relativePath: { eq: "kate-blush.jpg" }) {
