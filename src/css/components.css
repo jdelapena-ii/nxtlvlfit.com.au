@@ -3,6 +3,13 @@
  * with utility classes
  */
 
+ html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper {
+  height: -webkit-fill-available;
+}
+
 body {
   @apply bg-black;
 }
