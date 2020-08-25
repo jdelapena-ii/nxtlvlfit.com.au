@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Layout, SEO, ContactForm, TextWithImage } from '../components';
+import { Layout, SEO, ContactForm, TextWithImage, Map } from '../components';
 import { useGraphQL } from '../hooks';
 
 function ContactPage() {
@@ -9,6 +9,7 @@ function ContactPage() {
       <SEO title="Coming soon" />
       <FirstImage />
       <ContactForm />
+      <Map />
     </Layout>
   );
 }
