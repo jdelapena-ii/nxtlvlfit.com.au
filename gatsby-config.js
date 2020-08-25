@@ -32,6 +32,16 @@ module.exports = {
       rich: '0422 767 889',
       kez: '0402 322 131',
     },
+    social: {
+      instagram: {
+        handle: '@nxtlvl_pmq',
+        url: 'https://www.instagram.com/nxtlvl_pmq/',
+      },
+      facebook: {
+        handle: '@nxtlvlpmq',
+        url: 'https://www.facebook.com/nxtlvlpmq/',
+      },
+    },
   },
   plugins: [
     'gatsby-plugin-netlify',
