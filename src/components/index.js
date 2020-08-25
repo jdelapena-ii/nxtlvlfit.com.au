@@ -7,3 +7,4 @@ export * from './navbar';
 export * from './privacy-policy';
 export * from './seo';
 export * from './text-with-image';
+export * from './blog-post';
