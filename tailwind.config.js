@@ -1,5 +1,6 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 const tailwindcssAspectRatio = require('tailwindcss-aspect-ratio');
+const tailwindcssLineClamp = require('tailwindcss-line-clamp');
 const tailwindUI = require('@tailwindcss/ui');
 
 module.exports = {
@@ -14,6 +15,11 @@ module.exports = {
       '16/9': [16, 9], // or 16 / 9
       '4/3': [4, 3], // or 4 / 3
       '21/9': [21, 9], // or 21 / 9
+    },
+    lineClamp: {
+      1: 1,
+      2: 2,
+      3: 3,
     },
     typography: (theme) => ({
       default: {
@@ -55,5 +61,5 @@ module.exports = {
     boxShadow: ['responsive', 'hover', 'focus', 'focus-within'],
     opacity: ['responsive', 'hover', 'focus', 'focus-within'],
   },
-  plugins: [tailwindcssAspectRatio, tailwindUI],
+  plugins: [tailwindcssAspectRatio, tailwindcssLineClamp, tailwindUI],
 };
