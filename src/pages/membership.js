@@ -1,7 +1,6 @@
 import React from 'react';
 
-import { Layout, SEO } from '../components';
-import Map from '../components/map';
+import { Layout, SEO, Map } from '../components';
 
 function MembershipPage() {
   return (
