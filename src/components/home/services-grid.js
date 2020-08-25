@@ -123,7 +123,7 @@ function Service({ children, image, label, slug }) {
           </div>
         </div>
       </div>
-      <div className="absolute inset-0 flex p-2 transition duration-300 ease-in-out bg-black opacity-0 hover:opacity-100">
+      <div className="absolute inset-0 flex p-2 transition duration-300 ease-in-out bg-black opacity-0 hover:opacity-100 focus-within:opacity-100">
         <div className="flex flex-col justify-between flex-1 px-4 py-12 overflow-hidden text-center border-2 border-white">
           <div className="overflow-auto overscroll-contain">
             <h3 className="font-bold tracking-widest uppercase">{label}</h3>
