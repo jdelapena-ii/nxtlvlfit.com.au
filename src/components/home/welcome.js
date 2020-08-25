@@ -17,7 +17,7 @@ function Welcome() {
           <br />
           <span className="mt-1 text-6xl">NXTLVL</span>
         </h2>
-        <div className="mx-auto mt-12 prose">
+        <div className="mx-auto mt-12 prose text-white text-shadow">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam qui
             veniam aliquid. Doloremque culpa assumenda voluptatem tempore optio!
@@ -33,7 +33,7 @@ function Welcome() {
         </div>
         <button
           type="button"
-          className="block w-full max-w-xs px-4 py-4 mx-auto my-24 text-2xl font-bold leading-none tracking-widest text-center uppercase border-2"
+          className="block w-full max-w-xs px-4 py-4 mx-auto my-24 text-2xl font-bold leading-none tracking-widest text-center uppercase border-2 border-white"
         >
           Sign up
         </button>
