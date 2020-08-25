@@ -8,7 +8,7 @@ import { LogoWithText } from './vectors';
 
 function NavBar() {
   return (
-    <header className="sticky inset-x-0 top-0 z-10 flex items-center w-full px-4 overflow-hidden bg-black bg-opacity-75 sm:px-6 lg:px-8">
+    <header className="sticky inset-x-0 top-0 z-10 flex items-center w-full px-4 overflow-hidden bg-black shadow-2xl sm:px-6 lg:px-8">
       <nav className="flex items-center h-20 mx-auto space-x-12 whitespace-no-wrap">
         <Link to="/">
           <LogoWithText className="h-12" />
