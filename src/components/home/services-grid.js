@@ -27,6 +27,24 @@ function ServicesGrid() {
           molestias, laudantium, ad non aliquid sed? Doloribus reiciendis vel
           odio.
         </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis,
+          rerum sapiente autem ducimus temporibus dolorem magni aperiam
+          accusantium distinctio eos iusto blanditiis facere magnam aspernatur.
+          Fugit odit error distinctio culpa.
+        </p>
+        <p>
+          Dolorum sapiente eos repellendus assumenda doloremque esse mollitia
+          necessitatibus molestias dicta quos! Porro soluta nihil libero fuga
+          velit eligendi ab, tenetur architecto dicta eos at, nesciunt repellat,
+          odit quidem atque!
+        </p>
+        <p>
+          Repudiandae quibusdam doloribus dolores praesentium error, quidem
+          labore. Sed, voluptate. Rem iure eius provident soluta inventore quis
+          reprehenderit recusandae quo, incidunt nesciunt! Dicta quisquam et
+          debitis nam doloremque recusandae accusamus.
+        </p>
       </Service>
       <Service
         label="Calisthenics"
@@ -106,15 +124,15 @@ function Service({ children, image, label, slug }) {
         </div>
       </div>
       <div className="absolute inset-0 flex p-2 transition duration-300 ease-in-out bg-black opacity-0 hover:opacity-100">
-        <div className="flex flex-col justify-between flex-1 px-4 py-12 text-center border-2 border-white">
-          <div>
+        <div className="flex flex-col justify-between flex-1 px-4 py-12 overflow-hidden text-center border-2 border-white">
+          <div className="overflow-auto overscroll-contain">
             <h3 className="font-bold tracking-widest uppercase">{label}</h3>
-            <div className="mt-4 prose text-white">{children}</div>
+            <div className="my-4 prose text-white">{children}</div>
           </div>
           <span>
             <Link
               to={slug}
-              className="inline-block px-8 py-2 text-sm tracking-widest uppercase border-2 border-white"
+              className="inline-block px-8 py-2 mt-4 text-sm tracking-widest uppercase border-2 border-white"
             >
               Learn more
             </Link>
