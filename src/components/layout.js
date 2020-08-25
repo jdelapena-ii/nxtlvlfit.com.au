@@ -19,7 +19,6 @@ function Layout({ children, isHome }) {
       <div className="flex flex-col w-full min-h-screen mx-auto max-w-7xl">
         <div className="relative flex flex-col flex-1">
           <Background isHome={isHome} />
-          <Gradient />
           {isHome ? <Hero /> : <NavBar />}
           <main className="relative flex flex-col justify-end flex-1">
             {children}
@@ -35,14 +34,5 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
   isHome: PropTypes.bool,
 };
-
-function Gradient() {
-  return (
-    <div
-      aria-hidden
-      className="absolute inset-0 pointer-events-none bg-gradient-to-t via-transparent from-black to-black"
-    />
-  );
-}
 
 export { Layout };

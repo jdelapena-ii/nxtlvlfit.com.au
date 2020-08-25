@@ -11,7 +11,8 @@ function Hero() {
   } = useGraphQL();
 
   return (
-    <div className="px-4 pt-12">
+    <div className="relative px-4 pt-12">
+      <Gradient />
       <div className="relative w-full max-w-3xl mx-auto">
         <Link to="/">
           <h1>
@@ -29,6 +30,15 @@ function Hero() {
         </p>
       </div>
     </div>
+  );
+}
+
+function Gradient() {
+  return (
+    <div
+      aria-hidden
+      className="absolute inset-0 pointer-events-none bg-gradient-to-b via-transparent from-black"
+    />
   );
 }
 
