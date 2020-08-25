@@ -13,6 +13,8 @@ dotenv.config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
+const isProd = process.env.NODE_ENV === 'production';
+
 module.exports = {
   siteMetadata: {
     title: 'nXtLvL Functional Movement Centre',
@@ -96,6 +98,27 @@ module.exports = {
       options: {
         name: 'images',
         path: 'src/images',
+      },
+    },
+    {
+      resolve: 'gatsby-source-sanity',
+      options: {
+        projectId: process.env.GATSBY_SANITY_PROJECT_ID,
+        dataset: process.env.GATSBY_SANITY_DATASET,
+        // a token with read permissions is required
+        // if you have a private dataset
+        // Set to `true` in order for drafts to replace their published version. By default, drafts will be skipped.
+        // overlayDrafts: !isProd,
+
+        // Set to `true` to keep a listener open and update with the latest changes in realtime. If you add a `token` you will get all content updates down to each keypress.
+        watchMode: !isProd,
+
+        // If the Sanity GraphQL API was deployed using '--tag <name>',
+        // use 'graphqlTag' to specify the tag name. Defaults to 'default'.
+        graphqlTag: 'default',
+
+        // Authentication token for fetching data from private datasets, or when using overlayDrafts
+        // token: process.env.SANITY_TOKEN,
       },
     },
   ],
