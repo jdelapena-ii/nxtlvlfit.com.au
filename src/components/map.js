@@ -27,8 +27,7 @@ function Map() {
       <div className="absolute inset-0">
         <GoogleMap
           mapContainerStyle={mapContainerStyle}
-              zoom={8}
-              center={center}
+          zoom={16}
           center={center}
         />
       </div>
