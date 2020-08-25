@@ -64,7 +64,7 @@ function BlogPage({
       <SEO title="Blog" />
       <article className="mt-12 px-4 space-y-12 sm:px-6 lg:px-8">
         <div className="mx-auto text-center">
-          <h1 className="heading-1">Welcome to our blog.</h1>
+          <h1 className="heading-1 text-5xl">Welcome to our blog.</h1>
           <div className="grid max-w-2xl gap-x-6 gap-y-10 mx-auto mt-4 sm:grid-cols-2">
             <div className="relative">
               <label htmlFor="search-input">
