@@ -6,6 +6,7 @@
   "author": "Luke Bennett <l.bennett@phirannodesigns.com.au>",
   "dependencies": {
     "@reach/menu-button": "^0.10.5",
+    "@sanity/block-content-to-react": "^2.0.7",
     "@tailwindcss/ui": "^0.4.0",
     "autoprefixer": "^9.8.5",
     "cssnano": "^4.1.10",
@@ -24,6 +25,7 @@
     "gatsby-plugin-sharp": "^2.6.21",
     "gatsby-plugin-sitemap": "^2.4.11",
     "gatsby-source-filesystem": "^2.3.22",
+    "gatsby-source-sanity": "^6.0.4",
     "gatsby-transformer-sharp": "^2.5.11",
     "nanoid": "^3.1.12",
     "postcss-import": "^12.0.1",
@@ -35,6 +37,7 @@
     "react-icons": "^3.11.0",
     "tailwindcss": "^1.7.3",
     "tailwindcss-aspect-ratio": "^3.0.0",
+    "tailwindcss-line-clamp": "^1.0.5",
     "typeface-josefin-sans": "^0.0.75"
   },
   "devDependencies": {
