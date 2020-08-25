@@ -39,7 +39,10 @@ function Map() {
           center={center}
           options={options}
         >
-          <Marker position={center} />
+          <Marker 
+            position={center}
+            label={"31 Jindalee Road, Port Macquarie"} 
+          />
         </GoogleMap>  
       </div>
     </div>
