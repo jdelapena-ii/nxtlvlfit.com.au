@@ -30,63 +30,72 @@ export function useGraphQL() {
         }
         kateBlush: file(relativePath: { eq: "kate-blush.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         allefVinicius: file(relativePath: { eq: "allef-vinicius-do.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         backgroundImage: file(relativePath: { eq: "background-image.png" }) {
           childImageSharp {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         brigitteTohm: file(relativePath: { eq: "brigitte-tohm.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         hayleyKim: file(relativePath: { eq: "hayley-kim.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         marcosPaulo: file(relativePath: { eq: "marcos-paulo-prado.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         massageImage: file(relativePath: { eq: "massage.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         meghanHolmes: file(relativePath: { eq: "meghan-holmes.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid
             }
           }
         }
         svenMieke: file(relativePath: { eq: "sven-mieke.jpg" }) {
           childImageSharp {
-            fluid(maxWidth: 800) {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        trueProtein: file(
+          relativePath: { eq: "true-protein-logo-with-text.png" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid
             }
           }

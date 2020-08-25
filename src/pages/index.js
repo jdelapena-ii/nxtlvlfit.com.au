@@ -6,29 +6,25 @@ import {
   ServicesGrid,
   MeetTheTeam,
   BlogPosts,
+  TrueProtein,
 } from '../components/home';
 
 function IndexPage() {
   return (
     <Layout isHome>
       <SEO title="Home" />
-      <MainSection />
-    </Layout>
-  );
-}
-
-function MainSection() {
-  return (
-    <div className="relative pointer-events-none">
-      <Spacer />
-      <div className="pointer-events-auto">
-        <NavBar />
-        <Welcome />
-        <ServicesGrid />
-        <MeetTheTeam />
-        <BlogPosts />
+      <div className="relative pointer-events-none">
+        <Spacer />
+        <div className="pointer-events-auto">
+          <NavBar />
+          <Welcome />
+          <ServicesGrid />
+          <MeetTheTeam />
+          <BlogPosts />
+          <TrueProtein />
+        </div>
       </div>
-    </div>
+    </Layout>
   );
 }
 
