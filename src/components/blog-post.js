@@ -7,7 +7,7 @@ function BlogPost({ post, setFilter }) {
   return (
     <article
       key={post.id}
-      className="flex duration-300 ease-in-out transform bg-white rounded-lg shadow hover:shadow-xl hover:scale-105"
+      className="z-20 flex duration-300 ease-in-out transform bg-white rounded-lg shadow hover:shadow-xl hover:scale-105"
     >
       <div className="flex flex-col flex-1 overflow-hidden rounded-lg shadow-sm">
         <div className="relative">
