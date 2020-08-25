@@ -24,7 +24,7 @@ function HeroSection() {
 
 function MainSection() {
   return (
-    <div className="relative mt-12 pointer-events-none">
+    <div className="relative pointer-events-none">
       <Spacer />
       <div className="pointer-events-auto">
         <NavBar />
@@ -39,7 +39,7 @@ function Spacer() {
   return (
     <div
       aria-hidden
-      className="relative h-0 pointer-events-none aspect-ratio-16/9"
+      className="relative h-0 pt-12 pointer-events-none aspect-ratio-16/9"
     >
       <div aria-hidden className="absolute inset-0" />
     </div>

@@ -11,7 +11,7 @@ function Hero() {
   } = useGraphQL();
 
   return (
-    <div className="px-4 mt-12">
+    <div className="px-4 pt-12">
       <div className="relative w-full max-w-3xl mx-auto">
         <Link to="/">
           <h1>
