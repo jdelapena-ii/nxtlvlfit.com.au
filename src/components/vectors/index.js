@@ -10,3 +10,4 @@ export * from './logo';
 export * from './no-icon';
 export * from './twitter-icon';
 export * from './yes-icon';
+export * from './search-icon';
