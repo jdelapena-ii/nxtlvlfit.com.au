@@ -15,7 +15,7 @@ function ContactPageForm() {
   } = useGraphQL();
 
   return (
-    <article className="relative px-4 mx-4 mt-24 md:mx-auto sm:mt-40">
+    <article className="mb-12 relative px-4 mx-4 mt-24 md:mx-auto sm:mt-40">
       <div className="relative w-full px-4 py-12 mx-auto bg-black bg-opacity-50 border-4 border-white max-w-7xl lg:my-12 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2
