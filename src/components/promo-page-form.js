@@ -2,9 +2,9 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 import { Link } from 'gatsby';
-import { Form, Input, Radio, Checkbox } from './form-elements';
+import { MailchimpForm, Input, Radio, Checkbox } from './form-elements';
 
-function ContactForm() {
+function PromoPageForm() {
   const { register, handleSubmit, errors } = useForm({ mode: 'onBlur' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState(null);
@@ -22,13 +22,13 @@ function ContactForm() {
           </p>
         </div>
         <div className="mt-12">
-          <Form
+          <MailchimpForm
             handleSubmit={handleSubmit}
             register={register}
             setIsSubmitting={setIsSubmitting}
             setMessage={setMessage}
             action="/success/"
-            name="contact-form"
+            name="mailchimp_form"
             className="grid grid-cols-1 gap-y-6"
           >
             <div className="grid gap-6 sm:grid-cols-2">
@@ -116,11 +116,11 @@ function ContactForm() {
                 className="mt-6 prose text-center"
               />
             )}
-          </Form>
+          </MailchimpForm>
         </div>
       </div>
     </article>
   );
 }
 
-export { ContactForm };
+export { PromoPageForm };

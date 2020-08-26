@@ -12,7 +12,6 @@ function ContactPage() {
       <SEO title="Coming soon" />
       <div className="relative">
         <GatsbyImage
-          className=""
           style={{ maxHeight: '40rem' }}
           fluid={kateBlush.childImageSharp.fluid}
         />

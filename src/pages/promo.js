@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Layout, SEO, ContactForm } from '../components';
+import { Layout, SEO, PromoPageForm } from '../components';
 
 function PromoPage() {
   return (
     <Layout isHome>
       <SEO title="Coming soon" />
-      <ContactForm />
+      <PromoPageForm />
     </Layout>
   );
 }
