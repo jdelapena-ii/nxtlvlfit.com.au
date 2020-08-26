@@ -1,57 +1,129 @@
-import PropTypes from 'prop-types';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'gatsby';
 import { Menu, MenuButton, MenuList } from '@reach/menu-button';
 import { AnimatePresence, motion } from 'framer-motion';
+import PropTypes from 'prop-types';
 
-import { mainNavigation, socialLinks } from '../data';
 import { LogoWithText } from './vectors';
+import { mainNavigation, socialLinks } from '../data';
+import { MobileMenu } from './mobile-menu';
 
 function NavBar() {
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState();
   return (
-    <header className="sticky inset-x-0 top-0 z-10 flex items-center w-full px-4 overflow-hidden bg-black shadow-2xl sm:px-6 lg:px-8">
-      <nav className="flex items-center h-20 mx-auto space-x-12 whitespace-no-wrap">
-        <Link to="/">
-          <LogoWithText className="h-12" />
-        </Link>
-        <ul className="flex w-full space-x-12 leading-none tracking-widest">
-          {mainNavigation.map((navItem) =>
-            navItem.submenu ? (
-              <li key={navItem.id}>
-                <Menu>
-                  {({ isExpanded }) => (
-                    <SubMenu navItem={navItem} isExpanded={isExpanded} />
-                  )}
-                </Menu>
-              </li>
-            ) : (
-              <li key={navItem.id}>
-                <Link to={navItem.slug} className="uppercase">
-                  {navItem.label}
-                </Link>
-              </li>
-            )
-          )}
-        </ul>
-        <ul className="flex w-full space-x-4 text-xl tracking-widest uppercase">
-          {socialLinks.map((link) => (
-            <li key={link.id}>
-              <a href={link.url} className="inline-block rounded-full">
-                <span className="sr-only">{link.label}</span>
-                <link.icon />
-              </a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </header>
+    <nav className="sticky top-0 z-10 bg-black shadow-2xl">
+      <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between flex-1">
+            <div className="flex-shrink-0">
+              <Link to="/">
+                <LogoWithText className="block w-auto h-12" />
+              </Link>
+            </div>
+            <div className="hidden lg:block lg:ml-6">
+              <ul className="flex space-x-4">
+                {mainNavigation.map((navItem) =>
+                  navItem.submenu ? (
+                    <li key={navItem.id} className="flex">
+                      <Menu>
+                        {({ isExpanded }) => (
+                          <SubMenu navItem={navItem} isExpanded={isExpanded} />
+                        )}
+                      </Menu>
+                    </li>
+                  ) : (
+                    <li key={navItem.id} className="flex">
+                      <Link
+                        to={navItem.slug}
+                        className="px-3 py-2 text-sm font-medium tracking-widest text-white uppercase hover:underline focus:underline"
+                      >
+                        {navItem.label}
+                      </Link>
+                    </li>
+                  )
+                )}
+              </ul>
+            </div>
+          </div>
+          <div className="flex items-center space-x-6">
+            <div className="hidden sm:ml-6 sm:block">
+              <ul className="flex items-center space-x-4">
+                {socialLinks.map((link) => (
+                  <li key={link.id} className="flex">
+                    <a
+                      href={link.url}
+                      className="inline-block p-2 rounded-full"
+                    >
+                      <span className="sr-only">{link.label}</span>
+                      <link.icon className="w-5 h-5" />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="flex -mr-2 lg:hidden">
+              {/* Mobile menu button */}
+              <button
+                type="button"
+                onClick={() => setMobileMenuOpen(true)}
+                aria-label="Main menu"
+                aria-expanded="false"
+                className="inline-flex items-center justify-center p-2 text-white hover:bg-gray-900 focus:bg-gray-900"
+              >
+                {/* Icon when menu is closed. */}
+                {/* Menu open: "hidden", Menu closed: "block" */}
+                <svg
+                  className="block w-6 h-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M4 6h16M4 12h16M4 18h16"
+                  />
+                </svg>
+                {/* Icon when menu is open. */}
+                {/* Menu open: "block", Menu closed: "hidden" */}
+                <svg
+                  className="hidden w-6 h-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      {/*
+    Mobile menu, toggle classes based on menu state.
+
+    Menu open: "block", Menu closed: "hidden"
+  */}
+      {isMobileMenuOpen && (
+        <MobileMenu
+          isMobileMenuOpen={isMobileMenuOpen}
+          setMobileMenuOpen={setMobileMenuOpen}
+        />
+      )}
+    </nav>
   );
 }
 
 function SubMenu({ navItem, isExpanded = false }) {
   return (
     <>
-      <MenuButton className="flex items-center space-x-2 uppercase">
+      <MenuButton className="flex items-center px-3 py-2 space-x-2 text-sm font-medium tracking-widest text-white uppercase hover:underline focus:underline">
         {navItem.label}{' '}
         <motion.span
           aria-hidden
@@ -76,7 +148,7 @@ function SubMenu({ navItem, isExpanded = false }) {
           </svg>
         </motion.span>
       </MenuButton>
-      <MenuList className="relative z-10 mt-4 transform outline-none -translate-x-1/3">
+      <MenuList className="relative z-10 mt-4 transform outline-none -translate-x-1/4">
         <AnimatePresence>
           {isExpanded && (
             <motion.div
@@ -92,10 +164,10 @@ function SubMenu({ navItem, isExpanded = false }) {
               <nav className="py-3">
                 <ul>
                   {navItem.submenu.map((submenu) => (
-                    <li key={submenu.id}>
+                    <li key={submenu.id} className="flex w-full">
                       <Link
                         to={submenu.slug}
-                        className="inline-block w-full px-6 py-2"
+                        className="block px-6 py-2 text-sm font-medium tracking-widest text-white uppercase hover:underline focus:underline"
                       >
                         {submenu.label}
                       </Link>
