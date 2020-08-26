@@ -3,7 +3,7 @@
  * with utility classes
  */
 
- html,
+html,
 body,
 #___gatsby,
 #gatsby-focus-wrapper {
@@ -20,7 +20,10 @@ button:focus {
   @apply shadow-outline outline-none;
 }
 
-
 .text-shadow {
   text-shadow: 0px 0px 2px hsla(0, 0%, 0%, 0.5);
+}
+
+:root {
+  --reach-menu-button: 1;
 }

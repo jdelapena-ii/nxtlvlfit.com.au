@@ -3,7 +3,7 @@ import { navigate } from 'gatsby';
 import addToMailchimp from 'gatsby-plugin-mailchimp';
 import PropTypes from 'prop-types';
 
-function Form({
+function MailchimpForm({
   action = '/success/',
   children,
   className,
@@ -59,7 +59,7 @@ function Form({
   );
 }
 
-Form.propTypes = {
+MailchimpForm.propTypes = {
   action: PropTypes.string,
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
@@ -69,4 +69,4 @@ Form.propTypes = {
   setMessage: PropTypes.func.isRequired,
 };
 
-export { Form };
+export { MailchimpForm };

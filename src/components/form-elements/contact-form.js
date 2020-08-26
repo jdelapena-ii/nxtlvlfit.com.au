@@ -1,6 +1,5 @@
 import React from 'react';
 import { navigate } from 'gatsby';
-import addToMailchimp from 'gatsby-plugin-mailchimp';
 import PropTypes from 'prop-types';
 
 function ContactForm({
@@ -9,8 +8,6 @@ function ContactForm({
   className,
   handleSubmit,
   name = 'contact_form',
-  setIsSubmitting,
-  setMessage,
 }) {
   function encode(data) {
     return Object.keys(data)
@@ -37,12 +34,12 @@ function ContactForm({
 
   return (
     <form
-      onSubmit={handleSubmit(onSubmit)}
-      action={action}
-      data-netlify
-      className={className}
-      method="POST"
       name={name}
+      action={action}
+      method="POST"
+      data-netlify
+      onSubmit={handleSubmit(onSubmit)}
+      className={className}
     >
       {children}
     </form>
@@ -55,8 +52,6 @@ ContactForm.propTypes = {
   className: PropTypes.string,
   handleSubmit: PropTypes.func.isRequired,
   name: PropTypes.string,
-  setIsSubmitting: PropTypes.func.isRequired,
-  setMessage: PropTypes.func.isRequired,
 };
 
 export { ContactForm };
