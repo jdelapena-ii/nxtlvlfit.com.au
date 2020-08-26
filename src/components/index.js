@@ -10,3 +10,4 @@ export * from './privacy-policy';
 export * from './promo-page-form';
 export * from './seo';
 export * from './text-with-image';
+export * from './team-member';
