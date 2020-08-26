@@ -39,6 +39,7 @@ function ContactForm({
     <form
       onSubmit={handleSubmit(onSubmit)}
       action={action}
+      data-netlify
       className={className}
       method="POST"
       name={name}
