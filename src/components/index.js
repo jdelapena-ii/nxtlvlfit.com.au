@@ -5,6 +5,7 @@ export * from './hero';
 export * from './layout';
 export * from './map';
 export * from './navbar';
+export * from './page-hero';
 export * from './privacy-policy';
 export * from './promo-page-form';
 export * from './seo';
