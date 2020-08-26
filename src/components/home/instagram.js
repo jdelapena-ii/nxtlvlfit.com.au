@@ -12,10 +12,10 @@ function Instagram() {
   return (
     <article className="px-4 py-12 space-y-12 bg-black bg-opacity-75 sm:px-6 lg:px-8">
       <div className="text-center">
-        <h2 className="text-2xl font-bold leading-none tracking-widest uppercase">
-          <span>Follow us on </span>
+        <h2 className="font-bold leading-none tracking-widest uppercase sm:text-2xl">
+          <span>What we're up to on </span>
           <br />
-          <span className="mt-1 text-6xl">Instagram</span>
+          <span className="mt-1 text-4xl sm:text-6xl">Instagram</span>
         </h2>
         <a
           href={siteMetadata.social.instagram.url}
