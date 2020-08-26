@@ -17,7 +17,7 @@ function ContactPage() {
           fluid={kateBlush.childImageSharp.fluid}
         />
         <div className="absolute inset-0 flex items-center justify-center">
-          <h2 className="text-4xl md:text-6xl font-bold leading-none tracking-widest text-center uppercase">
+          <h2 className="text-4xl font-bold leading-none tracking-widest text-center uppercase text-shadow md:text-6xl">
             Contact Us
           </h2>
         </div>

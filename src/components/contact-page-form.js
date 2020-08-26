@@ -1,17 +1,22 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-import { Link } from 'gatsby';
-import { ContactForm, Input, TextArea, Radio, Checkbox } from './form-elements';
+import { ContactForm, Input, TextArea } from './form-elements';
 import { socialLinks } from '../data';
+import { useGraphQL } from '../hooks';
 
 function ContactPageForm() {
   const { register, handleSubmit, errors } = useForm({ mode: 'onBlur' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState(null);
+
+  const {
+    site: { siteMetadata },
+  } = useGraphQL();
+
   return (
-    <article className="relative px-4 mx-4 md:mx-auto mt-24 sm:mt-40">
-      <div className="relative w-full max-w-7xl px-4 py-12 mx-auto bg-black bg-opacity-50 border-4 border-white lg:my-12 sm:px-6 lg:px-8">
+    <article className="relative px-4 mx-4 mt-24 md:mx-auto sm:mt-40">
+      <div className="relative w-full px-4 py-12 mx-auto bg-black bg-opacity-50 border-4 border-white max-w-7xl lg:my-12 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2
             style={{ letterSpacing: '0.7rem' }}
@@ -28,30 +33,50 @@ function ContactPageForm() {
             setMessage={setMessage}
             action="/success/"
             name="contact-page-form"
-            className="grid grid-cols-1 md:grid-cols-7 gap-24"
+            className="grid grid-cols-1 gap-24 md:grid-cols-7"
           >
-            <div className="mt-4 hidden md:block md:col-span-3">
-              <p className="tracking-widest">
-                Rich <strong>0422 767 889</strong>
-              </p>
-              <p className="tracking-widest">
-                Kez <strong>0402 322 131</strong>
-              </p>
-              <p className="mt-4 tracking-widest">
-                Address: <strong>31 Jindalee Road</strong>
-              </p>
-              <p className="tracking-widest">
-                <strong>Port Macquarie, NSW, Australia</strong>
-              </p>
-              <p className="mt-4 tracking-widest">
-                Email: <strong>enquiries@nxtlvlfit.com.au</strong>
-              </p>
+            <div className="hidden mt-4 md:block md:col-span-3">
+              <dl className="space-y-4">
+                <div>
+                  <div className="tracking-widest">
+                    <dt className="inline">Rich </dt>
+                    <dd className="inline font-bold">
+                      <a href={`tel:${siteMetadata.phone.rich}`}>
+                        {siteMetadata.phone.rich}
+                      </a>
+                    </dd>
+                  </div>
+                  <div className="tracking-widest">
+                    <dt className="inline">Kez </dt>
+                    <dd className="inline font-bold">
+                      <a href={`tel:${siteMetadata.phone.kez}`}>
+                        {siteMetadata.phone.kez}
+                      </a>
+                    </dd>
+                  </div>
+                </div>
+                <div className="tracking-widest">
+                  <dt className="inline">Address: </dt>
+                  <dd className="inline font-bold">
+                    {siteMetadata.address.street} <br />
+                    {siteMetadata.address.suburb}, {siteMetadata.address.state}
+                  </dd>
+                </div>
+                <div className="tracking-widest">
+                  <dt className="inline">Email: </dt>
+                  <dd className="inline font-bold">
+                    <a href={`mailto:${siteMetadata.email}`}>
+                      {siteMetadata.email}
+                    </a>
+                  </dd>
+                </div>
+              </dl>
               <p className="mt-16 tracking-widest">
                 <strong>Follow us on</strong>
               </p>
-              <ul className="mt-2 flex space-x-4 text-xl tracking-widest uppercase">
+              <ul className="flex mt-2 space-x-4 text-xl tracking-widest uppercase">
                 {socialLinks.map((link) => (
-                  <li key={link.id}>
+                  <li key={link.id} className="flex">
                     <a href={link.url} className="inline-block rounded-full">
                       <span className="sr-only">{link.label}</span>
                       <link.icon />
@@ -60,7 +85,7 @@ function ContactPageForm() {
                 ))}
               </ul>
             </div>
-            <div className="space-y-6 col-span-1 md:col-span-4">
+            <div className="col-span-1 space-y-6 md:col-span-4">
               <Input
                 name="full_name"
                 label="Full name"
