@@ -16,8 +16,8 @@ function NavBar() {
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center justify-between flex-1">
             <div className="flex-shrink-0">
-              <Link to="/">
-                <LogoWithText className="block w-auto h-12" />
+              <Link to="/" className="inline-block h-16 p-2 -ml-2">
+                <LogoWithText className="h-full" />
               </Link>
             </div>
             <div className="hidden lg:block lg:ml-6">
