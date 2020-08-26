@@ -2,6 +2,8 @@ import React from 'react';
 
 import GatsbyImage from 'gatsby-image';
 import { Layout, SEO, ContactPageForm } from '../components';
+import { Map } from '../components/map';
+import { Instagram } from '../components/home';
 import { useGraphQL } from '../hooks';
 
 function ContactPage() {
@@ -22,6 +24,8 @@ function ContactPage() {
         </div>
       </div>
       <ContactPageForm />
+      <Map />
+      <Instagram />
     </Layout>
   );
 }

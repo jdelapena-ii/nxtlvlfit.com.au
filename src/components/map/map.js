@@ -5,11 +5,6 @@ import { styles } from './styles';
 
 const libraries = ['places'];
 
-const mapContainerStyle = {
-  height: '100%',
-  width: '100%',
-};
-
 const center = {
   lat: -31.451399,
   lng: 152.884298,
@@ -27,11 +22,16 @@ function Map() {
     libraries,
   });
 
+  const mapContainerStyle = {
+    height: '100%',
+    width: '100%',
+  };
+
   if (loadError) return 'Error';
   if (!isLoaded) return 'Loading...';
 
   return (
-    <div className="relative h-0 aspect-ratio-16/9">
+    <div className="relative h-0 aspect-ratio-16/9 lg:aspect-ratio-none lg:h-96">
       <div className="absolute inset-0">
         <GoogleMap
           mapContainerStyle={mapContainerStyle}
