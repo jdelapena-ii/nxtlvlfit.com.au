@@ -36,7 +36,7 @@ function Spacer() {
   return (
     <div
       aria-hidden
-      className="relative h-0 pt-12 pointer-events-none aspect-ratio-16/9 bg-gradient-to-t from-black via-transparent"
+      className="relative h-0 -mt-40 pointer-events-none aspect-ratio-16/9 bg-gradient-to-t from-black via-transparent"
     >
       <div aria-hidden className="absolute inset-0" />
     </div>
