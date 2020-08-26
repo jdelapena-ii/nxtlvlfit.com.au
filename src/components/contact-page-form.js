@@ -75,7 +75,7 @@ function ContactPageForm() {
               </p>
               <ul className="flex mt-2 space-x-4 text-xl tracking-widest uppercase">
                 {socialLinks.map((link) => (
-                  <li key={link.id}>
+                  <li key={link.id} className="flex">
                     <a href={link.url} className="inline-block rounded-full">
                       <span className="sr-only">{link.label}</span>
                       <link.icon />
