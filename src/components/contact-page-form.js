@@ -8,7 +8,6 @@ import { useGraphQL } from '../hooks';
 function ContactPageForm() {
   const { register, handleSubmit, errors } = useForm({ mode: 'onBlur' });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [message, setMessage] = useState(null);
 
   const {
     site: { siteMetadata },
@@ -30,7 +29,6 @@ function ContactPageForm() {
             handleSubmit={handleSubmit}
             register={register}
             setIsSubmitting={setIsSubmitting}
-            setMessage={setMessage}
             action="/success/"
             name="contact_form"
             className="grid grid-cols-1 gap-24 md:grid-cols-7"
@@ -123,12 +121,6 @@ function ContactPageForm() {
                   </button>
                 </span>
               </div>
-              {message && (
-                <p
-                  dangerouslySetInnerHTML={{ __html: message }}
-                  className="mt-6 prose text-center"
-                />
-              )}
             </div>
           </ContactForm>
         </div>
