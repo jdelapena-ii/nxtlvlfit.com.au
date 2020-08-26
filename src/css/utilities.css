@@ -8,3 +8,13 @@
     min-height: -webkit-fill-available;
   }
 }
+
+@variants hover, focus {
+  /* Subtle shadow around text to increase contrast */
+  .text-shadow {
+    text-shadow: 0px 0px 2px hsla(0, 0%, 0%, 0.5);
+  }
+  .text-shadow-none {
+    text-shadow: none;
+  }
+}
