@@ -10,7 +10,7 @@ function BlogPosts() {
   return (
     <article className="px-4 py-12 space-y-12 bg-black bg-opacity-75 sm:px-6 lg:px-8">
       <h2 className="text-2xl font-bold leading-none tracking-widest text-center uppercase">
-        <span>The latest on our </span>
+        <span>The latest from our </span>
         <br />
         <span className="mt-1 text-6xl">Blog</span>
       </h2>
