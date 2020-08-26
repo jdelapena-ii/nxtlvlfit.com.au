@@ -4,11 +4,12 @@ import { Layout, SEO, NavBar, ContactPageForm, Map } from '../components';
 import {
   Welcome,
   ServicesGrid,
-  MeetTheTeam,
+  MeetYourTeam,
   BlogPosts,
   TrueProtein,
   Instagram,
 } from '../components/home';
+import grunge from '../images/background-image-black.jpg';
 
 function IndexPage() {
   return (
@@ -16,11 +17,14 @@ function IndexPage() {
       <SEO title="Home" />
       <div className="relative pointer-events-none">
         <Spacer />
-        <div className="pointer-events-auto">
+        <div
+          style={{ backgroundImage: `url(${grunge})` }}
+          className="bg-fixed pointer-events-auto"
+        >
           <NavBar />
           <Welcome />
           <ServicesGrid />
-          <MeetTheTeam />
+          <MeetYourTeam />
           <BlogPosts />
           <TrueProtein />
           <Instagram />
@@ -36,7 +40,7 @@ function Spacer() {
   return (
     <div
       aria-hidden
-      className="relative h-0 pt-12 pointer-events-none aspect-ratio-16/9 bg-gradient-to-t from-black via-transparent"
+      className="relative h-0 -mt-40 pointer-events-none aspect-ratio-16/9 bg-gradient-to-t from-black via-transparent"
     >
       <div aria-hidden className="absolute inset-0" />
     </div>

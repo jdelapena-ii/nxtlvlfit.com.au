@@ -14,7 +14,7 @@ function Background({ isHome }) {
         }
       }
       backgroundBlack: file(
-        relativePath: { eq: "background-image-black.png" }
+        relativePath: { eq: "background-image-black.jpg" }
       ) {
         childImageSharp {
           fluid(maxWidth: 1920, quality: 90) {

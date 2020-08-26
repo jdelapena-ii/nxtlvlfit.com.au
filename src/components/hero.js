@@ -15,10 +15,8 @@ function Hero() {
       <Gradient />
       <div className="relative w-full max-w-3xl mx-auto">
         <Link to="/">
-          <h1>
-            <span className="sr-only">{siteMetadata.title}</span>
-            <Logo aria-hidden className="w-full pointer-events-none" />
-          </h1>
+          <span className="sr-only">{siteMetadata.title}</span>
+          <Logo aria-hidden className="w-full pointer-events-none" />
         </Link>
         <Foreground />
         <LogoL aria-hidden className="absolute top-0 pointer-events-none" />
@@ -26,7 +24,7 @@ function Hero() {
           aria-hidden
           className="relative mt-4 text-2xl font-bold tracking-widest text-center uppercase"
         >
-          Functional movement centre
+          Functional Movement Centre
         </p>
       </div>
     </div>

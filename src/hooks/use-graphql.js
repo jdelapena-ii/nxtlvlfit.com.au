@@ -34,13 +34,6 @@ export function useGraphQL() {
             }
           }
         }
-        kateBlush: file(relativePath: { eq: "kate-blush.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 1920) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
         allefVinicius: file(relativePath: { eq: "allef-vinicius-do.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
@@ -63,6 +56,20 @@ export function useGraphQL() {
           }
         }
         hayleyKim: file(relativePath: { eq: "hayley-kim.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        infraredSauna: file(relativePath: { eq: "infrared-sauna.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        kateBlush: file(relativePath: { eq: "kate-blush.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid

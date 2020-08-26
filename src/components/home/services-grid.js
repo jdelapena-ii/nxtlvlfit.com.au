@@ -1,49 +1,32 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { Link } from 'gatsby';
 import GatsbyImage from 'gatsby-image';
 import PropTypes from 'prop-types';
 
-import { useGraphQL } from '../../hooks';
+import { useGraphQL, useOnClickOutside } from '../../hooks';
 
 function ServicesGrid() {
   const {
     svenMieke,
     kateBlush,
     allefVinicius,
-    meghanHolmes,
-    brigitteTohm,
+    infraredSauna,
     massageImage,
   } = useGraphQL();
   return (
-    <div className="grid p-2 bg-black md:grid-cols-2 lg:grid-cols-3">
+    <div className="grid bg-black md:grid-cols-2 lg:grid-cols-3">
       <Service
         label="Functional Fitness"
         slug="/"
         image={svenMieke.childImageSharp.fluid}
       >
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate
-          hic dolores quam cumque possimus quas, animi quisquam ex magnam fugit
-          molestias, laudantium, ad non aliquid sed? Doloribus reiciendis vel
-          odio.
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis,
-          rerum sapiente autem ducimus temporibus dolorem magni aperiam
-          accusantium distinctio eos iusto blanditiis facere magnam aspernatur.
-          Fugit odit error distinctio culpa.
-        </p>
-        <p>
-          Dolorum sapiente eos repellendus assumenda doloremque esse mollitia
-          necessitatibus molestias dicta quos! Porro soluta nihil libero fuga
-          velit eligendi ab, tenetur architecto dicta eos at, nesciunt repellat,
-          odit quidem atque!
-        </p>
-        <p>
-          Repudiandae quibusdam doloribus dolores praesentium error, quidem
-          labore. Sed, voluptate. Rem iure eius provident soluta inventore quis
-          reprehenderit recusandae quo, incidunt nesciunt! Dicta quisquam et
-          debitis nam doloremque recusandae accusamus.
+          Discover your potential with NXTLVL’s functional training area.
+          Improve strength, condition your body, learn new skills, challenge
+          yourself, and have fun using the latest in functional training
+          methodologies so you can smash your goals. We offer custom designed
+          rigs and competition grade equipment to give you the edge in hitting
+          your PRs and getting the most out of each Workout of the Day (WOD.)
         </p>
       </Service>
       <Service
@@ -52,46 +35,46 @@ function ServicesGrid() {
         image={kateBlush.childImageSharp.fluid}
       >
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate
-          hic dolores quam cumque possimus quas, animi quisquam ex magnam fugit
-          molestias, laudantium, ad non aliquid sed? Doloribus reiciendis vel
-          odio.
+          NXTLVL is proud to offer a full calisthenics gym with its own
+          dedicated mobility facility and class schedule. Incorporating movement
+          with body weight exercises, calisthenics increases strength, fitness,
+          and mobility for all ages and body types.
+        </p>
+        <p>
+          NXTLVL calisthenics training ranges from group classes, personal
+          training, and special seminars with expert calisthenics and fitness
+          practitioners from around the region and Australia.
         </p>
       </Service>
       <Service
-        label="Olympic Lifting"
+        label="Olympic Lifting & Power Lifting"
         slug="/"
         image={allefVinicius.childImageSharp.fluid}
       >
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate
-          hic dolores quam cumque possimus quas, animi quisquam ex magnam fugit
-          molestias, laudantium, ad non aliquid sed? Doloribus reiciendis vel
-          odio.
+          Get to the next level of lifting heavy at NXTLVL. Hit those gains with
+          premier weightlifting, powerlifting, and plyometrics equipment,
+          another dedicated part of our functional movement centre. Whether it’s
+          for conditioning, hypertrophy, or attaining that one max rep, you’re
+          always in control.
         </p>
-      </Service>
-      <Service
-        label="Power Lifting"
-        slug="/"
-        image={meghanHolmes.childImageSharp.fluid}
-      >
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate
-          hic dolores quam cumque possimus quas, animi quisquam ex magnam fugit
-          molestias, laudantium, ad non aliquid sed? Doloribus reiciendis vel
-          odio.
+          Train on your own or with a group – take part in our rolling “Friday
+          Night Lights” lifting competition for added support and social fun!
         </p>
       </Service>
       <Service
         label="Infrared Sauna"
         slug="/"
-        image={brigitteTohm.childImageSharp.fluid}
+        image={infraredSauna.childImageSharp.fluid}
       >
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate
-          hic dolores quam cumque possimus quas, animi quisquam ex magnam fugit
-          molestias, laudantium, ad non aliquid sed? Doloribus reiciendis vel
-          odio.
+          NXTLVL has its own state-of-the-art infrared sauna for muscle recovery
+          and Waon therapy. Waon therapy is linked with improve heart function,
+          important for cardio training and heat conditioning. Use our infrared
+          sauna for relaxation or as part of your training regimen. Infrared
+          sauna or infrared therapy rooms are known as a “dry” sauna, using
+          invisible light to create heat instead of traditional steam.
         </p>
       </Service>
       <Service
@@ -100,10 +83,13 @@ function ServicesGrid() {
         image={massageImage.childImageSharp.fluid}
       >
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate
-          hic dolores quam cumque possimus quas, animi quisquam ex magnam fugit
-          molestias, laudantium, ad non aliquid sed? Doloribus reiciendis vel
-          odio.
+          Recovery is integral to maintaining peak physical performance. NXTLVL
+          offers sports massage and muscle therapy from a qualified massage
+          therapist to help you get moving after injury or improve mobility.
+          Sports massage is part of NXTLVL’s dedicated mobility and recovery
+          zone, focused on helping you ease back into full weight or cardio
+          training. We encourage athletes and enthusiasts to use our facilities
+          to support a comprehensive physiotherapy program.
         </p>
       </Service>
     </div>
@@ -111,34 +97,60 @@ function ServicesGrid() {
 }
 
 function Service({ children, image, label, slug }) {
+  // Create a ref that we add to the element for which we want to detect outside clicks
+  const ref = useRef();
+
+  // State to manage showing or hiding service information
+  const [isOpen, setIsOpen] = useState(false);
+
+  // Function to hide service information
+  function handleClose() {
+    setIsOpen(false);
+  }
+
+  // Call hook passing in the ref and a function to call on outside click
+  useOnClickOutside(ref, handleClose);
+
   return (
     <div className="relative h-0 aspect-ratio-square">
-      <div className="absolute inset-0 flex bg-black">
-        <div className="absolute inset-0 flex">
-          <GatsbyImage fluid={image} className="flex-1" />
-        </div>
-        <div className="relative flex items-center justify-center flex-1 p-4 bg-black bg-opacity-25">
-          <div className="w-full px-8 py-4 font-bold text-center uppercase border-2 border-white">
-            {label}
+      {isOpen ? (
+        <div ref={ref} className="absolute inset-0 flex p-2 bg-black">
+          <div className="flex flex-col justify-between flex-1 px-4 py-12 overflow-hidden text-center border-2 border-white">
+            <div className="relative overflow-y-scroll overscroll-contain">
+              <h3 className="font-bold tracking-widest uppercase">{label}</h3>
+              <div className="my-4 prose text-white">{children}</div>
+            </div>
+            <div className="relative">
+              <div
+                aria-hidden
+                className="absolute inset-x-0 top-0 h-8 transform -translate-y-full bg-gradient-to-t from-black"
+              />
+              <Link
+                aria-label={`Learn more about ${label}`}
+                to={slug}
+                className="inline-block px-8 py-2 mt-4 text-sm tracking-widest uppercase transition duration-150 ease-in-out border-2 border-white hover:bg-white hover:text-black"
+              >
+                Learn more
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="absolute inset-0 flex p-2 transition duration-300 ease-in-out bg-black opacity-0 hover:opacity-100 focus-within:opacity-100">
-        <div className="flex flex-col justify-between flex-1 px-4 py-12 overflow-hidden text-center border-2 border-white">
-          <div className="overflow-auto overscroll-contain">
-            <h3 className="font-bold tracking-widest uppercase">{label}</h3>
-            <div className="my-4 prose text-white">{children}</div>
+      ) : (
+        <div className="absolute inset-0 flex bg-black">
+          <div className="absolute inset-0 flex">
+            <GatsbyImage fluid={image} className="flex-1" />
           </div>
-          <span>
-            <Link
-              to={slug}
-              className="inline-block px-8 py-2 mt-4 text-sm tracking-widest uppercase border-2 border-white"
+          <div className="relative flex items-center justify-center flex-1 p-4 bg-black bg-opacity-25">
+            <button
+              type="button"
+              onClick={() => setIsOpen(true)}
+              className="w-full px-8 py-4 font-bold text-center uppercase transition duration-300 ease-in-out border-2 border-white hover:bg-white hover:text-black focus:bg-white focus:text-black"
             >
-              Learn more
-            </Link>
-          </span>
+              {label}
+            </button>
+          </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

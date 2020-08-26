@@ -8,29 +8,34 @@ import { useGraphQL } from '../hooks';
 function ContactPageForm() {
   const { register, handleSubmit, errors } = useForm({ mode: 'onBlur' });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [message, setMessage] = useState(null);
 
   const {
     site: { siteMetadata },
   } = useGraphQL();
 
   return (
-    <article className="mb-12 relative px-4 mx-4 mt-24 md:mx-auto sm:mt-40">
+    <article className="relative max-w-5xl px-4 mx-auto mt-24 mb-12 sm:px-6 lg:px-8 md:mx-auto sm:mt-40">
       <div className="relative w-full px-4 py-12 mx-auto bg-black bg-opacity-50 border-4 border-white max-w-7xl lg:my-12 sm:px-6 lg:px-8">
-        <div className="text-center">
+        <div className="space-y-6 text-center">
           <h2
             style={{ letterSpacing: '0.7rem' }}
             className="text-2xl font-bold uppercase"
           >
             Contact Us
           </h2>
+          <div className="mx-auto prose text-white">
+            <p>
+              Talk to our Centre Directors Kez or Rich for bookings, sign-ups,
+              or enquiries. <br />
+              Send us a message outside of business hours below.
+            </p>
+          </div>
         </div>
         <div className="mt-12">
           <ContactForm
             handleSubmit={handleSubmit}
             register={register}
             setIsSubmitting={setIsSubmitting}
-            setMessage={setMessage}
             action="/success/"
             name="contact_form"
             className="grid grid-cols-1 gap-24 md:grid-cols-7"
@@ -74,10 +79,13 @@ function ContactPageForm() {
               <p className="mt-16 tracking-widest">
                 <strong>Follow us on</strong>
               </p>
-              <ul className="flex mt-2 space-x-4 text-xl tracking-widest uppercase">
+              <ul className="flex mt-2 space-x-2 text-xl tracking-widest uppercase">
                 {socialLinks.map((link) => (
                   <li key={link.id} className="flex">
-                    <a href={link.url} className="inline-block rounded-full">
+                    <a
+                      href={link.url}
+                      className="inline-block p-1 rounded-full"
+                    >
                       <span className="sr-only">{link.label}</span>
                       <link.icon />
                     </a>
@@ -94,7 +102,7 @@ function ContactPageForm() {
               />
               <Input
                 name="contact_number"
-                label="Contact number"
+                label="Phone number"
                 type="tel"
                 register={register}
                 errors={errors}
@@ -117,18 +125,12 @@ function ContactPageForm() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="inline-flex items-center justify-center w-full px-6 py-3 font-bold tracking-widest uppercase border border-white rounded-none focus:outline-none focus:shadow-outline"
+                    className="inline-flex items-center justify-center w-full px-6 py-3 font-bold tracking-widest uppercase transition duration-300 ease-in-out border border-white rounded-none hover:bg-white hover:text-black focus:bg-white focus:text-black"
                   >
                     Submit
                   </button>
                 </span>
               </div>
-              {message && (
-                <p
-                  dangerouslySetInnerHTML={{ __html: message }}
-                  className="mt-6 prose text-center"
-                />
-              )}
             </div>
           </ContactForm>
         </div>

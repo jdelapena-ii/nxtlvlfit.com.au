@@ -15,6 +15,7 @@ function TrueProtein() {
         />
         <Block
           image={trueProtein.childImageSharp.fluid}
+          altText="True Protein available instore now"
           objectFit="contain"
           objectPosition="center"
         />
@@ -29,6 +30,7 @@ function TrueProtein() {
 
 function Block({
   image,
+  altText = '',
   objectFit = 'cover',
   objectPosition = 'center',
   padding,
@@ -39,6 +41,7 @@ function Block({
         <div className="absolute inset-0 flex bg-black">
           <GatsbyImage
             fluid={image}
+            alt={altText}
             imgStyle={{ objectPosition, objectFit }}
             className="flex-1"
           />
@@ -49,6 +52,7 @@ function Block({
 }
 
 Block.propTypes = {
+  altText: PropTypes.string,
   image: PropTypes.object.isRequired,
   objectFit: PropTypes.string,
   objectPosition: PropTypes.string,
