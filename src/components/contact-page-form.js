@@ -4,11 +4,17 @@ import { useForm } from 'react-hook-form';
 import { Link } from 'gatsby';
 import { ContactForm, Input, TextArea, Radio, Checkbox } from './form-elements';
 import { socialLinks } from '../data';
+import { useGraphQL } from '../hooks';
 
 function ContactPageForm() {
   const { register, handleSubmit, errors } = useForm({ mode: 'onBlur' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [message, setMessage] = useState(null);
+
+  const {
+    site: { siteMetadata },
+  } = useGraphQL();
+
   return (
     <article className="relative px-4 mx-4 md:mx-auto mt-24 sm:mt-40">
       <div className="relative w-full max-w-7xl px-4 py-12 mx-auto bg-black bg-opacity-50 border-4 border-white lg:my-12 sm:px-6 lg:px-8">
@@ -30,22 +36,42 @@ function ContactPageForm() {
             name="contact-form"
             className="grid grid-cols-1 md:grid-cols-7 gap-24"
           >
-            <div className="mt-4 hidden md:block md:col-span-3">
-              <p className="tracking-widest">
-                Rich <strong>0422 767 889</strong>
-              </p>
-              <p className="tracking-widest">
-                Kez <strong>0402 322 131</strong>
-              </p>
-              <p className="mt-4 tracking-widest">
-                Address: <strong>31 Jindalee Road</strong>
-              </p>
-              <p className="tracking-widest">
-                <strong>Port Macquarie, NSW, Australia</strong>
-              </p>
-              <p className="mt-4 tracking-widest">
-                Email: <strong>enquiries@nxtlvlfit.com.au</strong>
-              </p>
+            <div className="hidden mt-4 md:block md:col-span-3">
+              <dl className="space-y-4">
+                <div>
+                  <div className="tracking-widest">
+                    <dt className="inline">Rich </dt>
+                    <dd className="inline font-bold">
+                      <a href={`tel:${siteMetadata.phone.rich}`}>
+                        {siteMetadata.phone.rich}
+                      </a>
+                    </dd>
+                  </div>
+                  <div className="tracking-widest">
+                    <dt className="inline">Kez </dt>
+                    <dd className="inline font-bold">
+                      <a href={`tel:${siteMetadata.phone.kez}`}>
+                        {siteMetadata.phone.kez}
+                      </a>
+                    </dd>
+                  </div>
+                </div>
+                <div className="tracking-widest">
+                  <dt className="inline">Address: </dt>
+                  <dd className="inline font-bold">
+                    {siteMetadata.address.street} <br />
+                    {siteMetadata.address.suburb}, {siteMetadata.address.state}
+                  </dd>
+                </div>
+                <div className="tracking-widest">
+                  <dt className="inline">Email: </dt>
+                  <dd className="inline font-bold">
+                    <a href={`mailto:${siteMetadata.email}`}>
+                      {siteMetadata.email}
+                    </a>
+                  </dd>
+                </div>
+              </dl>
               <p className="mt-16 tracking-widest">
                 <strong>Follow us on</strong>
               </p>
