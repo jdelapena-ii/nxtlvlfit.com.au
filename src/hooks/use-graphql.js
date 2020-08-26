@@ -98,7 +98,7 @@ export function useGraphQL() {
           }
         }
         trueProtein: file(
-          relativePath: { eq: "true-protein-logo-with-text.png" }
+          relativePath: { eq: "true-protein-logo-with-text.jpg" }
         ) {
           childImageSharp {
             fluid(maxWidth: 1920) {

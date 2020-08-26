@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Layout, SEO, NavBar } from '../components';
+import { Layout, SEO, NavBar, Map } from '../components';
 import {
   Welcome,
   ServicesGrid,
@@ -24,6 +24,7 @@ function IndexPage() {
           <BlogPosts />
           <TrueProtein />
           <Instagram />
+          <Map />
         </div>
       </div>
     </Layout>

@@ -17,7 +17,6 @@ function TrueProtein() {
           image={trueProtein.childImageSharp.fluid}
           objectFit="contain"
           objectPosition="center"
-          padding="p-8"
         />
         <Block
           image={brigitteTohm.childImageSharp.fluid}
