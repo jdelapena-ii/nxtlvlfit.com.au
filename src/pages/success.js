@@ -13,9 +13,8 @@ function SuccessPage() {
             SUCCESS
           </h2>
           <p className="text-gray-200">
-            Thank you, our team will get
-            <br />
-            back to you shortly
+            Thank you for contacting NXTLVL! <br />
+            We’ll be in touch with you soon.
           </p>
           <p>
             <Link
