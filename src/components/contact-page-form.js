@@ -115,7 +115,7 @@ function ContactPageForm() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="inline-flex items-center justify-center w-full px-6 py-3 font-bold tracking-widest uppercase border border-white rounded-none focus:outline-none focus:shadow-outline"
+                    className="inline-flex items-center justify-center w-full px-6 py-3 font-bold tracking-widest uppercase transition duration-300 ease-in-out border border-white rounded-none hover:bg-white hover:text-black focus:bg-white focus:text-black"
                   >
                     Submit
                   </button>
