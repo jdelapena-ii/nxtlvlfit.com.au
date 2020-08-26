@@ -94,7 +94,7 @@ function ContactPageForm() {
               />
               <Input
                 name="contact_number"
-                label="Contact number"
+                label="Phone number"
                 type="tel"
                 register={register}
                 errors={errors}
