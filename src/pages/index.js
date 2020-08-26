@@ -4,7 +4,7 @@ import { Layout, SEO, NavBar, ContactPageForm, Map } from '../components';
 import {
   Welcome,
   ServicesGrid,
-  MeetTheTeam,
+  MeetYourTeam,
   BlogPosts,
   TrueProtein,
   Instagram,
@@ -20,7 +20,7 @@ function IndexPage() {
           <NavBar />
           <Welcome />
           <ServicesGrid />
-          <MeetTheTeam />
+          <MeetYourTeam />
           <BlogPosts />
           <TrueProtein />
           <Instagram />
