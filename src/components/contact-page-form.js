@@ -32,7 +32,7 @@ function ContactPageForm() {
             setIsSubmitting={setIsSubmitting}
             setMessage={setMessage}
             action="/success/"
-            name="contact_form"
+            name="contact-page-form"
             className="grid grid-cols-1 gap-24 md:grid-cols-7"
           >
             <div className="hidden mt-4 md:block md:col-span-3">
