@@ -9,6 +9,7 @@ import {
   TrueProtein,
   Instagram,
 } from '../components/home';
+import grunge from '../images/background-image-black.jpg';
 
 function IndexPage() {
   return (
@@ -16,7 +17,10 @@ function IndexPage() {
       <SEO title="Home" />
       <div className="relative pointer-events-none">
         <Spacer />
-        <div className="pointer-events-auto">
+        <div
+          style={{ backgroundImage: `url(${grunge})` }}
+          className="bg-fixed pointer-events-auto"
+        >
           <NavBar />
           <Welcome />
           <ServicesGrid />
