@@ -78,7 +78,7 @@ function MobileMenu({ isMobileMenuOpen, setMobileMenuOpen }) {
                     <div className="relative flex-1 px-4 sm:px-6">
                       <div className="flex flex-col flex-grow py-6 overflow-y-auto">
                         <div className="flex flex-col flex-grow">
-                          <nav className="flex-1 px-2 bg-black">
+                          <nav className="flex-1 px-2 space-y-4 bg-black">
                             {mainNavigation.map((navItem) =>
                               navItem.submenu ? (
                                 <SubMenu key={navItem.id} navItem={navItem} />
@@ -86,7 +86,7 @@ function MobileMenu({ isMobileMenuOpen, setMobileMenuOpen }) {
                                 <div key={navItem.id}>
                                   <Link
                                     to={navItem.slug}
-                                    className="flex items-center w-full py-2 pr-2 text-sm font-medium leading-5 tracking-widest text-white uppercase transition duration-150 ease-in-out group pl-7 hover:bg-gray-900 focus:outline-none focus:bg-gray-800"
+                                    className="flex items-center w-full py-2 pr-2 text-xl font-medium tracking-widest text-white uppercase transition duration-150 ease-in-out group pl-7 hover:bg-gray-900 focus:outline-none focus:bg-gray-800"
                                   >
                                     {navItem.label}
                                   </Link>
@@ -120,7 +120,7 @@ function SubMenu({ navItem }) {
       <button
         type="button"
         onClick={() => setIsExpanded((prev) => !prev)}
-        className="flex items-center w-full py-2 pr-2 mt-1 text-sm font-medium leading-5 tracking-widest text-white uppercase transition duration-150 ease-in-out group hover:bg-gray-900 focus:outline-none focus:bg-gray-800"
+        className="flex items-center w-full py-2 pr-2 mt-1 text-xl font-medium tracking-widest text-white uppercase transition duration-150 ease-in-out group hover:bg-gray-900 focus:outline-none focus:bg-gray-800"
       >
         <motion.svg
           animate={{ rotate: isExpanded ? '90deg' : 0 }}
@@ -138,13 +138,13 @@ function SubMenu({ navItem }) {
             animate={{ height: 'auto', opacity: 1, overflow: 'visible' }}
             exit={{ height: 0, opacity: 0, overflow: 'hidden' }}
             transition={{ min: 0, max: 100, bounceDamping: 9 }}
-            className="mt-1 space-y-1"
+            className="mt-1 space-y-4"
           >
             {navItem.submenu.map((submenu) => (
               <Link
                 key={submenu.id}
                 to={submenu.slug}
-                className="flex items-center w-full py-2 pl-10 pr-2 text-sm font-medium leading-5 tracking-widest text-white uppercase transition duration-150 ease-in-out group hover:bg-gray-900 focus:outline-none focus:bg-gray-800"
+                className="flex items-center w-full py-2 pl-10 pr-2 text-xl font-medium tracking-widest text-white uppercase transition duration-150 ease-in-out group hover:bg-gray-900 focus:outline-none focus:bg-gray-800"
               >
                 {submenu.label}
               </Link>
