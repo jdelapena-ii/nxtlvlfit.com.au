@@ -1,33 +1,29 @@
 import React from 'react';
 
-import { Layout, SEO, ContactForm, TextWithImage } from '../components';
+import GatsbyImage from 'gatsby-image';
+import { Layout, SEO, ContactPageForm } from '../components';
 import { useGraphQL } from '../hooks';
 
 function ContactPage() {
+  const { kateBlush } = useGraphQL();
+
   return (
     <Layout>
       <SEO title="Coming soon" />
-      <FirstImage />
-      <ContactForm />
+      <div className="relative">
+        <GatsbyImage
+          className=""
+          style={{ maxHeight: '40rem' }}
+          fluid={kateBlush.childImageSharp.fluid}
+        />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <h2 className="text-4xl md:text-6xl font-bold leading-none tracking-widest text-center uppercase">
+            Contact Us
+          </h2>
+        </div>
+      </div>
+      <ContactPageForm />
     </Layout>
-  );
-}
-
-function FirstImage() {
-  const { marcosPaulo } = useGraphQL();
-  return (
-    <TextWithImage
-      heading="Marcos Paulo"
-      image={marcosPaulo.childImageSharp.fluid}
-      reverse
-    >
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-        architecto modi, ratione blanditiis quis facere nulla repudiandae, quia
-        perspiciatis quae aspernatur iusto laudantium itaque nesciunt molestias,
-        in vel doloribus earum!
-      </p>
-    </TextWithImage>
   );
 }
 

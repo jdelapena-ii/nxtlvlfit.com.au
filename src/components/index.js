@@ -1,5 +1,6 @@
 export * from './background';
 export * from './contact-form';
+export * from './contact-page-form';
 export * from './hero';
 export * from './layout';
 export * from './navbar';
