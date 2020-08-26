@@ -8,6 +8,7 @@ function ContactForm({
   className,
   handleSubmit,
   name = 'contact_form',
+  setIsSubmitting,
 }) {
   function encode(data) {
     return Object.keys(data)
@@ -19,6 +20,7 @@ function ContactForm({
 
   function onSubmit(data, e) {
     e.preventDefault();
+    setIsSubmitting(true);
     const form = e.target;
     fetch('/', {
       method: 'POST',
@@ -52,6 +54,7 @@ ContactForm.propTypes = {
   className: PropTypes.string,
   handleSubmit: PropTypes.func.isRequired,
   name: PropTypes.string,
+  setIsSubmitting: PropTypes.func.isRequired,
 };
 
 export { ContactForm };
