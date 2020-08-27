@@ -4,7 +4,7 @@ import { Menu, MenuButton, MenuList } from '@reach/menu-button';
 import { AnimatePresence, motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 
-import { LogoWithText } from './vectors';
+import { Logo } from './vectors';
 import { mainNavigation, socialLinks } from '../data';
 import { MobileMenu } from './mobile-menu';
 
@@ -17,7 +17,7 @@ function NavBar() {
           <div className="flex items-center justify-between flex-1">
             <div className="flex-shrink-0">
               <Link to="/" className="inline-block h-16 p-2 -ml-2">
-                <LogoWithText className="h-full" />
+                <Logo className="h-full" />
               </Link>
             </div>
             <div className="hidden lg:block lg:ml-6">
