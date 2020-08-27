@@ -39,12 +39,14 @@ function TeamMember({
             {eyebrowText}
           </div>
         )}
-        <h3
-          style={{ letterSpacing: '0.7rem' }}
-          className="mt-4 text-4xl font-bold leading-none uppercase"
-        >
-          {heading}
-        </h3>
+        {heading && (
+          <h3
+            style={{ letterSpacing: '0.7rem' }}
+            className="mt-4 text-4xl font-bold leading-none uppercase"
+          >
+            {heading}
+          </h3>
+        )}
         <div className="mt-4 prose text-white">{children}</div>
       </div>
       {!reverse && <Image />}
@@ -56,7 +58,7 @@ TeamMember.propTypes = {
   aspectRatio: PropTypes.string,
   children: PropTypes.node.isRequired,
   eyebrowText: PropTypes.string,
-  heading: PropTypes.string.isRequired,
+  heading: PropTypes.string,
   image: PropTypes.object.isRequired,
   objectFit: PropTypes.string,
   objectPosition: PropTypes.string,

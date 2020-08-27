@@ -3,13 +3,14 @@ import React from 'react';
 import {
   Layout,
   SEO,
-  ContactPageForm,
   PageHero,
   GradientContainer,
+  Intro,
   TeamMember,
+  Instagram,
+  ContactPageForm,
+  Map,
 } from '../components';
-import { Map } from '../components/map';
-import { Instagram } from '../components/home';
 
 import { useGraphQL } from '../hooks';
 
@@ -21,7 +22,20 @@ function MeetUsPage() {
       <PageHero heading="Meet Us" image={kateBlush.childImageSharp.fluid} />
       <GradientContainer>
         <div className="relative grid pb-24 gap-y-24">
-          <Intro />
+          <Intro eyebrowText="Come in and meet the" heading="nTxLvL Team">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam qui
+              veniam aliquid. Doloremque culpa assumenda voluptatem tempore
+              optio! Laudantium et assumenda, officia quas voluptatum incidunt
+              dolores aliquam quasi eligendi beatae.
+            </p>
+            <p>
+              Eius sequi facilis cum, dolore incidunt odit similique saepe quis
+              tempora, dolorem quae, facere autem ut cupiditate. Dicta placeat
+              officiis labore animi! Ut architecto quas distinctio dolore
+              inventore tempora. Harum.
+            </p>
+          </Intro>
           <MattMoore />
           <AshPollard />
           <KateBlush />
@@ -31,40 +45,6 @@ function MeetUsPage() {
       <ContactPageForm />
       <Map />
     </Layout>
-  );
-}
-
-function Intro() {
-  return (
-    <div className="relative px-4 py-12 mt-12 sm:px-6 lg:px-8">
-      <h2
-        style={{ letterSpacing: '0.7rem' }}
-        className="text-2xl font-bold leading-none text-center uppercase"
-      >
-        <span>Come in and meet the</span>
-        <br />
-        <span
-          style={{ letterSpacing: '0.7rem' }}
-          className="mt-4 text-6xl font-bold leading-none text-center uppercase"
-        >
-          NXTLVL Team
-        </span>
-      </h2>
-      <div className="mx-auto mt-6 tracking-widest prose text-center text-white text-shadow">
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam qui
-          veniam aliquid. Doloremque culpa assumenda voluptatem tempore optio!
-          Laudantium et assumenda, officia quas voluptatum incidunt dolores
-          aliquam quasi eligendi beatae.
-        </p>
-        <p>
-          Eius sequi facilis cum, dolore incidunt odit similique saepe quis
-          tempora, dolorem quae, facere autem ut cupiditate. Dicta placeat
-          officiis labore animi! Ut architecto quas distinctio dolore inventore
-          tempora. Harum.
-        </p>
-      </div>
-    </div>
   );
 }
 

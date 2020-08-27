@@ -3,6 +3,8 @@ export * from './blog-post';
 export * from './contact-page-form';
 export * from './gradient-container';
 export * from './hero';
+export * from './instagram';
+export * from './intro';
 export * from './layout';
 export * from './map';
 export * from './navbar';

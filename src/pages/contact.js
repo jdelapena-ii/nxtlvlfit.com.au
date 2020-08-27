@@ -1,8 +1,13 @@
 import React from 'react';
 
-import { Layout, SEO, PageHero, ContactPageForm } from '../components';
+import {
+  Layout,
+  SEO,
+  PageHero,
+  Instagram,
+  ContactPageForm,
+} from '../components';
 import { Map } from '../components/map';
-import { Instagram } from '../components/home';
 import { useGraphQL } from '../hooks';
 
 function ContactPage() {
