@@ -37,12 +37,10 @@ function MeetUsPage() {
 function Intro() {
   return (
     <div className="relative px-4 py-12 mt-12 sm:px-6 lg:px-8">
-      <h2
-        style={{ letterSpacing: '0.7rem' }}
-        className="text-2xl font-bold leading-none text-center uppercase"
-      >
+      <h2 className="text-2xl font-bold leading-none text-center uppercase tracking-insane">
         <span>Come in and meet the</span>
         <br />
+        <span className="mt-4 text-6xl font-bold leading-none text-center uppercase">
         <span
           style={{ letterSpacing: '0.7rem' }}
           className="mt-4 text-6xl font-bold leading-none text-center uppercase"

@@ -19,10 +19,7 @@ function ContactPageForm() {
       <article className="relative px-4 pt-24 pb-12 sm:px-6 lg:px-8 sm:pt-40">
         <div className="relative w-full max-w-5xl px-4 py-12 mx-auto bg-black bg-opacity-50 border-4 border-white lg:my-12 sm:px-6 lg:px-8">
           <div className="space-y-6 text-center">
-            <h2
-              style={{ letterSpacing: '0.7rem' }}
-              className="text-2xl font-bold uppercase"
-            >
+            <h2 className="text-2xl font-bold uppercase tracking-insane">
               Contact Us
             </h2>
             <div className="mx-auto prose text-white">
