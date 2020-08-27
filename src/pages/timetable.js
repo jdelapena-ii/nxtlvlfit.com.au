@@ -25,7 +25,7 @@ function TimetablePage({
     if (node.day === 'Saturday') saturday.push(node);
   });
 
-  console.log(monday, tuesday, wednesday, thursday, friday, saturday);
+  // console.log(monday, tuesday, wednesday, thursday, friday, saturday);
 
   return (
     <Layout>
@@ -44,6 +44,10 @@ function TimetablePage({
           </tr>
         </thead>
         <tbody>
+          {/* ************************************************************** */}
+          {/* The following code is total garbage. It used to be done with map() until I ran into a bunch of problems */}
+          {/* which will be fixed soon */}
+          {/* ************************************************************** */}
           <tr>
             <td className="text-center px-2 py-3 border">{monday[0].time}</td>
             <td className="text-center px-2 py-3 border">
