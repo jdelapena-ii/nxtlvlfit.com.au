@@ -94,12 +94,12 @@ export function Footer() {
               <h2 className="text-xl font-bold tracking-widest uppercase">
                 Join Us
               </h2>
-              <button
-                type="button"
-                className="w-full max-w-xs px-8 py-2 text-sm tracking-widest uppercase border-2 border-white"
+              <Link
+                to="/membership/"
+                className="inline-block w-full max-w-xs px-8 py-2 text-sm tracking-widest uppercase transition duration-300 ease-in-out border-2 border-white hover:bg-white hover:text-black focus:bg-white focus:text-black"
               >
                 Sign up
-              </button>
+              </Link>
             </div>
           </nav>
         </div>
