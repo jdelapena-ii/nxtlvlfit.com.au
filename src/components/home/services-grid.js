@@ -21,7 +21,7 @@ function ServicesGrid() {
         image={svenMieke.childImageSharp.fluid}
       >
         <p>
-          Discover your potential with NXTLVL’s functional training area.
+          Discover your potential with nXtLvL’s functional training area.
           Improve strength, condition your body, learn new skills, challenge
           yourself, and have fun using the latest in functional training
           methodologies so you can smash your goals. We offer custom designed
@@ -35,13 +35,13 @@ function ServicesGrid() {
         image={kateBlush.childImageSharp.fluid}
       >
         <p>
-          NXTLVL is proud to offer a full calisthenics gym with its own
+          nXtLvL is proud to offer a full calisthenics gym with its own
           dedicated mobility facility and class schedule. Incorporating movement
           with body weight exercises, calisthenics increases strength, fitness,
           and mobility for all ages and body types.
         </p>
         <p>
-          NXTLVL calisthenics training ranges from group classes, personal
+          nXtLvL calisthenics training ranges from group classes, personal
           training, and special seminars with expert calisthenics and fitness
           practitioners from around the region and Australia.
         </p>
@@ -52,7 +52,7 @@ function ServicesGrid() {
         image={allefVinicius.childImageSharp.fluid}
       >
         <p>
-          Get to the next level of lifting heavy at NXTLVL. Hit those gains with
+          Get to the next level of lifting heavy at nXtLvL. Hit those gains with
           premier weightlifting, powerlifting, and plyometrics equipment,
           another dedicated part of our functional movement centre. Whether it’s
           for conditioning, hypertrophy, or attaining that one max rep, you’re
@@ -69,7 +69,7 @@ function ServicesGrid() {
         image={infraredSauna.childImageSharp.fluid}
       >
         <p>
-          NXTLVL has its own state-of-the-art infrared sauna for muscle recovery
+          nXtLvL has its own state-of-the-art infrared sauna for muscle recovery
           and Waon therapy. Waon therapy is linked with improve heart function,
           important for cardio training and heat conditioning. Use our infrared
           sauna for relaxation or as part of your training regimen. Infrared
@@ -83,10 +83,10 @@ function ServicesGrid() {
         image={massageImage.childImageSharp.fluid}
       >
         <p>
-          Recovery is integral to maintaining peak physical performance. NXTLVL
+          Recovery is integral to maintaining peak physical performance. nXtLvL
           offers sports massage and muscle therapy from a qualified massage
           therapist to help you get moving after injury or improve mobility.
-          Sports massage is part of NXTLVL’s dedicated mobility and recovery
+          Sports massage is part of nXtLvL’s dedicated mobility and recovery
           zone, focused on helping you ease back into full weight or cardio
           training. We encourage athletes and enthusiasts to use our facilities
           to support a comprehensive physiotherapy program.

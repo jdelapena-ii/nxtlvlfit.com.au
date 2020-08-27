@@ -15,7 +15,7 @@ function PageHero({ heading, image }) {
         </div>
       </div>
       <div className="absolute inset-0 flex items-center justify-center overflow-hidden">
-        <h1 className="text-4xl font-bold leading-none tracking-widest text-center uppercase text-shadow md:text-6xl">
+        <h1 className="max-w-2xl text-4xl font-bold leading-tight text-center uppercase tracking-insane text-shadow md:text-6xl">
           {heading}
         </h1>
       </div>

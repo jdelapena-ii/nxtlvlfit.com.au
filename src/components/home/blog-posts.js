@@ -1,19 +1,16 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import GatsbyImage from 'gatsby-image';
 import PropTypes from 'prop-types';
 
-import { Link } from 'gatsby';
+import { Heading } from '../heading';
 import { useGraphQL } from '../../hooks';
 
 function BlogPosts() {
   const { meghanHolmes } = useGraphQL();
   return (
     <article className="px-4 py-12 space-y-12 bg-black bg-opacity-75 sm:px-6 lg:px-8">
-      <h2 className="font-bold leading-none tracking-widest text-center uppercase sm:text-2xl">
-        <span>The latest from our </span>
-        <br />
-        <span className="mt-1 text-4xl sm:text-6xl">Blog</span>
-      </h2>
+      <Heading eyebrowText="The latest from our ">Blog</Heading>
       <div className="flex flex-col w-full max-w-4xl p-4 pb-12 mx-auto space-y-12 border-2 border-white ">
         <div className="grid gap-y-24">
           <BlogPost
