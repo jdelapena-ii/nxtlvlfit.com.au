@@ -24,7 +24,6 @@ function ServicesPage() {
           <FunctionalFitness />
           <Calisthenics />
           <PowerLifting />
-          <OlympicLifting />
           <SportsMassage />
           <InfraredSauna />
           <MobilityLounge />
