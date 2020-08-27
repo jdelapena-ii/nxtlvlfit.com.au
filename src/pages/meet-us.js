@@ -41,11 +41,7 @@ function Intro() {
         <span>Come in and meet the</span>
         <br />
         <span className="mt-4 text-6xl font-bold leading-none text-center uppercase">
-        <span
-          style={{ letterSpacing: '0.7rem' }}
-          className="mt-4 text-6xl font-bold leading-none text-center uppercase"
-        >
-          NXTLVL Team
+          nXtLvL Team
         </span>
       </h2>
       <div className="mx-auto mt-6 tracking-widest prose text-center text-white text-shadow">

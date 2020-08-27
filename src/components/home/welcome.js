@@ -23,7 +23,7 @@ function Welcome() {
         </h1>
         <div className="mx-auto mt-12 prose text-white">
           <p>
-            NXTLVL Functional Movement Centre is your ultimate fitness and
+            nXtLvL Functional Movement Centre is your ultimate fitness and
             mobility destination, catering for all ages and fitness levels in a
             fun, friendly, and functional environment.
           </p>
@@ -32,7 +32,7 @@ function Welcome() {
             your body and smash your fitness goals your way.
           </p>
           <p>
-            NXTLVL offers a range of training options: 1-on-1 personal training,
+            nXtLvL offers a range of training options: 1-on-1 personal training,
             Functional Fitness, Power Lifting, Olympic Lifting, and our
             world-class calisthenics program.
           </p>
@@ -45,11 +45,11 @@ function Welcome() {
             after your workout.
           </p>
           <p>
-            NXTLVL is where Port Macquarie meets their fitness goals while
+            nXtLvL is where Port Macquarie meets their fitness goals while
             keeping training diverse, challenging, and fun!
           </p>
           <p>
-            All are welcome at NXTLVL – click below for your FREE trial or
+            All are welcome at nXtLvL – click below for your FREE trial or
             arrange a grand tour with Rich or Kez here.
           </p>
         </div>
