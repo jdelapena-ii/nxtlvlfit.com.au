@@ -42,6 +42,63 @@ export default () =>
                 .child(S.documentTypeList('category').title('Blog Category')),
             ])
         ),
+      S.listItem()
+        .title('Timetable')
+        .icon(IoIosConstruct)
+        .child(
+          S.list()
+            .title('Day')
+            .items([
+              S.listItem()
+                .title('Monday')
+                .icon(IoIosNavigate)
+                .child(
+                  S.documentTypeList('timetable')
+                    .title('Schedule')
+                    .filter('day == "Monday"')
+                ),
+              S.listItem()
+                .title('Tuesday')
+                .icon(IoIosNavigate)
+                .child(
+                  S.documentTypeList('timetable')
+                    .title('Schedule')
+                    .filter('day == "Tuesday"')
+                ),
+              S.listItem()
+                .title('Wednesday')
+                .icon(IoIosNavigate)
+                .child(
+                  S.documentTypeList('timetable')
+                    .title('Schedule')
+                    .filter('day == "Wednesday"')
+                ),
+              S.listItem()
+                .title('Thursday')
+                .icon(IoIosNavigate)
+                .child(
+                  S.documentTypeList('timetable')
+                    .title('Schedule')
+                    .filter('day == "Thursday"')
+                ),
+              S.listItem()
+                .title('Friday')
+                .icon(IoIosNavigate)
+                .child(
+                  S.documentTypeList('timetable')
+                    .title('Schedule')
+                    .filter('day == "Friday"')
+                ),
+              S.listItem()
+                .title('Saturday')
+                .icon(IoIosNavigate)
+                .child(
+                  S.documentTypeList('timetable')
+                    .title('Schedule')
+                    .filter('day == "Saturday"')
+                ),
+            ])
+        ),
       ...S.documentTypeListItems().filter(
         (listItem) =>
           ![
@@ -56,6 +113,7 @@ export default () =>
             'menu',
             'serviceLocation',
             'service',
+            'timetable',
           ].includes(listItem.getId())
       ),
     ]);
