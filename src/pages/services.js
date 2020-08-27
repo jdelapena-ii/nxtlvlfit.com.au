@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
 import {
   Layout,
@@ -48,16 +49,12 @@ function FunctionalFitness() {
         functional training spaces that allow you learn new techniques,
         challenge yourself, and reach all your training goals.
       </p>
-      <p>
-        Our functional fitness zone encourages friendly competition, diverse
-        workout styles, and fun. Every day is a new challenge, as our
-        experienced trainers set Workouts of the Day that’ll get your heart
-        pumping.
-      </p>
-      <p>
-        Our custom designed rigs are ideal for people looking to improve their
-        fitness, hit their PRs or compete at the highest levels.{' '}
-      </p>
+      <Link
+        to="/"
+        className="inline-block px-8 py-2 text-sm tracking-widest text-black uppercase transition duration-300 ease-in-out bg-white border-2 border-white hover:text-white hover:bg-transparent"
+      >
+        See classes
+      </Link>
     </TeamMember>
   );
 }
@@ -66,22 +63,21 @@ function Calisthenics() {
   const { marcosPaulo } = useGraphQL();
   return (
     <TeamMember
+      eyebrowText="Discover fluid movement with"
       heading="Calisthenics"
       image={marcosPaulo.childImageSharp.fluid}
       objectPosition="right"
     >
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-        architecto modi, ratione blanditiis quis facere nulla repudiandae, quia
-        perspiciatis quae aspernatur iusto laudantium itaque nesciunt molestias,
-        in vel doloribus earum!
+        NXTLVL Functional Movement Centre is proud home to one of the region’s 
+        premier calisthenics training facilities. 
       </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-        architecto modi, ratione blanditiis quis facere nulla repudiandae, quia
-        perspiciatis quae aspernatur iusto laudantium itaque nesciunt molestias,
-        in vel doloribus earum!
-      </p>
+      <Link
+        to="/"
+        className="inline-block px-8 py-2 text-sm tracking-widest text-black uppercase transition duration-300 ease-in-out bg-white border-2 border-white hover:text-white hover:bg-transparent"
+      >
+        More info
+      </Link>
     </TeamMember>
   );
 }
@@ -90,22 +86,22 @@ function PowerLifting() {
   const { marcosPaulo } = useGraphQL();
   return (
     <TeamMember
-      heading="Power Lifting"
+      eyebrowText="Get those gains with"
+      heading="OLYMPIC LIFTING and POWER LIFTING"
       image={marcosPaulo.childImageSharp.fluid}
       reverse
     >
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-        architecto modi, ratione blanditiis quis facere nulla repudiandae, quia
-        perspiciatis quae aspernatur iusto laudantium itaque nesciunt molestias,
-        in vel doloribus earum!
+        Lift heavy with proper technique at NXTLVL Functional Movement Centre’s 
+        dedicated Olympic and Power lifting area, using all the latest weightlifting, 
+        powerlifting, and plyometrics equipment. 
       </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-        architecto modi, ratione blanditiis quis facere nulla repudiandae, quia
-        perspiciatis quae aspernatur iusto laudantium itaque nesciunt molestias,
-        in vel doloribus earum!
-      </p>
+      <Link
+        to="/"
+        className="inline-block px-8 py-2 text-sm tracking-widest text-black uppercase transition duration-300 ease-in-out bg-white border-2 border-white hover:text-white hover:bg-transparent"
+      >
+        More info
+      </Link>
     </TeamMember>
   );
 }
@@ -137,22 +133,23 @@ function SportsMassage() {
   const { marcosPaulo } = useGraphQL();
   return (
     <TeamMember
+      eyebrowText="Recover quicker with"
       heading="Sports Massage"
       image={marcosPaulo.childImageSharp.fluid}
       reverse
     >
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-        architecto modi, ratione blanditiis quis facere nulla repudiandae, quia
-        perspiciatis quae aspernatur iusto laudantium itaque nesciunt molestias,
-        in vel doloribus earum!
+        As part of our Functional Movement Centre, we understand how vital recovery 
+        is to maintaining fitness and function. NXTLVL offers in-house sports massage 
+        from qualified massage therapists to help you achieve more in the gym and in 
+        everyday life.
       </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-        architecto modi, ratione blanditiis quis facere nulla repudiandae, quia
-        perspiciatis quae aspernatur iusto laudantium itaque nesciunt molestias,
-        in vel doloribus earum!
-      </p>
+      <Link
+        to="/"
+        className="inline-block px-8 py-2 text-sm tracking-widest text-black uppercase transition duration-300 ease-in-out bg-white border-2 border-white hover:text-white hover:bg-transparent"
+      >
+        More info
+      </Link>
     </TeamMember>
   );
 }
@@ -161,21 +158,21 @@ function InfraredSauna() {
   const { marcosPaulo } = useGraphQL();
   return (
     <TeamMember
-      heading="Infrared Sauna"
+      eyebrowText="Sweat it out in our"
+      heading="INFRARED SAUNA"
       image={marcosPaulo.childImageSharp.fluid}
     >
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-        architecto modi, ratione blanditiis quis facere nulla repudiandae, quia
-        perspiciatis quae aspernatur iusto laudantium itaque nesciunt molestias,
-        in vel doloribus earum!
+      Our innovative infrared sauna is part of our recovery centre, helping 
+      your muscles recover from high intensity workout, improve circulation, 
+      and aid in relaxation. 
       </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-        architecto modi, ratione blanditiis quis facere nulla repudiandae, quia
-        perspiciatis quae aspernatur iusto laudantium itaque nesciunt molestias,
-        in vel doloribus earum!
-      </p>
+      <Link
+        to="/"
+        className="inline-block px-8 py-2 text-sm tracking-widest text-black uppercase transition duration-300 ease-in-out bg-white border-2 border-white hover:text-white hover:bg-transparent"
+      >
+        More info
+      </Link>
     </TeamMember>
   );
 }
