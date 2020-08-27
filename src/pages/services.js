@@ -7,6 +7,7 @@ import {
   PageHero,
   TeamMember,
   GradientContainer,
+  Heading,
 } from '../components';
 import { useGraphQL } from '../hooks';
 
@@ -20,13 +21,16 @@ function ServicesPage() {
         image={marcosPaulo.childImageSharp.fluid}
       />
       <GradientContainer>
-        <div className="relative grid max-w-5xl py-12 mx-auto mt-12 border-2 border-white gap-y-24">
-          <FunctionalFitness />
-          <Calisthenics />
-          <PowerLifting />
-          <SportsMassage />
-          <InfraredSauna />
-          <MobilityLounge />
+        <div className="px-4 pt-24 sm:px-6 lg:px-8">
+          <Heading eyebrowText="Get ready to get">Energised!</Heading>
+          <div className="relative grid max-w-5xl py-12 mx-auto mt-12 border-2 border-white gap-y-24">
+            <FunctionalFitness />
+            <Calisthenics />
+            <PowerLifting />
+            <SportsMassage />
+            <InfraredSauna />
+            <MobilityLounge />
+          </div>
         </div>
       </GradientContainer>
     </Layout>
@@ -39,21 +43,17 @@ function FunctionalFitness() {
     <TeamMember
       eyebrowText="Smash your goals with"
       heading="Functional Fitness"
+      ctaLink="/services/functional-fitness/"
+      ctaLabel="Read more"
       image={svenMieke.childImageSharp.fluid}
       reverse
     >
       <p>
-        NXTLVL offers a boutique industrial-inspired functional fitness training
+        nXtLvL offers a boutique industrial-inspired functional fitness training
         area with state-of-the-art equipment, resistance training, and
         functional training spaces that allow you learn new techniques,
         challenge yourself, and reach all your training goals.
       </p>
-      <Link
-        to="/"
-        className="inline-block px-8 py-2 text-sm tracking-widest text-black uppercase transition duration-300 ease-in-out bg-white border-2 border-white hover:text-white hover:bg-transparent"
-      >
-        See classes
-      </Link>
     </TeamMember>
   );
 }
@@ -64,19 +64,15 @@ function Calisthenics() {
     <TeamMember
       eyebrowText="Discover fluid movement with"
       heading="Calisthenics"
+      ctaLink="/services/calisthenics/"
+      ctaLabel="Read more"
       image={marcosPaulo.childImageSharp.fluid}
       objectPosition="right"
     >
       <p>
-        NXTLVL Functional Movement Centre is proud home to one of the region’s 
-        premier calisthenics training facilities. 
+        nXtLvL Functional Movement Centre is proud home to one of the region’s
+        premier calisthenics training facilities.
       </p>
-      <Link
-        to="/"
-        className="inline-block px-8 py-2 text-sm tracking-widest text-black uppercase transition duration-300 ease-in-out bg-white border-2 border-white hover:text-white hover:bg-transparent"
-      >
-        More info
-      </Link>
     </TeamMember>
   );
 }
@@ -86,25 +82,20 @@ function PowerLifting() {
   return (
     <TeamMember
       eyebrowText="Get those gains with"
-      heading="OLYMPIC LIFTING and POWER LIFTING"
+      heading="Olympic Lifting and Power Lifting"
+      ctaLink="/services/olympic-lifting–and–power-lifting/"
+      ctaLabel="Read more"
       image={marcosPaulo.childImageSharp.fluid}
       reverse
     >
       <p>
-        Lift heavy with proper technique at NXTLVL Functional Movement Centre’s 
-        dedicated Olympic and Power lifting area, using all the latest weightlifting, 
-        powerlifting, and plyometrics equipment. 
+        Lift heavy with proper technique at nXtLvL Functional Movement Centre’s
+        dedicated Olympic and Power lifting area, using all the latest
+        weightlifting, powerlifting, and plyometrics equipment.
       </p>
-      <Link
-        to="/"
-        className="inline-block px-8 py-2 text-sm tracking-widest text-black uppercase transition duration-300 ease-in-out bg-white border-2 border-white hover:text-white hover:bg-transparent"
-      >
-        More info
-      </Link>
     </TeamMember>
   );
 }
-
 
 function SportsMassage() {
   const { marcosPaulo } = useGraphQL();
@@ -112,20 +103,16 @@ function SportsMassage() {
     <TeamMember
       eyebrowText="Recover quicker with"
       heading="Sports Massage"
+      ctaLink="/services/sports-massage/"
+      ctaLabel="Read more"
       image={marcosPaulo.childImageSharp.fluid}
     >
       <p>
-        As part of our Functional Movement Centre, we understand how vital recovery 
-        is to maintaining fitness and function. NXTLVL offers in-house sports massage 
-        from qualified massage therapists to help you achieve more in the gym and in 
-        everyday life.
+        As part of our Functional Movement Centre, we understand how vital
+        recovery is to maintaining fitness and function. nXtLvL offers in-house
+        sports massage from qualified massage therapists to help you achieve
+        more in the gym and in everyday life.
       </p>
-      <Link
-        to="/"
-        className="inline-block px-8 py-2 text-sm tracking-widest text-black uppercase transition duration-300 ease-in-out bg-white border-2 border-white hover:text-white hover:bg-transparent"
-      >
-        More info
-      </Link>
     </TeamMember>
   );
 }
@@ -135,21 +122,17 @@ function InfraredSauna() {
   return (
     <TeamMember
       eyebrowText="Sweat it out in our"
-      heading="INFRARED SAUNA"
+      heading="Infrared Sauna"
+      ctaLink="/services/infrared-sauna/"
+      ctaLabel="Read more"
       image={marcosPaulo.childImageSharp.fluid}
       reverse
     >
       <p>
-      Our innovative infrared sauna is part of our recovery centre, helping 
-      your muscles recover from high intensity workout, improve circulation, 
-      and aid in relaxation. 
+        Our innovative infrared sauna is part of our recovery centre, helping
+        your muscles recover from high intensity workout, improve circulation,
+        and aid in relaxation.
       </p>
-      <Link
-        to="/"
-        className="inline-block px-8 py-2 text-sm tracking-widest text-black uppercase transition duration-300 ease-in-out bg-white border-2 border-white hover:text-white hover:bg-transparent"
-      >
-        More info
-      </Link>
     </TeamMember>
   );
 }
@@ -159,6 +142,8 @@ function MobilityLounge() {
   return (
     <TeamMember
       heading="Mobility Lounge"
+      ctaLink="/services/mobility-lounge/"
+      ctaLabel="Read more"
       image={marcosPaulo.childImageSharp.fluid}
     >
       <p>

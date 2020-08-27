@@ -2,6 +2,7 @@ export * from './background';
 export * from './blog-post';
 export * from './contact-page-form';
 export * from './gradient-container';
+export * from './heading';
 export * from './hero';
 export * from './layout';
 export * from './map';

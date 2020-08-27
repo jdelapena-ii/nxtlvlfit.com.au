@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'gatsby';
 import GatsbyImage from 'gatsby-image';
 
-import { Link } from 'gatsby';
+import { Heading } from '../heading';
 import { useGraphQL } from '../../hooks';
 
 function Welcome() {
@@ -16,11 +17,9 @@ function Welcome() {
         <div className="absolute inset-0 bg-black bg-opacity-75 pointer-events-none bg-gradient-to-t from-black via-transparent to-black sm:bg-transparent" />
       </div>
       <div className="relative px-4 py-12 sm:px-6 lg:px-8 text-shadow">
-        <h1 className="font-bold leading-none tracking-widest text-center uppercase sm:text-2xl">
-          <span className="mt-1 text-4xl sm:text-6xl">Level up </span>
-          <br />
-          <span>your fitness and mobility</span>
-        </h1>
+        <Heading eyebrowText="your fitness and mobility" tag="h1" reverse>
+          Level up{' '}
+        </Heading>
         <div className="mx-auto mt-12 prose text-white">
           <p>
             nXtLvL Functional Movement Centre is your ultimate fitness and
