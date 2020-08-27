@@ -20,9 +20,7 @@ function Layout({ children, isHome }) {
         <div className="relative flex flex-col flex-1">
           <Background isHome={isHome} />
           {isHome ? <Hero /> : <NavBar />}
-          <main className="relative flex flex-col justify-end flex-1">
-            {children}
-          </main>
+          <main className="relative flex flex-col flex-1">{children}</main>
         </div>
         <Footer />
       </div>
