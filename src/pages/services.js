@@ -106,28 +106,6 @@ function PowerLifting() {
   );
 }
 
-function OlympicLifting() {
-  const { marcosPaulo } = useGraphQL();
-  return (
-    <TeamMember
-      heading="Olympic Lifting"
-      image={marcosPaulo.childImageSharp.fluid}
-    >
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-        architecto modi, ratione blanditiis quis facere nulla repudiandae, quia
-        perspiciatis quae aspernatur iusto laudantium itaque nesciunt molestias,
-        in vel doloribus earum!
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-        architecto modi, ratione blanditiis quis facere nulla repudiandae, quia
-        perspiciatis quae aspernatur iusto laudantium itaque nesciunt molestias,
-        in vel doloribus earum!
-      </p>
-    </TeamMember>
-  );
-}
 
 function SportsMassage() {
   const { marcosPaulo } = useGraphQL();
@@ -136,7 +114,6 @@ function SportsMassage() {
       eyebrowText="Recover quicker with"
       heading="Sports Massage"
       image={marcosPaulo.childImageSharp.fluid}
-      reverse
     >
       <p>
         As part of our Functional Movement Centre, we understand how vital recovery 
@@ -161,6 +138,7 @@ function InfraredSauna() {
       eyebrowText="Sweat it out in our"
       heading="INFRARED SAUNA"
       image={marcosPaulo.childImageSharp.fluid}
+      reverse
     >
       <p>
       Our innovative infrared sauna is part of our recovery centre, helping 
@@ -183,7 +161,6 @@ function MobilityLounge() {
     <TeamMember
       heading="Mobility Lounge"
       image={marcosPaulo.childImageSharp.fluid}
-      reverse
     >
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
