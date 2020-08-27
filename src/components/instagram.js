@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { useGraphQL, useInstagram } from '../../hooks';
+import { useGraphQL, useInstagram } from '../hooks';
 
 function Instagram() {
   const {

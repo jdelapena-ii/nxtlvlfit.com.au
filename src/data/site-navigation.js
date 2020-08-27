@@ -38,6 +38,11 @@ export const mainNavigation = [
     slug: '/timetable/',
   },
   {
+    id: 'a123jh94-a398-4556-a678-74l98578a2ce',
+    label: 'Blog',
+    slug: '/blog/',
+  },
+  {
     id: '6032c728-23e9-4611-8613-48e7973c998c',
     label: 'Contact',
     slug: '/contact/',

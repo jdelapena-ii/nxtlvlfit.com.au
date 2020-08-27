@@ -41,6 +41,15 @@ export function useGraphQL() {
             }
           }
         }
+        backgroundBlack: file(
+          relativePath: { eq: "background-image-black.jpg" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 1920, quality: 90) {
+              ...GatsbyImageSharpFluid_withWebp_noBase64
+            }
+          }
+        }
         backgroundImage: file(relativePath: { eq: "background-image.png" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {

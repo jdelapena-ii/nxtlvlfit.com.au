@@ -1,13 +1,19 @@
 import React from 'react';
 
-import { Layout, SEO, NavBar, ContactPageForm, Map } from '../components';
+import {
+  Layout,
+  SEO,
+  NavBar,
+  ContactPageForm,
+  Instagram,
+  Map,
+} from '../components';
 import {
   Welcome,
   ServicesGrid,
   MeetYourTeam,
   BlogPosts,
   TrueProtein,
-  Instagram,
 } from '../components/home';
 import grunge from '../images/background-image-black.jpg';
 
