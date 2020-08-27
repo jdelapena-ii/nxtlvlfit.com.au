@@ -56,6 +56,10 @@ module.exports = {
       fontFamily: {
         sans: ['Josefin Sans', ...defaultTheme.fontFamily.sans],
       },
+      letterSpacing: {
+        'ultra-wide': '0.3em',
+        insane: '0.7em',
+      },
     },
   },
   variants: {
