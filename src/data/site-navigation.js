@@ -6,11 +6,6 @@ export const mainNavigation = [
     label: 'nXtLvL ',
     submenu: [
       {
-        id: '85402cb4-5d07-4afb-87f0-1876e68d80e0',
-        label: 'nXtLvL Facility',
-        slug: '/facility/',
-      },
-      {
         id: '7ef6f429-3013-40b7-8cf3-fc1fa2329318',
         label: 'nXtLvL Services',
         slug: '/services/',

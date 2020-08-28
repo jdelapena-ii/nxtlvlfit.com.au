@@ -5,6 +5,7 @@ import {
   SEO,
   NavBar,
   ContactPageForm,
+  TrueProtein,
   Instagram,
   Map,
 } from '../components';
@@ -13,7 +14,6 @@ import {
   ServicesGrid,
   MeetYourTeam,
   BlogPosts,
-  TrueProtein,
 } from '../components/home';
 import grunge from '../images/background-image-black.jpg';
 

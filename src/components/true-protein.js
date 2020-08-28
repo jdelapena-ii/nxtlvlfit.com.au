@@ -2,7 +2,7 @@ import React from 'react';
 import GatsbyImage from 'gatsby-image';
 import PropTypes from 'prop-types';
 
-import { useGraphQL } from '../../hooks';
+import { useGraphQL } from '../hooks';
 
 function TrueProtein() {
   const { marcosPaulo, trueProtein, brigitteTohm } = useGraphQL();

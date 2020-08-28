@@ -1,13 +1,16 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 import {
   Layout,
   SEO,
   PageHero,
-  TeamMember,
   GradientContainer,
   Heading,
+  TeamMember,
+  TrueProtein,
+  Instagram,
+  ContactPageForm,
+  Map,
 } from '../components';
 import { useGraphQL } from '../hooks';
 
@@ -21,7 +24,7 @@ function ServicesPage() {
         image={marcosPaulo.childImageSharp.fluid}
       />
       <GradientContainer>
-        <div className="px-4 pt-24 sm:px-6 lg:px-8">
+        <div className="px-4 py-24 sm:px-6 lg:px-8">
           <Heading eyebrowText="Get ready to get">Energised!</Heading>
           <div className="relative grid max-w-5xl py-12 mx-auto mt-12 border-2 border-white gap-y-24">
             <FunctionalFitness />
@@ -33,6 +36,10 @@ function ServicesPage() {
           </div>
         </div>
       </GradientContainer>
+      <TrueProtein />
+      <Instagram />
+      <ContactPageForm />
+      <Map />
     </Layout>
   );
 }
@@ -98,14 +105,14 @@ function PowerLifting() {
 }
 
 function SportsMassage() {
-  const { marcosPaulo } = useGraphQL();
+  const { massageImage } = useGraphQL();
   return (
     <TeamMember
       eyebrowText="Recover quicker with"
       heading="Sports Massage"
       ctaLink="/services/sports-massage/"
       ctaLabel="Read more"
-      image={marcosPaulo.childImageSharp.fluid}
+      image={massageImage.childImageSharp.fluid}
     >
       <p>
         As part of our Functional Movement Centre, we understand how vital
@@ -118,14 +125,14 @@ function SportsMassage() {
 }
 
 function InfraredSauna() {
-  const { marcosPaulo } = useGraphQL();
+  const { infraredSauna } = useGraphQL();
   return (
     <TeamMember
       eyebrowText="Sweat it out in our"
       heading="Infrared Sauna"
       ctaLink="/services/infrared-sauna/"
       ctaLabel="Read more"
-      image={marcosPaulo.childImageSharp.fluid}
+      image={infraredSauna.childImageSharp.fluid}
       reverse
     >
       <p>
@@ -138,13 +145,13 @@ function InfraredSauna() {
 }
 
 function MobilityLounge() {
-  const { marcosPaulo } = useGraphQL();
+  const { massageImage } = useGraphQL();
   return (
     <TeamMember
       heading="Mobility Lounge"
       ctaLink="/services/mobility-lounge/"
       ctaLabel="Read more"
-      image={marcosPaulo.childImageSharp.fluid}
+      image={massageImage.childImageSharp.fluid}
     >
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam

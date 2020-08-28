@@ -15,3 +15,4 @@ export * from './promo-page-form';
 export * from './seo';
 export * from './team-member';
 export * from './text-with-image';
+export * from './true-protein';
