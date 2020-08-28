@@ -5,10 +5,10 @@ import { Link } from 'gatsby';
 import { useGraphQL } from '../../hooks';
 
 function MeetYourTeam() {
-  const { meghanHolmes } = useGraphQL();
+  const { scottWebb } = useGraphQL();
   return (
     <article className="relative flex flex-col justify-between overflow-hidden">
-      <GatsbyImage fluid={meghanHolmes.childImageSharp.fluid} />
+      <GatsbyImage fluid={scottWebb.childImageSharp.fluid} />
       <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black via-transparent" />
       <div className="absolute inset-0 flex items-center justify-center">
         <Link

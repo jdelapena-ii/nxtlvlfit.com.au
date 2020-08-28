@@ -106,6 +106,13 @@ export function useGraphQL() {
             }
           }
         }
+        scottWebb: file(relativePath: { eq: "scott-webb.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         svenMieke: file(relativePath: { eq: "sven-mieke.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
