@@ -2,7 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { graphql } from 'gatsby';
 
-import { Layout, SEO } from '../components';
+import {
+  Layout,
+  SEO,
+  GradientContainer,
+  Table,
+  TableRow,
+  TableHeading,
+  TableBody,
+  TableCell,
+} from '../components';
 
 function TimetablePage({
   data: {
@@ -25,273 +34,152 @@ function TimetablePage({
     if (node.day === 'Saturday') saturday.push(node);
   });
 
-  // console.log(monday, tuesday, wednesday, thursday, friday, saturday);
-
   return (
     <Layout>
       <SEO title="Coming soon" />
-      <table className="border-4 mt-12 table-auto">
-        <thead>
-          <tr>
-            <th className="px-2 py-3 border uppercase">Time</th>
-            <th className="px-2 py-3 border uppercase">Monday</th>
-            <th className="px-2 py-3 border uppercase">Tuesday</th>
-            <th className="px-2 py-3 border uppercase">Wednesday</th>
-            <th className="px-2 py-3 border uppercase">Thursday</th>
-            <th className="px-2 py-3 border uppercase">Friday</th>
-            <th className="px-2 py-3 border uppercase">Saturday</th>
-            <th className="px-2 py-3 border uppercase">Sunday</th>
-          </tr>
-        </thead>
-        <tbody>
-          {/* ************************************************************** */}
-          {/* The following code is total garbage. It used to be done with map() until I ran into a bunch of problems */}
-          {/* which will be fixed soon */}
-          {/* ************************************************************** */}
-          <tr>
-            <td className="text-center px-2 py-3 border">{monday[0].time}</td>
-            <td className="text-center px-2 py-3 border">
-              {monday[0].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {tuesday[0].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {wednesday[0].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {thursday[0].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {friday[0].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {saturday[0].activity}
-            </td>
-            <td rowSpan="11" className="text-center px-2 py-3 border">
-              nXt LvL REST <br />
-              &amp; RESTORE
-            </td>
-          </tr>
-          <tr>
-            <td className="text-center px-2 py-3 border">{monday[1].time}</td>
-            <td className="text-center px-2 py-3 border">
-              {monday[1].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {tuesday[1].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {wednesday[1].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {thursday[1].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {friday[1].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {saturday[1].activity}
-            </td>
-          </tr>
-          <tr>
-            <td className="text-center px-2 py-3 border">{monday[2].time}</td>
-            <td className="text-center px-2 py-3 border">
-              {monday[2].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {tuesday[2].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {wednesday[2].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {thursday[2].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {friday[2].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {saturday[2].activity}
-            </td>
-          </tr>
-          <tr>
-            <td className="text-center px-2 py-3 border">{monday[3].time}</td>
-            <td className="text-center px-2 py-3 border">
-              {monday[3].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {tuesday[3].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {wednesday[3].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {thursday[3].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {friday[3].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {saturday[3].activity}
-            </td>
-          </tr>
-          <tr>
-            <td className="text-center px-2 py-3 border">{monday[4].time}</td>
-            <td className="text-center px-2 py-3 border">
-              {monday[4].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {tuesday[4].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {wednesday[4].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {thursday[4].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {friday[4].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {saturday[4].activity}
-            </td>
-          </tr>
-          <tr>
-            <td className="text-center px-2 py-3 border">{monday[5].time}</td>
-            <td className="text-center px-2 py-3 border">
-              {monday[5].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {tuesday[5].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {wednesday[5].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {thursday[5].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {friday[5].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {saturday[5].activity}
-            </td>
-          </tr>
-          <tr>
-            <td className="text-center px-2 py-3 border">{monday[6].time}</td>
-            <td className="text-center px-2 py-3 border">
-              {monday[6].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {tuesday[6].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {wednesday[6].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {thursday[6].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {friday[6].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {saturday[6].activity}
-            </td>
-          </tr>
-          <tr>
-            <td className="text-center px-2 py-3 border">{monday[7].time}</td>
-            <td className="text-center px-2 py-3 border">
-              {monday[7].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {tuesday[7].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {wednesday[7].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {thursday[7].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {friday[7].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {saturday[7].activity}
-            </td>
-          </tr>
-          <tr>
-            <td className="text-center px-2 py-3 border">{monday[8].time}</td>
-            <td className="text-center px-2 py-3 border">
-              {monday[8].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {tuesday[8].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {wednesday[8].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {thursday[8].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {friday[8].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {saturday[8].activity}
-            </td>
-          </tr>
-          <tr>
-            <td className="text-center px-2 py-3 border">{monday[9].time}</td>
-            <td className="text-center px-2 py-3 border">
-              {monday[9].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {tuesday[9].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {wednesday[9].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {thursday[9].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {friday[9].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {saturday[9].activity}
-            </td>
-          </tr>
-          <tr>
-            <td className="text-center px-2 py-3 border">{monday[10].time}</td>
-            <td className="text-center px-2 py-3 border">
-              {monday[10].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {tuesday[10].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {wednesday[10].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {thursday[10].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {friday[10].activity}
-            </td>
-            <td className="text-center px-2 py-3 border">
-              {saturday[10].activity}
-            </td>
-          </tr>
-          <tr>
-            <td colSpan="8" className="text-center px-2 py-3 border-4">
-              The first Friday of each month there will be NO 4.30pm or 5.30pm
-              classes. Instead we will host FRIDAY NIGHT LIGHTS - Lifting,
-              skills, wood, music, food and BYO drinks
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <GradientContainer>
+        <div className="relative flex flex-col">
+          <div className="-my-2 overflow-x-auto">
+            <div className="inline-block min-w-full px-4 py-2 align-middle sm:px-6 lg:px-8">
+              <div className="overflow-hidden border-2 border-white">
+                <Table>
+                  <thead>
+                    <TableRow>
+                      <TableHeading>Time</TableHeading>
+                      <TableHeading>Monday</TableHeading>
+                      <TableHeading>Tuesday</TableHeading>
+                      <TableHeading>Wednesday</TableHeading>
+                      <TableHeading>Thursday</TableHeading>
+                      <TableHeading>Friday</TableHeading>
+                      <TableHeading>Saturday</TableHeading>
+                      <TableHeading>Sunday</TableHeading>
+                    </TableRow>
+                  </thead>
+                  <TableBody>
+                    {/* **********************************************************
+                  /* The following code is total garbage.
+                  /* It used to be done with map() until I ran into
+                  /* a bunch of problems
+                  /* which will be fixed soon
+                  /* ******************************************************* */}
+                    <TableRow>
+                      <TableCell>{monday[0].time}</TableCell>
+                      <TableCell>{monday[0].activity}</TableCell>
+                      <TableCell>{tuesday[0].activity}</TableCell>
+                      <TableCell>{wednesday[0].activity}</TableCell>
+                      <TableCell>{thursday[0].activity}</TableCell>
+                      <TableCell>{friday[0].activity}</TableCell>
+                      <TableCell>{saturday[0].activity}</TableCell>
+                      <TableCell rowSpan={11}>
+                        nXt LvL REST <br />
+                        &amp; RESTORE
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell>{monday[1].time}</TableCell>
+                      <TableCell>{monday[1].activity}</TableCell>
+                      <TableCell>{tuesday[1].activity}</TableCell>
+                      <TableCell>{wednesday[1].activity}</TableCell>
+                      <TableCell>{thursday[1].activity}</TableCell>
+                      <TableCell>{friday[1].activity}</TableCell>
+                      <TableCell>{saturday[1].activity}</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell>{monday[2].time}</TableCell>
+                      <TableCell>{monday[2].activity}</TableCell>
+                      <TableCell>{tuesday[2].activity}</TableCell>
+                      <TableCell>{wednesday[2].activity}</TableCell>
+                      <TableCell>{thursday[2].activity}</TableCell>
+                      <TableCell>{friday[2].activity}</TableCell>
+                      <TableCell>{saturday[2].activity}</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell>{monday[3].time}</TableCell>
+                      <TableCell>{monday[3].activity}</TableCell>
+                      <TableCell>{tuesday[3].activity}</TableCell>
+                      <TableCell>{wednesday[3].activity}</TableCell>
+                      <TableCell>{thursday[3].activity}</TableCell>
+                      <TableCell>{friday[3].activity}</TableCell>
+                      <TableCell>{saturday[3].activity}</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell>{monday[4].time}</TableCell>
+                      <TableCell>{monday[4].activity}</TableCell>
+                      <TableCell>{tuesday[4].activity}</TableCell>
+                      <TableCell>{wednesday[4].activity}</TableCell>
+                      <TableCell>{thursday[4].activity}</TableCell>
+                      <TableCell>{friday[4].activity}</TableCell>
+                      <TableCell>{saturday[4].activity}</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell>{monday[5].time}</TableCell>
+                      <TableCell>{monday[5].activity}</TableCell>
+                      <TableCell>{tuesday[5].activity}</TableCell>
+                      <TableCell>{wednesday[5].activity}</TableCell>
+                      <TableCell>{thursday[5].activity}</TableCell>
+                      <TableCell>{friday[5].activity}</TableCell>
+                      <TableCell>{saturday[5].activity}</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell>{monday[6].time}</TableCell>
+                      <TableCell>{monday[6].activity}</TableCell>
+                      <TableCell>{tuesday[6].activity}</TableCell>
+                      <TableCell>{wednesday[6].activity}</TableCell>
+                      <TableCell>{thursday[6].activity}</TableCell>
+                      <TableCell>{friday[6].activity}</TableCell>
+                      <TableCell>{saturday[6].activity}</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell>{monday[7].time}</TableCell>
+                      <TableCell>{monday[7].activity}</TableCell>
+                      <TableCell>{tuesday[7].activity}</TableCell>
+                      <TableCell>{wednesday[7].activity}</TableCell>
+                      <TableCell>{thursday[7].activity}</TableCell>
+                      <TableCell>{friday[7].activity}</TableCell>
+                      <TableCell>{saturday[7].activity}</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell>{monday[8].time}</TableCell>
+                      <TableCell>{monday[8].activity}</TableCell>
+                      <TableCell>{tuesday[8].activity}</TableCell>
+                      <TableCell>{wednesday[8].activity}</TableCell>
+                      <TableCell>{thursday[8].activity}</TableCell>
+                      <TableCell>{friday[8].activity}</TableCell>
+                      <TableCell>{saturday[8].activity}</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell>{monday[9].time}</TableCell>
+                      <TableCell>{monday[9].activity}</TableCell>
+                      <TableCell>{tuesday[9].activity}</TableCell>
+                      <TableCell>{wednesday[9].activity}</TableCell>
+                      <TableCell>{thursday[9].activity}</TableCell>
+                      <TableCell>{friday[9].activity}</TableCell>
+                      <TableCell>{saturday[9].activity}</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell>{monday[10].time}</TableCell>
+                      <TableCell>{monday[10].activity}</TableCell>
+                      <TableCell>{tuesday[10].activity}</TableCell>
+                      <TableCell>{wednesday[10].activity}</TableCell>
+                      <TableCell>{thursday[10].activity}</TableCell>
+                      <TableCell>{friday[10].activity}</TableCell>
+                      <TableCell>{saturday[10].activity}</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell colSpan={8}>
+                        The first Friday of each month there will be NO 4.30pm
+                        or 5.30pm classes. Instead we will host FRIDAY NIGHT
+                        LIGHTS - Lifting, skills, wood, music, food and BYO
+                        drinks
+                      </TableCell>
+                    </TableRow>
+                  </TableBody>
+                </Table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </GradientContainer>
     </Layout>
   );
 }
