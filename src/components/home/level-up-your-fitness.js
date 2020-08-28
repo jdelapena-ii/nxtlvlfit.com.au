@@ -5,7 +5,7 @@ import GatsbyImage from 'gatsby-image';
 import { Heading } from '../heading';
 import { useGraphQL } from '../../hooks';
 
-function Welcome() {
+function LevelUpYourFitness() {
   const { allefVinicius } = useGraphQL();
   return (
     <article className="relative flex flex-col justify-between overflow-hidden">
@@ -63,4 +63,4 @@ function Welcome() {
   );
 }
 
-export { Welcome };
+export { LevelUpYourFitness };

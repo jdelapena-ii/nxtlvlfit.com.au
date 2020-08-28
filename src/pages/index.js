@@ -9,7 +9,7 @@ import {
   Instagram,
   Map,
 } from '../components';
-import { Welcome, ServicesGrid, MeetYourTeam } from '../components/home';
+import { LevelUpYourFitness, MeetYourTeam } from '../components/home';
 import grunge from '../images/background-image-black.jpg';
 
 function IndexPage() {
@@ -23,8 +23,7 @@ function IndexPage() {
           className="bg-fixed pointer-events-auto"
         >
           <NavBar />
-          <Welcome />
-          <ServicesGrid />
+          <LevelUpYourFitness />
           <MeetYourTeam />
           <TrueProtein />
           <Instagram />
