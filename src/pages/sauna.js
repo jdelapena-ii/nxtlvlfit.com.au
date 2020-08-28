@@ -16,7 +16,12 @@ import {
 import { useGraphQL } from '../hooks';
 
 function SaunaPage() {
-  const { infraredSauna, marcosPaulo, massageImage, brigitteTohm } = useGraphQL();
+  const {
+    infraredSauna,
+    marcosPaulo,
+    sportsMassage,
+    brigitteTohm,
+  } = useGraphQL();
   return (
     <Layout>
       <SEO title="Sauna" />
@@ -94,7 +99,7 @@ function SaunaPage() {
             <div className="relative h-0 aspect-ratio-square">
               <div className="absolute inset-0 flex">
                 <GatsbyImage
-                  fluid={massageImage.childImageSharp.fluid}
+                  fluid={sportsMassage.childImageSharp.fluid}
                   className="flex-1"
                 />
               </div>

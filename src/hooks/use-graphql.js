@@ -45,7 +45,7 @@ export function useGraphQL() {
           relativePath: { eq: "background-image-black.jpg" }
         ) {
           childImageSharp {
-            fluid(maxWidth: 1920, quality: 90) {
+            fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid_withWebp_noBase64
             }
           }
@@ -58,6 +58,13 @@ export function useGraphQL() {
           }
         }
         brigitteTohm: file(relativePath: { eq: "brigitte-tohm.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        calisthenics: file(relativePath: { eq: "calisthenics.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid
@@ -92,13 +99,6 @@ export function useGraphQL() {
             }
           }
         }
-        massageImage: file(relativePath: { eq: "massage.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 1920) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
         meghanHolmes: file(relativePath: { eq: "meghan-holmes.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
@@ -106,7 +106,23 @@ export function useGraphQL() {
             }
           }
         }
+        olympicAndPowerLifting: file(
+          relativePath: { eq: "olympic-and-power-lifting.jpg" }
+        ) {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         scottWebb: file(relativePath: { eq: "scott-webb.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        sportsMassage: file(relativePath: { eq: "sports-massage.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid

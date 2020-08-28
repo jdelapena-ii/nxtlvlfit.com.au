@@ -18,7 +18,7 @@ function FunctionalFitness() {
     {
       file(relativePath: { eq: "background-image.png" }) {
         childImageSharp {
-          fluid(maxWidth: 1920, quality: 90) {
+          fluid(maxWidth: 1920) {
             ...GatsbyImageSharpFluid_withWebp_noBase64
           }
         }

@@ -66,15 +66,14 @@ function FunctionalFitness() {
 }
 
 function Calisthenics() {
-  const { marcosPaulo } = useGraphQL();
+  const { calisthenics } = useGraphQL();
   return (
     <TeamMember
       eyebrowText="Discover fluid movement with"
       heading="Calisthenics"
       ctaLink="/services/calisthenics/"
       ctaLabel="Read more"
-      image={marcosPaulo.childImageSharp.fluid}
-      objectPosition="right"
+      image={calisthenics.childImageSharp.fluid}
     >
       <p>
         nXtLvL Functional Movement Centre is proud home to one of the region’s
@@ -85,14 +84,14 @@ function Calisthenics() {
 }
 
 function PowerLifting() {
-  const { marcosPaulo } = useGraphQL();
+  const { olympicAndPowerLifting } = useGraphQL();
   return (
     <TeamMember
       eyebrowText="Get those gains with"
       heading="Olympic Lifting and Power Lifting"
       ctaLink="/services/olympic-lifting–and–power-lifting/"
       ctaLabel="Read more"
-      image={marcosPaulo.childImageSharp.fluid}
+      image={olympicAndPowerLifting.childImageSharp.fluid}
       reverse
     >
       <p>
@@ -105,14 +104,15 @@ function PowerLifting() {
 }
 
 function SportsMassage() {
-  const { massageImage } = useGraphQL();
+  const { sportsMassage } = useGraphQL();
   return (
     <TeamMember
       eyebrowText="Recover quicker with"
       heading="Sports Massage"
       ctaLink="/services/sports-massage/"
       ctaLabel="Read more"
-      image={massageImage.childImageSharp.fluid}
+      image={sportsMassage.childImageSharp.fluid}
+      objectPosition="right"
     >
       <p>
         As part of our Functional Movement Centre, we understand how vital
@@ -145,13 +145,13 @@ function InfraredSauna() {
 }
 
 function MobilityLounge() {
-  const { massageImage } = useGraphQL();
+  const { sportsMassage } = useGraphQL();
   return (
     <TeamMember
       heading="Mobility Lounge"
       ctaLink="/services/mobility-lounge/"
       ctaLabel="Read more"
-      image={massageImage.childImageSharp.fluid}
+      image={sportsMassage.childImageSharp.fluid}
     >
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam

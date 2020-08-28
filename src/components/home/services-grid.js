@@ -11,7 +11,7 @@ function ServicesGrid() {
     kateBlush,
     allefVinicius,
     infraredSauna,
-    massageImage,
+    sportsMassage,
   } = useGraphQL();
   return (
     <div className="grid bg-black md:grid-cols-2 lg:grid-cols-3">
@@ -80,7 +80,7 @@ function ServicesGrid() {
       <Service
         label="Sports Massage"
         slug="/"
-        image={massageImage.childImageSharp.fluid}
+        image={sportsMassage.childImageSharp.fluid}
       >
         <p>
           Recovery is integral to maintaining peak physical performance. nXtLvL

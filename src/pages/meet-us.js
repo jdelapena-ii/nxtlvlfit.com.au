@@ -1,4 +1,5 @@
 import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import {
   Layout,
@@ -11,15 +12,29 @@ import {
   ContactPageForm,
   Map,
 } from '../components';
-
 import { useGraphQL } from '../hooks';
 
 function MeetUsPage() {
-  const { kateBlush } = useGraphQL();
+  const { meetUsHeroImage } = useStaticQuery(
+    graphql`
+      {
+        meetUsHeroImage: file(relativePath: { eq: "meet-us-hero-image.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    `
+  );
   return (
     <Layout>
       <SEO title="Meet the nXtLvL Team" />
-      <PageHero heading="Meet Us" image={kateBlush.childImageSharp.fluid} />
+      <PageHero
+        heading="Meet Us"
+        image={meetUsHeroImage.childImageSharp.fluid}
+      />
       <GradientContainer>
         <div className="relative grid pb-24 gap-y-24">
           <Intro eyebrowText="Come in and meet the" heading="nTxLvL Team">
