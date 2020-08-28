@@ -9,12 +9,7 @@ import {
   Instagram,
   Map,
 } from '../components';
-import {
-  Welcome,
-  ServicesGrid,
-  MeetYourTeam,
-  BlogPosts,
-} from '../components/home';
+import { Welcome, ServicesGrid, MeetYourTeam } from '../components/home';
 import grunge from '../images/background-image-black.jpg';
 
 function IndexPage() {
@@ -31,7 +26,6 @@ function IndexPage() {
           <Welcome />
           <ServicesGrid />
           <MeetYourTeam />
-          <BlogPosts />
           <TrueProtein />
           <Instagram />
           <ContactPageForm />
