@@ -21,7 +21,7 @@ function ServiceTemplate({ data: { sanityService } }) {
   const { marcosPaulo } = useGraphQL();
   return (
     <Layout>
-      <SEO title="Sauna" />
+      <SEO title={sanityService.title} />
       <PageHero
         heading={sanityService.heroHeading}
         image={sanityService.heroImage.asset.fluid}
@@ -54,8 +54,8 @@ function ServiceTemplate({ data: { sanityService } }) {
             />
           </TeamMember>
           <article className="grid grid-cols-2 px-4 lg:grid-cols-4 sm:px-6 lg:px-8">
-            {sanityService.smallImages.map((img) => (
-              <div className="relative h-0 aspect-ratio-square">
+            {sanityService.smallImages.map((img, i) => (
+              <div key={i} className="relative h-0 aspect-ratio-square">
                 <div className="absolute inset-0 flex">
                   <GatsbyImage fluid={img.asset.fluid} className="flex-1" />
                 </div>
