@@ -89,7 +89,7 @@ function PowerLifting() {
     <TeamMember
       eyebrowText="Get those gains with"
       heading="Olympic Lifting and Power Lifting"
-      ctaLink="/services/olympic-lifting–and–power-lifting/"
+      ctaLink="/services/olympic-and-power-lifting/"
       ctaLabel="Read more"
       image={olympicAndPowerLifting.childImageSharp.fluid}
       reverse

@@ -17,7 +17,7 @@ function ServicesGrid() {
     <div className="grid bg-black md:grid-cols-2 lg:grid-cols-3">
       <Service
         label="Functional Fitness"
-        slug="/"
+        slug="/services/functional-fitness/"
         image={svenMieke.childImageSharp.fluid}
       >
         <p>
@@ -31,7 +31,7 @@ function ServicesGrid() {
       </Service>
       <Service
         label="Calisthenics"
-        slug="/"
+        slug="/services/calisthenics/"
         image={kateBlush.childImageSharp.fluid}
       >
         <p>
@@ -48,7 +48,7 @@ function ServicesGrid() {
       </Service>
       <Service
         label="Olympic Lifting & Power Lifting"
-        slug="/"
+        slug="/services/olympic-and-power-lifting/"
         image={allefVinicius.childImageSharp.fluid}
       >
         <p>
@@ -65,7 +65,7 @@ function ServicesGrid() {
       </Service>
       <Service
         label="Infrared Sauna"
-        slug="/"
+        slug="/services/infrared-sauna/"
         image={infraredSauna.childImageSharp.fluid}
       >
         <p>
@@ -79,7 +79,7 @@ function ServicesGrid() {
       </Service>
       <Service
         label="Sports Massage"
-        slug="/"
+        slug="/services/sports-massage/"
         image={sportsMassage.childImageSharp.fluid}
       >
         <p>
