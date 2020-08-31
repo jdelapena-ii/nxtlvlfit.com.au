@@ -41,7 +41,7 @@ function Instagram() {
               />
               <div
                 aria-hidden
-                className="absolute inset-0 p-4 overflow-y-auto transition duration-300 ease-in-out bg-black bg-opacity-75 opacity-0 overscroll-y-auto hover:opacity-100"
+                className="absolute inset-0 p-4 overflow-y-auto break-words transition duration-300 ease-in-out bg-black bg-opacity-75 opacity-0 overscroll-y-auto hover:opacity-100"
               >
                 {post.caption}
               </div>
