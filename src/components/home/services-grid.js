@@ -8,8 +8,8 @@ import { useGraphQL, useOnClickOutside } from '../../hooks';
 function ServicesGrid() {
   const {
     svenMieke,
-    kateBlush,
-    allefVinicius,
+    calisthenics,
+    olympicAndPowerLifting,
     infraredSauna,
     sportsMassage,
   } = useGraphQL();
@@ -32,7 +32,7 @@ function ServicesGrid() {
       <Service
         label="Calisthenics"
         slug="/services/calisthenics/"
-        image={kateBlush.childImageSharp.fluid}
+        image={calisthenics.childImageSharp.fluid}
       >
         <p>
           nXtLvL is proud to offer a full calisthenics gym with its own
@@ -49,7 +49,7 @@ function ServicesGrid() {
       <Service
         label="Olympic Lifting & Power Lifting"
         slug="/services/olympic-and-power-lifting/"
-        image={allefVinicius.childImageSharp.fluid}
+        image={olympicAndPowerLifting.childImageSharp.fluid}
       >
         <p>
           Get to the next level of lifting heavy at nXtLvL. Hit those gains with
@@ -61,20 +61,6 @@ function ServicesGrid() {
         <p>
           Train on your own or with a group – take part in our rolling “Friday
           Night Lights” lifting competition for added support and social fun!
-        </p>
-      </Service>
-      <Service
-        label="Infrared Sauna"
-        slug="/services/infrared-sauna/"
-        image={infraredSauna.childImageSharp.fluid}
-      >
-        <p>
-          nXtLvL has its own state-of-the-art infrared sauna for muscle recovery
-          and Waon therapy. Waon therapy is linked with improve heart function,
-          important for cardio training and heat conditioning. Use our infrared
-          sauna for relaxation or as part of your training regimen. Infrared
-          sauna or infrared therapy rooms are known as a “dry” sauna, using
-          invisible light to create heat instead of traditional steam.
         </p>
       </Service>
       <Service
@@ -90,6 +76,20 @@ function ServicesGrid() {
           zone, focused on helping you ease back into full weight or cardio
           training. We encourage athletes and enthusiasts to use our facilities
           to support a comprehensive physiotherapy program.
+        </p>
+      </Service>
+      <Service
+        label="Infrared Sauna"
+        slug="/services/infrared-sauna/"
+        image={infraredSauna.childImageSharp.fluid}
+      >
+        <p>
+          nXtLvL has its own state-of-the-art infrared sauna for muscle recovery
+          and Waon therapy. Waon therapy is linked with improve heart function,
+          important for cardio training and heat conditioning. Use our infrared
+          sauna for relaxation or as part of your training regimen. Infrared
+          sauna or infrared therapy rooms are known as a “dry” sauna, using
+          invisible light to create heat instead of traditional steam.
         </p>
       </Service>
     </div>
