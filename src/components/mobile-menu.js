@@ -5,9 +5,11 @@ import PropTypes from 'prop-types';
 
 import { useOnClickOutside } from '../hooks';
 import { Logo } from './vectors';
-import { mainNavigation } from '../data';
+import { useMainNavigation } from '../data';
 
 function MobileMenu({ isMobileMenuOpen, setMobileMenuOpen }) {
+  const { mainNavigation } = useMainNavigation();
+
   function handleClose() {
     setMobileMenuOpen(false);
   }
@@ -88,7 +90,7 @@ function MobileMenu({ isMobileMenuOpen, setMobileMenuOpen }) {
                                     to={navItem.slug}
                                     className="flex items-center w-full py-2 pr-2 text-xl font-medium tracking-widest text-white uppercase transition duration-150 ease-in-out group pl-7 hover:bg-gray-900 focus:outline-none focus:bg-gray-800"
                                   >
-                                    {navItem.label}
+                                    {navItem.title}
                                   </Link>
                                 </div>
                               )
@@ -129,7 +131,7 @@ function SubMenu({ navItem }) {
         >
           <path d="M6 6L14 10L6 14V6Z" fill="currentColor" />
         </motion.svg>
-        {navItem.label}
+        {navItem.title}
       </button>
       <AnimatePresence>
         {isExpanded && (
@@ -143,10 +145,10 @@ function SubMenu({ navItem }) {
             {navItem.submenu.map((submenu) => (
               <Link
                 key={submenu.id}
-                to={submenu.slug}
+                to={submenu.slug.current}
                 className="flex items-center w-full py-2 pl-10 pr-2 text-xl font-medium tracking-widest text-white uppercase transition duration-150 ease-in-out group hover:bg-gray-900 focus:outline-none focus:bg-gray-800"
               >
-                {submenu.label}
+                {submenu.title}
               </Link>
             ))}
           </motion.div>

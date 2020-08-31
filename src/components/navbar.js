@@ -5,10 +5,11 @@ import { AnimatePresence, motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 
 import { Logo } from './vectors';
-import { mainNavigation, socialLinks } from '../data';
+import { useMainNavigation, socialLinks } from '../data';
 import { MobileMenu } from './mobile-menu';
 
 function NavBar() {
+  const { mainNavigation } = useMainNavigation();
   const [isMobileMenuOpen, setMobileMenuOpen] = useState();
   return (
     <nav className="sticky top-0 z-10 bg-black shadow-2xl">
@@ -21,7 +22,7 @@ function NavBar() {
               </Link>
             </div>
             <div className="hidden lg:block lg:ml-6">
-              <ul className="flex space-x-4">
+              <ul className="flex space-x-4 whitespace-no-wrap">
                 {mainNavigation.map((navItem) =>
                   navItem.submenu ? (
                     <li key={navItem.id} className="flex">
@@ -37,7 +38,7 @@ function NavBar() {
                         to={navItem.slug}
                         className="px-3 py-2 text-sm font-medium tracking-widest text-white uppercase hover:underline focus:underline"
                       >
-                        {navItem.label}
+                        {navItem.title}
                       </Link>
                     </li>
                   )
@@ -46,7 +47,7 @@ function NavBar() {
             </div>
           </div>
           <div className="flex items-center space-x-6">
-            <div className="hidden sm:ml-6 sm:block">
+            <div className="hidden ml-6 sm:block lg:hidden xl:block">
               <ul className="flex items-center space-x-4">
                 {socialLinks.map((link) => (
                   <li key={link.id} className="flex">
@@ -54,7 +55,7 @@ function NavBar() {
                       href={link.url}
                       className="inline-block p-2 rounded-full"
                     >
-                      <span className="sr-only">{link.label}</span>
+                      <span className="sr-only">{link.title}</span>
                       <link.icon className="w-5 h-5" />
                     </a>
                   </li>
@@ -105,11 +106,6 @@ function NavBar() {
           </div>
         </div>
       </div>
-      {/*
-    Mobile menu, toggle classes based on menu state.
-
-    Menu open: "block", Menu closed: "hidden"
-  */}
       {isMobileMenuOpen && (
         <MobileMenu
           isMobileMenuOpen={isMobileMenuOpen}
@@ -124,7 +120,7 @@ function SubMenu({ navItem, isExpanded = false }) {
   return (
     <>
       <MenuButton className="flex items-center px-3 py-2 space-x-2 text-sm font-medium tracking-widest text-white uppercase hover:underline focus:underline">
-        {navItem.label}{' '}
+        {navItem.title}{' '}
         <motion.span
           aria-hidden
           focusable="false"
@@ -166,10 +162,14 @@ function SubMenu({ navItem, isExpanded = false }) {
                   {navItem.submenu.map((submenu) => (
                     <li key={submenu.id} className="flex w-full">
                       <Link
-                        to={submenu.slug}
+                        to={
+                          submenu.slug.current === '/services/'
+                            ? submenu.slug.current
+                            : `/services/${submenu.slug.current}/`
+                        }
                         className="block px-6 py-2 text-sm font-medium tracking-widest text-white uppercase hover:underline focus:underline"
                       >
-                        {submenu.label}
+                        {submenu.title}
                       </Link>
                     </li>
                   ))}

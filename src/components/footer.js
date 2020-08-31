@@ -4,7 +4,7 @@ import GatsbyImage from 'gatsby-image';
 
 import { GradientContainer } from './gradient-container';
 import { LogoWithText } from './vectors';
-import { mainNavigation, socialLinks } from '../data';
+import { useMainNavigation, socialLinks } from '../data';
 import { useGraphQL } from '../hooks';
 
 export function Footer() {
@@ -12,6 +12,8 @@ export function Footer() {
     site: { siteMetadata },
     backgroundBlack,
   } = useGraphQL();
+
+  const { mainNavigation } = useMainNavigation();
   return (
     <footer className="relative">
       <div className="absolute inset-0 flex">
@@ -34,18 +36,16 @@ export function Footer() {
                 Links
               </h2>
               <ul className="space-y-2">
-                {mainNavigation.map((navItem) =>
-                  navItem.submenu ? null : (
-                    <li key={navItem.id}>
-                      <Link
-                        to={navItem.slug}
-                        className="tracking-widest hover:underline"
-                      >
-                        {navItem.label}
-                      </Link>
-                    </li>
-                  )
-                )}
+                {mainNavigation.map((navItem) => (
+                  <li key={navItem.id}>
+                    <Link
+                      to={navItem.slug}
+                      className="tracking-widest hover:underline"
+                    >
+                      {navItem.title}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </nav>
             <nav className="space-y-8">
@@ -112,7 +112,7 @@ export function Footer() {
               {socialLinks.map((link) => (
                 <li key={link.id}>
                   <a href={link.url} className="inline-block rounded-full">
-                    <span className="sr-only">{link.label}</span>
+                    <span className="sr-only">{link.title}</span>
                     <link.icon />
                   </a>
                 </li>
