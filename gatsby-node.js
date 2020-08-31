@@ -5,13 +5,13 @@ exports.createPages = async ({ graphql, actions }) => {
 
   const result = await graphql(`
     {
-      allSanityPost {
-        nodes {
-          slug {
-            current
-          }
-        }
-      }
+      # allSanityPost {
+      #   nodes {
+      #     slug {
+      #       current
+      #     }
+      #   }
+      # }
       allSanityService {
         nodes {
           slug {
@@ -27,17 +27,17 @@ exports.createPages = async ({ graphql, actions }) => {
   }
 
   // Create blog posts from Sanity
-  const posts = result.data.allSanityPost.nodes || [];
-  posts.forEach((post) => {
-    const {
-      slug: { current: slug },
-    } = post;
-    createPage({
-      path: `/posts/${slug}`,
-      component: require.resolve('./src/templates/post.js'),
-      context: { slug },
-    });
-  });
+  // const posts = result.data.allSanityPost.nodes || [];
+  // posts.forEach((post) => {
+  //   const {
+  //     slug: { current: slug },
+  //   } = post;
+  //   createPage({
+  //     path: `/posts/${slug}`,
+  //     component: require.resolve('./src/templates/post.js'),
+  //     context: { slug },
+  //   });
+  // });
 
   // Create service pages from Sanity
   const services = result.data.allSanityService.nodes || [];
