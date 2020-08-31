@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 
 import { useOnClickOutside } from '../hooks';
-import { LogoWithText } from './vectors';
+import { Logo } from './vectors';
 import { mainNavigation } from '../data';
 
 function MobileMenu({ isMobileMenuOpen, setMobileMenuOpen }) {
@@ -49,7 +49,7 @@ function MobileMenu({ isMobileMenuOpen, setMobileMenuOpen }) {
                     <header className="px-4 sm:px-6">
                       <div className="flex items-center justify-between w-full h-20 space-x-3">
                         <Link to="/" onClick={handleClose}>
-                          <LogoWithText className="block w-auto h-12" />
+                          <Logo className="block w-auto h-12" />
                         </Link>
                         <div className="flex items-center">
                           <button
