@@ -71,6 +71,13 @@ export function useGraphQL() {
             }
           }
         }
+        classes: file(relativePath: { eq: "classes.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         hayleyKim: file(relativePath: { eq: "hayley-kim.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
