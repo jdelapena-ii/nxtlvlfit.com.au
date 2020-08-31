@@ -10,7 +10,7 @@ import {
   PageHero,
   GradientContainer,
   Intro,
-  TeamMember,
+  TextWithImage,
   Instagram,
   ContactPageForm,
   Map,
@@ -37,7 +37,7 @@ function ServiceTemplate({ data: { sanityService } }) {
               className=""
             />
           </Intro>
-          <TeamMember
+          <TextWithImage
             image={sanityService.serviceImage.asset.fluid}
             aspectRatio="aspect-ratio-3/4"
             reverse
@@ -52,7 +52,7 @@ function ServiceTemplate({ data: { sanityService } }) {
               blocks={sanityService._rawBenefits}
               className=""
             />
-          </TeamMember>
+          </TextWithImage>
           <article className="grid grid-cols-2 px-4 lg:grid-cols-4 sm:px-6 lg:px-8">
             {sanityService.smallImages.map((img, i) => (
               <div key={i} className="relative h-0 aspect-ratio-square">

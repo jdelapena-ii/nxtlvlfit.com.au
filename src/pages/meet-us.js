@@ -8,7 +8,7 @@ import {
   PageHero,
   GradientContainer,
   Intro,
-  TeamMember,
+  TextWithImage,
   Instagram,
   ContactPageForm,
   Map,
@@ -56,7 +56,7 @@ function MeetUsPage() {
 function Jodie() {
   const { jodieLea } = useImages();
   return (
-    <TeamMember
+    <TextWithImage
       // eyebrowText="Coach/Crossfit Trainer"
       heading="Jodie"
       image={jodieLea.childImageSharp.fluid}
@@ -69,14 +69,14 @@ function Jodie() {
         <li>Functional Fitness</li>
         <li>Rowing</li>
       </ul>
-    </TeamMember>
+    </TextWithImage>
   );
 }
 
 function Nige() {
   const { nige } = useImages();
   return (
-    <TeamMember
+    <TextWithImage
       // eyebrowText="Personal/Crossfit Trainer"
       heading="Nige"
       image={nige.childImageSharp.fluid}
@@ -88,14 +88,14 @@ function Nige() {
         <li>Power Lifting</li>
         <li>Technique &amp; Corrective Exercises</li>
       </ul>
-    </TeamMember>
+    </TextWithImage>
   );
 }
 
 function Harry() {
   const { harry } = useImages();
   return (
-    <TeamMember
+    <TextWithImage
       // eyebrowText="Power Lift Trainer"
       heading="Harry"
       image={harry.childImageSharp.fluid}
@@ -105,14 +105,14 @@ function Harry() {
       <ul>
         <li>Calisthenics</li>
       </ul>
-    </TeamMember>
+    </TextWithImage>
   );
 }
 
 function Rich() {
   const { rich } = useImages();
   return (
-    <TeamMember
+    <TextWithImage
       // eyebrowText="Power Lift Trainer"
       heading="Rich"
       image={rich.childImageSharp.fluid}
@@ -123,14 +123,14 @@ function Rich() {
         <li>AWF Level 1</li>
         <li>CrossFit Level 1</li>
       </ul>
-    </TeamMember>
+    </TextWithImage>
   );
 }
 
 function Kez() {
   const { kez } = useImages();
   return (
-    <TeamMember
+    <TextWithImage
       // eyebrowText="Power Lift Trainer"
       heading="Kez"
       image={kez.childImageSharp.fluid}
@@ -142,7 +142,7 @@ function Kez() {
         <li>AWF Level 1</li>
         <li>CrossFit Level 1</li>
       </ul>
-    </TeamMember>
+    </TextWithImage>
   );
 }
 

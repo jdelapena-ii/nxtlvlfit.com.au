@@ -6,7 +6,7 @@ import {
   PageHero,
   GradientContainer,
   Heading,
-  TeamMember,
+  TextWithImage,
   TrueProtein,
   Instagram,
   ContactPageForm,
@@ -47,7 +47,7 @@ function ServicesPage() {
 function FunctionalFitness() {
   const { svenMieke } = useGraphQL();
   return (
-    <TeamMember
+    <TextWithImage
       eyebrowText="Smash your goals with"
       heading="Functional Fitness"
       ctaLink="/services/functional-fitness/"
@@ -61,14 +61,14 @@ function FunctionalFitness() {
         functional training spaces that allow you learn new techniques,
         challenge yourself, and reach all your training goals.
       </p>
-    </TeamMember>
+    </TextWithImage>
   );
 }
 
 function Calisthenics() {
   const { calisthenics } = useGraphQL();
   return (
-    <TeamMember
+    <TextWithImage
       eyebrowText="Discover fluid movement with"
       heading="Calisthenics"
       ctaLink="/services/calisthenics/"
@@ -79,14 +79,14 @@ function Calisthenics() {
         nXtLvL Functional Movement Centre is proud home to one of the region’s
         premier calisthenics training facilities.
       </p>
-    </TeamMember>
+    </TextWithImage>
   );
 }
 
 function PowerLifting() {
   const { olympicAndPowerLifting } = useGraphQL();
   return (
-    <TeamMember
+    <TextWithImage
       eyebrowText="Get those gains with"
       heading="Olympic Lifting and Power Lifting"
       ctaLink="/services/olympic-and-power-lifting/"
@@ -99,14 +99,14 @@ function PowerLifting() {
         dedicated Olympic and Power lifting area, using all the latest
         weightlifting, powerlifting, and plyometrics equipment.
       </p>
-    </TeamMember>
+    </TextWithImage>
   );
 }
 
 function SportsMassage() {
   const { sportsMassage } = useGraphQL();
   return (
-    <TeamMember
+    <TextWithImage
       eyebrowText="Recover quicker with"
       heading="Sports Massage"
       ctaLink="/services/sports-massage/"
@@ -120,14 +120,14 @@ function SportsMassage() {
         sports massage from qualified massage therapists to help you achieve
         more in the gym and in everyday life.
       </p>
-    </TeamMember>
+    </TextWithImage>
   );
 }
 
 function InfraredSauna() {
   const { infraredSauna } = useGraphQL();
   return (
-    <TeamMember
+    <TextWithImage
       eyebrowText="Sweat it out in our"
       heading="Infrared Sauna"
       ctaLink="/services/infrared-sauna/"
@@ -140,14 +140,14 @@ function InfraredSauna() {
         your muscles recover from high intensity workout, improve circulation,
         and aid in relaxation.
       </p>
-    </TeamMember>
+    </TextWithImage>
   );
 }
 
 function MobilityLounge() {
   const { sportsMassage } = useGraphQL();
   return (
-    <TeamMember
+    <TextWithImage
       heading="Mobility Lounge"
       ctaLink="/services/mobility-lounge/"
       ctaLabel="Read more"
@@ -165,7 +165,7 @@ function MobilityLounge() {
         perspiciatis quae aspernatur iusto laudantium itaque nesciunt molestias,
         in vel doloribus earum!
       </p>
-    </TeamMember>
+    </TextWithImage>
   );
 }
 
