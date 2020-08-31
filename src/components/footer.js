@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import GatsbyImage from 'gatsby-image';
 
 import { GradientContainer } from './gradient-container';
-import { Logo } from './vectors';
+import { LogoWithText } from './vectors';
 import { mainNavigation, socialLinks } from '../data';
 import { useGraphQL } from '../hooks';
 
@@ -26,7 +26,7 @@ export function Footer() {
             to="/"
             className="inline-flex justify-center h-20 mx-auto sm:h-24"
           >
-            <Logo className="h-full" />
+            <LogoWithText className="h-full" />
           </Link>
           <div className="grid w-full max-w-5xl gap-6 mx-auto space-y-4 text-center uppercase sm:space-y-0 sm:grid-cols-2 md:grid-cols-3 sm:text-left">
             <nav className="space-y-2">
