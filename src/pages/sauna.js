@@ -104,6 +104,14 @@ function SaunaPage() {
                 />
               </div>
             </div>
+            <div className="relative h-0 aspect-ratio-square">
+              <div className="absolute inset-0 flex">
+                <GatsbyImage
+                  fluid={sportsMassage.childImageSharp.fluid}
+                  className="flex-1"
+                />
+              </div>
+            </div>
           </article>
         </div>
         <article className="relative">
