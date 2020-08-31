@@ -145,7 +145,11 @@ function SubMenu({ navItem }) {
             {navItem.submenu.map((submenu) => (
               <Link
                 key={submenu.id}
-                to={submenu.slug.current}
+                to={
+                  submenu.slug.current === '/services/'
+                    ? submenu.slug.current
+                    : `/services/${submenu.slug.current}/`
+                }
                 className="flex items-center w-full py-2 pl-10 pr-2 text-xl font-medium tracking-widest text-white uppercase transition duration-150 ease-in-out group hover:bg-gray-900 focus:outline-none focus:bg-gray-800"
               >
                 {submenu.title}
