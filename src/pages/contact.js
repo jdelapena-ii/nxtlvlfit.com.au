@@ -15,7 +15,7 @@ function ContactPage() {
 
   return (
     <Layout>
-      <SEO title="Coming soon" />
+      <SEO title="Contact Us" />
       <PageHero heading="Contact Us" image={kateBlush.childImageSharp.fluid} />
       <ContactPageForm />
       <Map />

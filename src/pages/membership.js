@@ -15,7 +15,7 @@ function MembershipPage() {
 
   return (
     <Layout>
-      <SEO title="Coming soon" />
+      <SEO title="Membership" />
       <PageHero image={kateBlush.childImageSharp.fluid} />
       <ContactPageForm />
       <Instagram />

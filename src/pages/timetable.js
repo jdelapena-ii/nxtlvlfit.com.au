@@ -36,7 +36,7 @@ function TimetablePage({
 
   return (
     <Layout>
-      <SEO title="Coming soon" />
+      <SEO title="Timetable" />
       <GradientContainer>
         <div className="relative flex flex-col">
           <div
