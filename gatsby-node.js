@@ -12,6 +12,13 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      allSanityService {
+        nodes {
+          slug {
+            current
+          }
+        }
+      }
     }
   `);
 
@@ -28,6 +35,19 @@ exports.createPages = async ({ graphql, actions }) => {
     createPage({
       path: `/posts/${slug}`,
       component: require.resolve('./src/templates/post.js'),
+      context: { slug },
+    });
+  });
+
+  // Create service pages from Sanity
+  const services = result.data.allSanityService.nodes || [];
+  services.forEach((service) => {
+    const {
+      slug: { current: slug },
+    } = service;
+    createPage({
+      path: `/services/${slug}`,
+      component: require.resolve('./src/templates/service.js'),
       context: { slug },
     });
   });
