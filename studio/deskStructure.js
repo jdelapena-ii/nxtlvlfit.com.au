@@ -15,6 +15,13 @@ export default () =>
   S.list()
     .title('Content')
     .items([
+      S.listItem()
+        .title('Services')
+        .icon(IoIosPaper)
+        .schemaType('service')
+        // When you open this list item, list out the documents
+        // of the type “project"
+        .child(S.documentTypeList('service')),
       // Make a new list item
       S.listItem()
         // Give it a title
