@@ -1,4 +1,3 @@
-/* eslint-disable no-use-before-define */
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
@@ -39,11 +38,11 @@ function MeetUsPage() {
               inventore tempora. Harum.
             </p>
           </Intro>
+          <Kez />
+          <Rich />
           <Jodie />
           <Nige />
           <Harry />
-          <Rich />
-          <Kez />
         </div>
       </GradientContainer>
       <Instagram />
@@ -53,11 +52,45 @@ function MeetUsPage() {
   );
 }
 
+function Kez() {
+  const { kez } = useImages();
+  return (
+    <TextWithImage
+      heading="Kez"
+      image={kez.childImageSharp.fluid}
+      aspectRatio="aspect-ratio-3/4"
+      reverse
+    >
+      <ul>
+        <li>Functional Fitness</li>
+        <li>AWF Level 1</li>
+        <li>CrossFit Level 1</li>
+      </ul>
+    </TextWithImage>
+  );
+}
+
+function Rich() {
+  const { rich } = useImages();
+  return (
+    <TextWithImage
+      heading="Rich"
+      image={rich.childImageSharp.fluid}
+      aspectRatio="aspect-ratio-3/4"
+    >
+      <ul>
+        <li>Functional Fitness</li>
+        <li>AWF Level 1</li>
+        <li>CrossFit Level 1</li>
+      </ul>
+    </TextWithImage>
+  );
+}
+
 function Jodie() {
   const { jodieLea } = useImages();
   return (
     <TextWithImage
-      // eyebrowText="Coach/Crossfit Trainer"
       heading="Jodie"
       image={jodieLea.childImageSharp.fluid}
       aspectRatio="aspect-ratio-3/4"
@@ -77,7 +110,6 @@ function Nige() {
   const { nige } = useImages();
   return (
     <TextWithImage
-      // eyebrowText="Personal/Crossfit Trainer"
       heading="Nige"
       image={nige.childImageSharp.fluid}
       aspectRatio="aspect-ratio-3/4"
@@ -96,7 +128,6 @@ function Harry() {
   const { harry } = useImages();
   return (
     <TextWithImage
-      // eyebrowText="Power Lift Trainer"
       heading="Harry"
       image={harry.childImageSharp.fluid}
       aspectRatio="aspect-ratio-3/4"
@@ -104,43 +135,6 @@ function Harry() {
     >
       <ul>
         <li>Calisthenics</li>
-      </ul>
-    </TextWithImage>
-  );
-}
-
-function Rich() {
-  const { rich } = useImages();
-  return (
-    <TextWithImage
-      // eyebrowText="Power Lift Trainer"
-      heading="Rich"
-      image={rich.childImageSharp.fluid}
-      aspectRatio="aspect-ratio-3/4"
-    >
-      <ul>
-        <li>Functional Fitness</li>
-        <li>AWF Level 1</li>
-        <li>CrossFit Level 1</li>
-      </ul>
-    </TextWithImage>
-  );
-}
-
-function Kez() {
-  const { kez } = useImages();
-  return (
-    <TextWithImage
-      // eyebrowText="Power Lift Trainer"
-      heading="Kez"
-      image={kez.childImageSharp.fluid}
-      aspectRatio="aspect-ratio-3/4"
-      reverse
-    >
-      <ul>
-        <li>Functional Fitness</li>
-        <li>AWF Level 1</li>
-        <li>CrossFit Level 1</li>
       </ul>
     </TextWithImage>
   );
