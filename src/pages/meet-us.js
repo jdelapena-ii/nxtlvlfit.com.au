@@ -18,7 +18,7 @@ function MeetUsPage() {
     <Layout>
       <SEO title="Meet the nXtLvL Team" />
       <PageHero
-        heading="Meet Us"
+        heading="Meet the nXtLvL team"
         image={meetUsHeroImage.childImageSharp.fluid}
       />
       <GradientContainer>
