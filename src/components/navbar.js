@@ -12,7 +12,7 @@ function NavBar() {
   const { mainNavigation } = useMainNavigation();
   const [isMobileMenuOpen, setMobileMenuOpen] = useState();
   return (
-    <nav className="sticky top-0 z-10 bg-black shadow-2xl">
+    <nav className="sticky z-10 bg-black shadow-2xl top-8">
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center justify-between flex-1">
