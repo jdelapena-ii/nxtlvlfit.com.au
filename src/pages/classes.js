@@ -90,7 +90,7 @@ function NxtlvlSkil() {
   const { nxtlvlSkil } = useGraphQL();
   return (
     <TextWithImage
-      heading="nXtLvL Skil"
+      heading="nXtLvL Skill"
       ctaLink="/timetable/"
       ctaLabel="See our timetable"
       image={nxtlvlSkil.childImageSharp.fluid}
@@ -140,11 +140,8 @@ function NxtlvlLift() {
         nXtLvL is an Australian Weightlifting Federation (AWF) registered
         training facility. With three Australian Weightlifting Federation
         qualified coaches to teach/refine your Olympic Lifting skillset. nXtLvL
-        LIFT will focus on a single lift each week, breaking The movement down
-        and teaching you the correct/safe way to lift. nXtLvL EDGE – Designed to
-        give you the edge on your training and lifts including but not limited
-        to power based lifts – deadlifts, bench press, all forms of squat and
-        more.
+        LIFT will focus on a single lift each week, breaking the movement down
+        and teaching you the correct/safe way to lift.
       </p>
     </TextWithImage>
   );
@@ -161,11 +158,13 @@ function NxtlvlEdge() {
       objectPosition="left"
     >
       <p>
-        will also be a place where corrective exercises and techniques will be
-        utilised to help you understand how your body works and what exercises
-        you can do to help you advance your strength and skill levels across the
-        board. Finishing with a WOD, it is a class with a comprehensive and
-        complete approach.
+        nXtLvL EDGE – Designed to give you the edge on your training and lifts
+        including but not limited to power based lifts – deadlifts, bench press,
+        all forms of squat and more. nXtLvL EDGE will also be a place where
+        corrective exercises and techniques will be utilised to help you
+        understand how your body works and what exercises you can do to help you
+        advance your strength and skill levels across the board. Finishing with
+        a WOD, it is a class with a comprehensive and complete approach.
       </p>
     </TextWithImage>
   );
@@ -182,7 +181,7 @@ function NxtlvlGrind() {
       reverse
     >
       <p>
-        the name says it all. nXtLvL’s class where you will be given 60-90
+        The name says it all. nXtLvL’s class where you will be given 60-90
         minutes of pure cardio grind!! Testing every aspect your mental and
         physical endurance and building that aerobic foundation in your
         training. This class won’t be about the technical or the heavy but about

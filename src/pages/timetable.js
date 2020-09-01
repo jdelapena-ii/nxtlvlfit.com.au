@@ -132,7 +132,13 @@ function TimetablePage({
                         <span className="uppercase">no</span> 4.30pm or 5.30pm
                         classes. Instead we will host{' '}
                         <span className="uppercase">Friday Night Lights</span> -
-                        Lifting, skills, wood, music, food and BYO drinks
+                        Lifting, skills, WOD, music, food and BYO drinks
+                      </TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableCell colSpan={8}>
+                        OPEN GYM: Monday – Friday 5:15am – 6:30pm & Saturday
+                        7.00am – 10:30am
                       </TableCell>
                     </TableRow>
                   </TableBody>

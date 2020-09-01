@@ -114,10 +114,10 @@ function MembershipPackages() {
       </h4>
       <ul>
         <li>1 person $30</li>
-        <li>1 person $35</li>
-        <li>1 person $40</li>
-        <li>1 person $45</li>
-        <li>1 person $50</li>
+        <li>2 people $35</li>
+        <li>3 people $40</li>
+        <li>4 people $45</li>
+        <li>5 people $50</li>
       </ul>
       <dl>
         <div>

@@ -33,7 +33,7 @@ function LevelUpYourFitness() {
           <p>
             nXtLvL offers a range of training options: 1-on-1 personal training,
             Functional Fitness, Power Lifting, Olympic Lifting, and our
-            world-class calisthenics program.
+            world-class Calisthenics Program.
           </p>
           <p>
             Need to get moving again? Recover and condition with massage,

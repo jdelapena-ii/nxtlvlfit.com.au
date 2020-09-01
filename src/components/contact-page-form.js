@@ -24,7 +24,7 @@ function ContactPageForm() {
             </h2>
             <div className="mx-auto prose text-white">
               <p>
-                Talk to our Centre Directors Kez or Rich for bookings, sign-ups,
+                Talk to our Centre Directors Rich or Kez for bookings, sign-ups,
                 or enquiries. <br />
                 Send us a message outside of business hours below.
               </p>

@@ -154,16 +154,10 @@ function MobilityLounge() {
       image={sportsMassage.childImageSharp.fluid}
     >
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-        architecto modi, ratione blanditiis quis facere nulla repudiandae, quia
-        perspiciatis quae aspernatur iusto laudantium itaque nesciunt molestias,
-        in vel doloribus earum!
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-        architecto modi, ratione blanditiis quis facere nulla repudiandae, quia
-        perspiciatis quae aspernatur iusto laudantium itaque nesciunt molestias,
-        in vel doloribus earum!
+        Mobility is one of the most important aspects of fitness and movement.
+        NXTLVL emphasises stretching and motion in our dedicated mobility
+        lounge. Use our rollers, balls, massage guns, and mobility equipment for
+        recovery, pre- or post-workout stretching, calisthenics, and more.
       </p>
     </TextWithImage>
   );

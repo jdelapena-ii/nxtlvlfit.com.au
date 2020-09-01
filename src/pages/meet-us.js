@@ -50,7 +50,7 @@ function Kez() {
     >
       <ul>
         <li>Functional Fitness</li>
-        <li>AWF Level 1</li>
+        <li>Australian Weightlifting Federation Level 1</li>
         <li>CrossFit Level 1</li>
       </ul>
     </TextWithImage>
@@ -67,7 +67,7 @@ function Rich() {
     >
       <ul>
         <li>Functional Fitness</li>
-        <li>AWF Level 1</li>
+        <li>Australian Weightlifting Federation Level 1</li>
         <li>CrossFit Level 1</li>
       </ul>
     </TextWithImage>
@@ -84,7 +84,7 @@ function Jodie() {
       reverse
     >
       <ul>
-        <li>AWF 1 &amp; 2 Lifting</li>
+        <li>Australian Weightlifting Federation Level 1 &amp; 2</li>
         <li>CrossFit Level 1 &amp; 2</li>
         <li>Functional Fitness</li>
         <li>Rowing</li>
