@@ -35,7 +35,7 @@ function MembershipPage() {
 
 function MembershipFirstSection() {
   return (
-    <article className="relative grid items-center w-full max-w-5xl gap-6 mx-auto -mt-1/2 lg:grid-cols-2">
+    <article className="relative grid items-center w-full max-w-5xl mx-auto -mt-1/2 lg:grid-cols-2">
       <MembershipBenefits />
       <MembershipForm />
     </article>

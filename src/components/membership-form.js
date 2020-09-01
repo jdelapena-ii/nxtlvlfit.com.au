@@ -8,7 +8,7 @@ function MembershipForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   return (
-    <article className="relative">
+    <article className="relative px-4 sm:px-6 lg:px-8">
       <div aria-hidden id="membership-form" className="absolute -mt-20" />
       <div className="relative w-full max-w-xl px-4 py-12 mx-auto bg-black bg-opacity-50 border-2 border-white lg:my-12 sm:px-6 lg:px-8">
         <div className="space-y-6 text-center">
