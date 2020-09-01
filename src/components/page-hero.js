@@ -5,7 +5,7 @@ import GatsbyImage from 'gatsby-image';
 function PageHero({ heading, image }) {
   return (
     <div className="relative overflow-hidden">
-      <div className="absolute inset-0 h-0 sm:relative aspect-ratio-16/9">
+      <div className="absolute inset-0 sm:h-0 sm:relative aspect-ratio-16/9">
         <div className="absolute inset-0 flex">
           <GatsbyImage fluid={image} className="flex-1" />
           <div
