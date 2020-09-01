@@ -7,6 +7,7 @@ import {
   GradientContainer,
   MembershipForm,
   TextWithImage,
+  StartFreeTrial,
   Instagram,
   Map,
 } from '../components';
@@ -20,8 +21,11 @@ function MembershipPage() {
       <SEO title="Membership" />
       <PageHero image={membership.childImageSharp.fluid} />
       <GradientContainer>
-        <MembershipFirstSection />
-        <MembershipPackages />
+        <div className="grid gap-24">
+          <MembershipFirstSection />
+          <MembershipPackages />
+          <StartFreeTrial />
+        </div>
       </GradientContainer>
       <Instagram />
       <Map />
@@ -31,7 +35,7 @@ function MembershipPage() {
 
 function MembershipFirstSection() {
   return (
-    <article className="relative grid items-center w-full max-w-5xl gap-6 mx-auto -mt-1/4 lg:grid-cols-2">
+    <article className="relative grid items-center w-full max-w-5xl gap-6 mx-auto -mt-1/2 lg:grid-cols-2">
       <MembershipBenefits />
       <MembershipForm />
     </article>
@@ -41,7 +45,7 @@ function MembershipFirstSection() {
 function MembershipBenefits() {
   return (
     <div className="flex items-center flex-1 px-4 py-4 sm:px-6 lg:px-8">
-      <div className="prose">
+      <div className="prose text-white text-shadow">
         <h2 className="text-lg font-bold uppercase">
           The First 50 people to sign up as members of nXtLvL will receive the
           following:
@@ -68,14 +72,64 @@ function MembershipPackages() {
     <TextWithImage
       eyebrowText="See our"
       heading="nXtLvL Memberships &amp; packages"
+      ctaLabel="Join now"
+      ctaLink="/membership/#membership-form"
       image={nxtlvlGrind.childImageSharp.fluid}
       aspectRatio="aspect-ratio-3/4"
       reverse
     >
       <dl>
         <div>
-          <dt>Gym Membership</dt>
-          <dd>$50 per week (unlimited classes and open gym)</dd>
+          <dt className="inline font-bold uppercase">Gym Membership </dt>
+          <dd className="inline">
+            $50 per week (unlimited classes and open gym)
+          </dd>
+        </div>
+        <div>
+          <dt className="inline font-bold uppercase">10 Visit Gym Pass </dt>
+          <dd className="inline">$200</dd>
+        </div>
+        <div>
+          <dt className="inline font-bold uppercase">Gym Drop Ins </dt>
+          <dd className="inline">$25 per class</dd>
+        </div>
+        <div>
+          <dt className="inline font-bold uppercase">Kids </dt>
+          <dd className="inline">$10 per class</dd>
+        </div>
+        <div>
+          <dt className="inline font-bold uppercase">Teens </dt>
+          <dd className="inline">
+            $15 per class for <span className="uppercase">teen</span> specific
+            classes
+          </dd>
+        </div>
+        <div>
+          <dt className="inline font-bold uppercase">Sauna Membership </dt>
+          <dd className="inline">$35 a week (unlimited sauna use)</dd>
+        </div>
+      </dl>
+      <h4 className="font-bold uppercase">
+        Casual sauna visits are as follows:
+      </h4>
+      <ul>
+        <li>1 person $30</li>
+        <li>1 person $35</li>
+        <li>1 person $40</li>
+        <li>1 person $45</li>
+        <li>1 person $50</li>
+      </ul>
+      <dl>
+        <div>
+          <dt className="inline font-bold uppercase">
+            Combined Unlimted Gym &amp; Sauna{' '}
+          </dt>
+          <dd className="inline">$75 per week</dd>
+        </div>
+        <div>
+          <dt className="font-bold uppercase">Personal training and massage</dt>
+          <dd>1 hour = $80</dd>
+          <dd>&frac12; hour = $50</dd>
         </div>
       </dl>
     </TextWithImage>
