@@ -99,6 +99,13 @@ function useGraphQL() {
             }
           }
         }
+        membership: file(relativePath: { eq: "membership.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         mobilityLounge: file(relativePath: { eq: "mobility-lounge.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
