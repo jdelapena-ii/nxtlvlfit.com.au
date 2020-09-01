@@ -45,14 +45,14 @@ function ServicesPage() {
 }
 
 function FunctionalFitness() {
-  const { svenMieke } = useGraphQL();
+  const { functionalFitness } = useGraphQL();
   return (
     <TextWithImage
       eyebrowText="Smash your goals with"
       heading="Functional Fitness"
       ctaLink="/services/functional-fitness/"
       ctaLabel="Read more"
-      image={svenMieke.childImageSharp.fluid}
+      image={functionalFitness.childImageSharp.fluid}
       reverse
     >
       <p>

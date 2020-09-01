@@ -120,6 +120,13 @@ function useGraphQL() {
             }
           }
         }
+        mobilityLounge: file(relativePath: { eq: "mobility-lounge.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         olympicAndPowerLifting: file(
           relativePath: { eq: "olympic-and-power-lifting.jpg" }
         ) {
@@ -150,7 +157,7 @@ function useGraphQL() {
             }
           }
         }
-        svenMieke: file(relativePath: { eq: "sven-mieke.jpg" }) {
+        functionalFitness: file(relativePath: { eq: "sven-mieke.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid
