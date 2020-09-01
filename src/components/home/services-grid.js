@@ -12,6 +12,7 @@ function ServicesGrid() {
     olympicAndPowerLifting,
     infraredSauna,
     sportsMassage,
+    pexelsBurst
   } = useGraphQL();
   return (
     <div className="grid bg-black md:grid-cols-2 lg:grid-cols-3">
@@ -62,20 +63,19 @@ function ServicesGrid() {
           Train on your own or with a group – take part in our rolling “Friday
           Night Lights” lifting competition for added support and social fun!
         </p>
-      </Service>
+      </Service> 
       <Service
-        label="Sports Massage"
-        slug="/services/sports-massage/"
-        image={sportsMassage.childImageSharp.fluid}
+        label="Mobility Lounge"
+        slug="/services/mobility-lounge/"
+        image={pexelsBurst.childImageSharp.fluid}
       >
         <p>
-          Recovery is integral to maintaining peak physical performance. nXtLvL
-          offers sports massage and muscle therapy from a qualified massage
-          therapist to help you get moving after injury or improve mobility.
-          Sports massage is part of nXtLvL’s dedicated mobility and recovery
-          zone, focused on helping you ease back into full weight or cardio
-          training. We encourage athletes and enthusiasts to use our facilities
-          to support a comprehensive physiotherapy program.
+          Take your pre- and post-workout stretching and recovery even further 
+          in our dedicated mobility lounge. Loosen up your joints and muscles 
+          with specialised mobility equipment to increase your range of motion, 
+          help ease joint and muscle stiffness, and help prevent injuries. It’s 
+          all part of a complete functional movement routine. Need help? Ask our 
+          friendly staff for expert advice on stretching and mobility enhancement.
         </p>
       </Service>
       <Service
@@ -90,6 +90,21 @@ function ServicesGrid() {
           sauna for relaxation or as part of your training regimen. Infrared
           sauna or infrared therapy rooms are known as a “dry” sauna, using
           invisible light to create heat instead of traditional steam.
+        </p>
+      </Service>
+      <Service
+        label="Sports Massage"
+        slug="/services/sports-massage/"
+        image={sportsMassage.childImageSharp.fluid}
+      >
+        <p>
+          Recovery is integral to maintaining peak physical performance. nXtLvL
+          offers sports massage and muscle therapy from a qualified massage
+          therapist to help you get moving after injury or improve mobility.
+          Sports massage is part of nXtLvL’s dedicated mobility and recovery
+          zone, focused on helping you ease back into full weight or cardio
+          training. We encourage athletes and enthusiasts to use our facilities
+          to support a comprehensive physiotherapy program.
         </p>
       </Service>
     </div>

@@ -122,6 +122,13 @@ function useGraphQL() {
             }
           }
         }
+        pexelsBurst: file(relativePath: { eq: "pexels-burst.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         scottWebb: file(relativePath: { eq: "scott-webb.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
