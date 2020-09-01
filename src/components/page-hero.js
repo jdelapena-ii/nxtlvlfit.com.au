@@ -18,7 +18,7 @@ function PageHero({ heading, image }) {
         style={{ minHeight: '20rem' }}
         className="relative inset-0 flex items-center justify-center px-4 py-4 overflow-hidden sm:px-6 lg:px-8 sm:absolute"
       >
-        <h1 className="max-w-2xl text-4xl font-bold leading-tight text-center uppercase tracking-insane text-shadow md:text-5xl">
+        <h1 className="max-w-2xl text-4xl font-bold leading-tight tracking-widest text-center uppercase sm:tracking-insane text-shadow md:text-5xl">
           {heading}
         </h1>
       </div>
