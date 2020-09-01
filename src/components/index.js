@@ -9,6 +9,7 @@ export * from './instagram';
 export * from './intro';
 export * from './layout';
 export * from './map';
+export * from './membership-form';
 export * from './navbar';
 export * from './page-hero';
 export * from './privacy-policy';

@@ -5,6 +5,7 @@ import {
   SEO,
   PageHero,
   GradientContainer,
+  MembershipForm,
   TextWithImage,
   Instagram,
   Map,
@@ -30,20 +31,16 @@ function MembershipPage() {
 
 function MembershipFirstSection() {
   return (
-    <article className="relative w-full max-w-5xl mx-auto -mt-1/4">
-      <div className="relative h-0 aspect-ratio-16/9">
-        <div className="absolute inset-0 grid items-center gap-12 lg:grid-cols-2">
-          <MembershipBenefits />
-          <MembershipForm />
-        </div>
-      </div>
+    <article className="relative grid items-center w-full max-w-5xl gap-6 mx-auto -mt-1/4 lg:grid-cols-2">
+      <MembershipBenefits />
+      <MembershipForm />
     </article>
   );
 }
 
 function MembershipBenefits() {
   return (
-    <div className="px-4 py-4 sm:px-6 lg:px-8">
+    <div className="flex items-center flex-1 px-4 py-4 sm:px-6 lg:px-8">
       <div className="prose">
         <h2 className="text-lg font-bold uppercase">
           The First 50 people to sign up as members of nXtLvL will receive the
@@ -61,14 +58,6 @@ function MembershipBenefits() {
           <li>nXtLvL Protein Shaker</li>
         </ul>
       </div>
-    </div>
-  );
-}
-
-function MembershipForm() {
-  return (
-    <div className="px-4 py-4 border-2 border-white sm:px-6 lg:px-8">
-      <h2 className="font-bold text-center uppercase">Join the team</h2>
     </div>
   );
 }
