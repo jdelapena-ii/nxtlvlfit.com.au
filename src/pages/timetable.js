@@ -80,7 +80,7 @@ function TimetablePage({
             aria-hidden
             className="absolute inset-y-0 right-0 w-4 sm:w-6 lg:w-8 bg-gradient-to-l from-black to-transparent"
           />
-          <div className="-my-2 overflow-x-auto">
+          <div className="-mt-2 overflow-x-auto">
             <div className="inline-block min-w-full px-4 py-2 align-middle sm:px-6 lg:px-8">
               <div className="overflow-hidden border-2 border-white">
                 <Table>
