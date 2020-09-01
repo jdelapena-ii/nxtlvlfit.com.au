@@ -18,12 +18,37 @@ function TimetablePage({
     allSanityTimetable: { nodes },
   },
 }) {
-  const monday = [];
-  const tuesday = [];
-  const wednesday = [];
-  const thursday = [];
-  const friday = [];
-  const saturday = [];
+  let monday = [];
+  let tuesday = [];
+  let wednesday = [];
+  let thursday = [];
+  let friday = [];
+  let saturday = [];
+
+  function sortTimes(node) {
+    const times = [];
+
+    node.forEach((n) => {
+      if (n.time.indexOf('pm') !== -1) {
+        times.push([
+          n.time.substr(0, n.time.indexOf('pm') + 2),
+          n.time.substr(n.time.indexOf('(')),
+          n.activity ? n.activity : '',
+        ]);
+      }
+      if (n.time.indexOf('am') !== -1) {
+        times.push([
+          n.time.substr(0, n.time.indexOf('am') + 2),
+          n.time.substr(n.time.indexOf('(')),
+          n.activity ? n.activity : '',
+        ]);
+      }
+    });
+    times.sort(function (a, b) {
+      return new Date('1970/01/01 ' + a[0]) - new Date('1970/01/01 ' + b[0]);
+    });
+    return times;
+  }
 
   nodes.map((node) => {
     if (node.day === 'Monday') monday.push(node);
@@ -33,6 +58,13 @@ function TimetablePage({
     if (node.day === 'Friday') friday.push(node);
     if (node.day === 'Saturday') saturday.push(node);
   });
+
+  monday = sortTimes(monday);
+  tuesday = sortTimes(tuesday);
+  wednesday = sortTimes(wednesday);
+  thursday = sortTimes(thursday);
+  friday = sortTimes(friday);
+  saturday = sortTimes(saturday);
 
   return (
     <Layout>
@@ -64,115 +96,35 @@ function TimetablePage({
                     </TableRow>
                   </thead>
                   <TableBody>
-                    {/* **********************************************************
-                  /* The following code is total garbage.
-                  /* It used to be done with map() until I ran into
-                  /* a bunch of problems
-                  /* which will be fixed soon
-                  /* ******************************************************* */}
+                    {/* Create the first row...well, first, because it contains the rowSpan cell */}
                     <TableRow>
-                      <TableCell>{monday[0].time}</TableCell>
-                      <TableCell>{monday[0].activity}</TableCell>
-                      <TableCell>{tuesday[0].activity}</TableCell>
-                      <TableCell>{wednesday[0].activity}</TableCell>
-                      <TableCell>{thursday[0].activity}</TableCell>
-                      <TableCell>{friday[0].activity}</TableCell>
-                      <TableCell>{saturday[0].activity}</TableCell>
-                      <TableCell rowSpan={11}>
+                      <TableCell>{`${monday[0][0]} ${monday[0][1]}`}</TableCell>
+                      <TableCell>{monday[0][2]}</TableCell>
+                      <TableCell>{tuesday[0][2]}</TableCell>
+                      <TableCell>{wednesday[0][2]}</TableCell>
+                      <TableCell>{thursday[0][2]}</TableCell>
+                      <TableCell>{friday[0][2]}</TableCell>
+                      <TableCell>{saturday[0][2]}</TableCell>
+                      <TableCell rowSpan={monday.length}>
                         nXt LvL REST <br />
                         &amp; RESTORE
                       </TableCell>
                     </TableRow>
-                    <TableRow>
-                      <TableCell>{monday[1].time}</TableCell>
-                      <TableCell>{monday[1].activity}</TableCell>
-                      <TableCell>{tuesday[1].activity}</TableCell>
-                      <TableCell>{wednesday[1].activity}</TableCell>
-                      <TableCell>{thursday[1].activity}</TableCell>
-                      <TableCell>{friday[1].activity}</TableCell>
-                      <TableCell>{saturday[1].activity}</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell>{monday[2].time}</TableCell>
-                      <TableCell>{monday[2].activity}</TableCell>
-                      <TableCell>{tuesday[2].activity}</TableCell>
-                      <TableCell>{wednesday[2].activity}</TableCell>
-                      <TableCell>{thursday[2].activity}</TableCell>
-                      <TableCell>{friday[2].activity}</TableCell>
-                      <TableCell>{saturday[2].activity}</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell>{monday[3].time}</TableCell>
-                      <TableCell>{monday[3].activity}</TableCell>
-                      <TableCell>{tuesday[3].activity}</TableCell>
-                      <TableCell>{wednesday[3].activity}</TableCell>
-                      <TableCell>{thursday[3].activity}</TableCell>
-                      <TableCell>{friday[3].activity}</TableCell>
-                      <TableCell>{saturday[3].activity}</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell>{monday[4].time}</TableCell>
-                      <TableCell>{monday[4].activity}</TableCell>
-                      <TableCell>{tuesday[4].activity}</TableCell>
-                      <TableCell>{wednesday[4].activity}</TableCell>
-                      <TableCell>{thursday[4].activity}</TableCell>
-                      <TableCell>{friday[4].activity}</TableCell>
-                      <TableCell>{saturday[4].activity}</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell>{monday[5].time}</TableCell>
-                      <TableCell>{monday[5].activity}</TableCell>
-                      <TableCell>{tuesday[5].activity}</TableCell>
-                      <TableCell>{wednesday[5].activity}</TableCell>
-                      <TableCell>{thursday[5].activity}</TableCell>
-                      <TableCell>{friday[5].activity}</TableCell>
-                      <TableCell>{saturday[5].activity}</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell>{monday[6].time}</TableCell>
-                      <TableCell>{monday[6].activity}</TableCell>
-                      <TableCell>{tuesday[6].activity}</TableCell>
-                      <TableCell>{wednesday[6].activity}</TableCell>
-                      <TableCell>{thursday[6].activity}</TableCell>
-                      <TableCell>{friday[6].activity}</TableCell>
-                      <TableCell>{saturday[6].activity}</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell>{monday[7].time}</TableCell>
-                      <TableCell>{monday[7].activity}</TableCell>
-                      <TableCell>{tuesday[7].activity}</TableCell>
-                      <TableCell>{wednesday[7].activity}</TableCell>
-                      <TableCell>{thursday[7].activity}</TableCell>
-                      <TableCell>{friday[7].activity}</TableCell>
-                      <TableCell>{saturday[7].activity}</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell>{monday[8].time}</TableCell>
-                      <TableCell>{monday[8].activity}</TableCell>
-                      <TableCell>{tuesday[8].activity}</TableCell>
-                      <TableCell>{wednesday[8].activity}</TableCell>
-                      <TableCell>{thursday[8].activity}</TableCell>
-                      <TableCell>{friday[8].activity}</TableCell>
-                      <TableCell>{saturday[8].activity}</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell>{monday[9].time}</TableCell>
-                      <TableCell>{monday[9].activity}</TableCell>
-                      <TableCell>{tuesday[9].activity}</TableCell>
-                      <TableCell>{wednesday[9].activity}</TableCell>
-                      <TableCell>{thursday[9].activity}</TableCell>
-                      <TableCell>{friday[9].activity}</TableCell>
-                      <TableCell>{saturday[9].activity}</TableCell>
-                    </TableRow>
-                    <TableRow>
-                      <TableCell>{monday[10].time}</TableCell>
-                      <TableCell>{monday[10].activity}</TableCell>
-                      <TableCell>{tuesday[10].activity}</TableCell>
-                      <TableCell>{wednesday[10].activity}</TableCell>
-                      <TableCell>{thursday[10].activity}</TableCell>
-                      <TableCell>{friday[10].activity}</TableCell>
-                      <TableCell>{saturday[10].activity}</TableCell>
-                    </TableRow>
+                    {/* Create the rest of the rows */}
+                    {monday.map((ele, i) => {
+                      return i > 0 ? (
+                        <TableRow key={i}>
+                          <TableCell>{`${ele[0]} ${ele[1]}`}</TableCell>
+                          <TableCell>{ele[2]}</TableCell>
+                          <TableCell>{tuesday[i][2]}</TableCell>
+                          <TableCell>{wednesday[i][2]}</TableCell>
+                          <TableCell>{thursday[i][2]}</TableCell>
+                          <TableCell>{friday[i][2]}</TableCell>
+                          <TableCell>{saturday[i][2]}</TableCell>
+                        </TableRow>
+                      ) : null;
+                    })}
+
                     <TableRow>
                       <TableCell colSpan={8}>
                         The first Friday of each month there will be NO 4.30pm
