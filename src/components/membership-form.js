@@ -50,11 +50,10 @@ function MembershipForm() {
                 name="membership_type"
                 label="Type of Membership"
                 options={[
-                  'Option 1',
-                  'Option 2',
-                  'Option 3',
-                  'Option 4',
-                  'Option 5',
+                  'Weekly gym membership',
+                  'Weekly sauna membership',
+                  'Unlimited gym & sauna membership',
+                  'Other',
                 ]}
                 register={register}
                 errors={errors}
