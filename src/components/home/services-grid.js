@@ -8,8 +8,8 @@ import { useGraphQL, useOnClickOutside } from '../../hooks';
 function ServicesGrid() {
   const {
     functionalFitness,
-    calisthenics,
-    olympicAndPowerLifting,
+    nxtlvlCali,
+    nxtlvlLift,
     mobilityLounge,
     infraredSauna,
     sportsMassage,
@@ -33,7 +33,7 @@ function ServicesGrid() {
       <Service
         label="Calisthenics"
         slug="/services/calisthenics/"
-        image={calisthenics.childImageSharp.fluid}
+        image={nxtlvlCali.childImageSharp.fluid}
       >
         <p>
           nXtLvL is proud to offer a full calisthenics gym with its own
@@ -50,7 +50,7 @@ function ServicesGrid() {
       <Service
         label="Olympic Lifting & Power Lifting"
         slug="/services/olympic-and-power-lifting/"
-        image={olympicAndPowerLifting.childImageSharp.fluid}
+        image={nxtlvlLift.childImageSharp.fluid}
       >
         <p>
           Get to the next level of lifting heavy at nXtLvL. Hit those gains with
