@@ -5,7 +5,7 @@ function useMainNavigation() {
   const { allSanityService } = useStaticQuery(
     graphql`
       {
-        allSanityService {
+        allSanityService(sort: { order: ASC, fields: order }) {
           nodes {
             id
             slug {
