@@ -8,7 +8,7 @@ function StartFreeTrial() {
   const { marcosPaulo } = useGraphQL();
   return (
     <article className="relative overflow-hidden">
-      <div className="absolute inset-0 h-0 sm:relative aspect-ratio-21/9">
+      <div className="absolute inset-0 sm:h-0 sm:relative aspect-ratio-21/9">
         <div className="absolute inset-0 flex">
           <GatsbyImage
             fluid={marcosPaulo.childImageSharp.fluid}
