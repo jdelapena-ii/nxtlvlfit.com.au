@@ -41,6 +41,13 @@ function useGraphQL() {
             }
           }
         }
+        awf: file(relativePath: { eq: "awf.png" }) {
+          childImageSharp {
+            fixed(width: 120) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
         backgroundBlack: file(
           relativePath: { eq: "background-image-black.jpg" }
         ) {

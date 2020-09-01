@@ -11,6 +11,7 @@ export function Footer() {
   const {
     site: { siteMetadata },
     backgroundBlack,
+    awf,
   } = useGraphQL();
 
   const { mainNavigation } = useMainNavigation();
@@ -103,6 +104,12 @@ export function Footer() {
                 >
                   Sign up
                 </Link>
+                <div>
+                  <GatsbyImage
+                    fixed={awf.childImageSharp.fixed}
+                    className="mx-auto"
+                  />
+                </div>
               </div>
             </nav>
           </div>
