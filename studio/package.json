@@ -7,8 +7,9 @@
   "author": "services PD <services@phirannodesigns.com.au>",
   "license": "UNLICENSED",
   "scripts": {
-    "start": "sanity start",
-    "test": "sanity check"
+    "deploy": "sanity deploy",
+    "deploy:graphql": "sanity graphql deploy",
+    "start": "sanity start"
   },
   "keywords": [
     "sanity"

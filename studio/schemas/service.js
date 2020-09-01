@@ -6,7 +6,7 @@ export default {
     {
       name: 'title',
       type: 'string',
-      title: 'Page Title',
+      title: 'Page title',
     },
     {
       name: 'slug',
@@ -16,6 +16,11 @@ export default {
         source: 'title',
         maxLength: 96,
       },
+    },
+    {
+      name: 'order',
+      type: 'number',
+      title: 'Order in navigation',
     },
     {
       name: 'description',
