@@ -6,7 +6,6 @@ import {
   SEO,
   PageHero,
   GradientContainer,
-  Intro,
   TextWithImage,
   Instagram,
   ContactPageForm,
@@ -19,25 +18,11 @@ function MeetUsPage() {
     <Layout>
       <SEO title="Meet the nXtLvL Team" />
       <PageHero
-        heading="Meet Us"
+        heading="Meet the nXtLvL team"
         image={meetUsHeroImage.childImageSharp.fluid}
       />
       <GradientContainer>
         <div className="relative grid pb-24 gap-y-24">
-          <Intro eyebrowText="Come in and meet the" heading="nTxLvL Team">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam qui
-              veniam aliquid. Doloremque culpa assumenda voluptatem tempore
-              optio! Laudantium et assumenda, officia quas voluptatum incidunt
-              dolores aliquam quasi eligendi beatae.
-            </p>
-            <p>
-              Eius sequi facilis cum, dolore incidunt odit similique saepe quis
-              tempora, dolorem quae, facere autem ut cupiditate. Dicta placeat
-              officiis labore animi! Ut architecto quas distinctio dolore
-              inventore tempora. Harum.
-            </p>
-          </Intro>
           <Kez />
           <Rich />
           <Jodie />

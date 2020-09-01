@@ -45,14 +45,14 @@ function ServicesPage() {
 }
 
 function FunctionalFitness() {
-  const { svenMieke } = useGraphQL();
+  const { functionalFitness } = useGraphQL();
   return (
     <TextWithImage
       eyebrowText="Smash your goals with"
       heading="Functional Fitness"
       ctaLink="/services/functional-fitness/"
       ctaLabel="Read more"
-      image={svenMieke.childImageSharp.fluid}
+      image={functionalFitness.childImageSharp.fluid}
       reverse
     >
       <p>
@@ -66,14 +66,14 @@ function FunctionalFitness() {
 }
 
 function Calisthenics() {
-  const { calisthenics } = useGraphQL();
+  const { nxtlvlCali } = useGraphQL();
   return (
     <TextWithImage
       eyebrowText="Discover fluid movement with"
       heading="Calisthenics"
       ctaLink="/services/calisthenics/"
       ctaLabel="Read more"
-      image={calisthenics.childImageSharp.fluid}
+      image={nxtlvlCali.childImageSharp.fluid}
     >
       <p>
         nXtLvL Functional Movement Centre is proud home to one of the region’s
@@ -84,14 +84,14 @@ function Calisthenics() {
 }
 
 function PowerLifting() {
-  const { olympicAndPowerLifting } = useGraphQL();
+  const { nxtlvlLift } = useGraphQL();
   return (
     <TextWithImage
       eyebrowText="Get those gains with"
       heading="Olympic Lifting and Power Lifting"
       ctaLink="/services/olympic-and-power-lifting/"
       ctaLabel="Read more"
-      image={olympicAndPowerLifting.childImageSharp.fluid}
+      image={nxtlvlLift.childImageSharp.fluid}
       reverse
     >
       <p>

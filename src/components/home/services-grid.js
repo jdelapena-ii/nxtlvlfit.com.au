@@ -7,19 +7,19 @@ import { useGraphQL, useOnClickOutside } from '../../hooks';
 
 function ServicesGrid() {
   const {
-    svenMieke,
-    calisthenics,
-    olympicAndPowerLifting,
+    functionalFitness,
+    nxtlvlCali,
+    nxtlvlLift,
+    mobilityLounge,
     infraredSauna,
     sportsMassage,
-    pexelsBurst
   } = useGraphQL();
   return (
     <div className="grid bg-black md:grid-cols-2 lg:grid-cols-3">
       <Service
         label="Functional Fitness"
         slug="/services/functional-fitness/"
-        image={svenMieke.childImageSharp.fluid}
+        image={functionalFitness.childImageSharp.fluid}
       >
         <p>
           Discover your potential with nXtLvL’s functional training area.
@@ -33,7 +33,7 @@ function ServicesGrid() {
       <Service
         label="Calisthenics"
         slug="/services/calisthenics/"
-        image={calisthenics.childImageSharp.fluid}
+        image={nxtlvlCali.childImageSharp.fluid}
       >
         <p>
           nXtLvL is proud to offer a full calisthenics gym with its own
@@ -50,7 +50,7 @@ function ServicesGrid() {
       <Service
         label="Olympic Lifting & Power Lifting"
         slug="/services/olympic-and-power-lifting/"
-        image={olympicAndPowerLifting.childImageSharp.fluid}
+        image={nxtlvlLift.childImageSharp.fluid}
       >
         <p>
           Get to the next level of lifting heavy at nXtLvL. Hit those gains with
@@ -63,19 +63,20 @@ function ServicesGrid() {
           Train on your own or with a group – take part in our rolling “Friday
           Night Lights” lifting competition for added support and social fun!
         </p>
-      </Service> 
+      </Service>
       <Service
         label="Mobility Lounge"
         slug="/services/mobility-lounge/"
-        image={pexelsBurst.childImageSharp.fluid}
+        image={mobilityLounge.childImageSharp.fluid}
       >
         <p>
-          Take your pre- and post-workout stretching and recovery even further 
-          in our dedicated mobility lounge. Loosen up your joints and muscles 
-          with specialised mobility equipment to increase your range of motion, 
-          help ease joint and muscle stiffness, and help prevent injuries. It’s 
-          all part of a complete functional movement routine. Need help? Ask our 
-          friendly staff for expert advice on stretching and mobility enhancement.
+          Take your pre- and post-workout stretching and recovery even further
+          in our dedicated mobility lounge. Loosen up your joints and muscles
+          with specialised mobility equipment to increase your range of motion,
+          help ease joint and muscle stiffness, and help prevent injuries. It’s
+          all part of a complete functional movement routine. Need help? Ask our
+          friendly staff for expert advice on stretching and mobility
+          enhancement.
         </p>
       </Service>
       <Service

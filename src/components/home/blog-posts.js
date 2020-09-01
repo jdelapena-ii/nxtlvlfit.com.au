@@ -7,7 +7,7 @@ import { Heading } from '../heading';
 import { useGraphQL } from '../../hooks';
 
 function BlogPosts() {
-  const { meghanHolmes } = useGraphQL();
+  const { nxtlvlBurn } = useGraphQL();
   return (
     <article className="px-4 py-12 space-y-12 bg-black bg-opacity-75 sm:px-6 lg:px-8">
       <Heading eyebrowText="The latest from our ">Blog</Heading>
@@ -17,13 +17,13 @@ function BlogPosts() {
             category="The Recovery Zone"
             heading="10 Simple Ways To Recharge"
             copy={<Copy />}
-            image={meghanHolmes.childImageSharp.fluid}
+            image={nxtlvlBurn.childImageSharp.fluid}
           />
           <BlogPost
             category="The Recovery Zone"
             heading="The Benefits of Infrared Saunas"
             copy={<Copy />}
-            image={meghanHolmes.childImageSharp.fluid}
+            image={nxtlvlBurn.childImageSharp.fluid}
             reversed
           />
         </div>

@@ -41,6 +41,13 @@ function useGraphQL() {
             }
           }
         }
+        awf: file(relativePath: { eq: "awf.png" }) {
+          childImageSharp {
+            fixed(width: 120) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
         backgroundBlack: file(
           relativePath: { eq: "background-image-black.jpg" }
         ) {
@@ -64,21 +71,7 @@ function useGraphQL() {
             }
           }
         }
-        calisthenics: file(relativePath: { eq: "calisthenics.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 1920) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
         classes: file(relativePath: { eq: "classes.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 1920) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        hayleyKim: file(relativePath: { eq: "hayley-kim.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid
@@ -106,16 +99,72 @@ function useGraphQL() {
             }
           }
         }
-        meghanHolmes: file(relativePath: { eq: "meghan-holmes.jpg" }) {
+        mobilityLounge: file(relativePath: { eq: "mobility-lounge.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid
             }
           }
         }
-        olympicAndPowerLifting: file(
+        nxtlvlBurn: file(relativePath: { eq: "nxtlvl-burn.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        nxtlvlCali: file(relativePath: { eq: "nxtlvl-cali.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        nxtlvlEdge: file(relativePath: { eq: "nxtlvl-edge.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        nxtlvlFit: file(relativePath: { eq: "nxtlvl-fit.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        nxtlvlGrind: file(relativePath: { eq: "nxtlvl-grind.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        nxtlvlKids: file(relativePath: { eq: "nxtlvl-kids.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        nxtlvlTeens: file(relativePath: { eq: "nxtlvl-teens.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        nxtlvlLift: file(
           relativePath: { eq: "olympic-and-power-lifting.jpg" }
         ) {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        nxtlvlSkil: file(relativePath: { eq: "nxtlvl-skil.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid
@@ -143,7 +192,7 @@ function useGraphQL() {
             }
           }
         }
-        svenMieke: file(relativePath: { eq: "sven-mieke.jpg" }) {
+        functionalFitness: file(relativePath: { eq: "sven-mieke.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid

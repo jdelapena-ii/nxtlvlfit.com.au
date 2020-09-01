@@ -35,7 +35,7 @@ function ClassesPage() {
             <NxtlvlEdge />
             <NxtlvlGrind />
             <NxtlvlKids />
-            <NxtlvlTeen />
+            <NxtlvlTeens />
           </div>
         </div>
       </GradientContainer>
@@ -47,13 +47,13 @@ function ClassesPage() {
 }
 
 function NxtlvlFit() {
-  const { classes } = useGraphQL();
+  const { nxtlvlFit } = useGraphQL();
   return (
     <TextWithImage
       heading="nXtLvL Fit"
       ctaLink="/timetable/"
       ctaLabel="See our timetable"
-      image={classes.childImageSharp.fluid}
+      image={nxtlvlFit.childImageSharp.fluid}
       reverse
     >
       <p>
@@ -68,13 +68,13 @@ function NxtlvlFit() {
 }
 
 function NxtlvlBurn() {
-  const { classes } = useGraphQL();
+  const { nxtlvlBurn } = useGraphQL();
   return (
     <TextWithImage
       heading="nXtLvL Burn"
       ctaLink="/timetable/"
       ctaLabel="See our timetable"
-      image={classes.childImageSharp.fluid}
+      image={nxtlvlBurn.childImageSharp.fluid}
     >
       <p>
         Designed with “get in, go hard and go home or back to the office”.
@@ -87,13 +87,14 @@ function NxtlvlBurn() {
 }
 
 function NxtlvlSkil() {
-  const { classes } = useGraphQL();
+  const { nxtlvlSkil } = useGraphQL();
   return (
     <TextWithImage
       heading="nXtLvL Skil"
       ctaLink="/timetable/"
       ctaLabel="See our timetable"
-      image={classes.childImageSharp.fluid}
+      image={nxtlvlSkil.childImageSharp.fluid}
+      objectPosition="left"
       reverse
     >
       <p>
@@ -106,13 +107,13 @@ function NxtlvlSkil() {
 }
 
 function NxtlvlCali() {
-  const { classes } = useGraphQL();
+  const { nxtlvlCali } = useGraphQL();
   return (
     <TextWithImage
       heading="nXtLvL Cali"
       ctaLink="/timetable/"
       ctaLabel="See our timetable"
-      image={classes.childImageSharp.fluid}
+      image={nxtlvlCali.childImageSharp.fluid}
     >
       <p>
         Catering from the beginner through to advanced, nXtLvL Cali is Port’s
@@ -126,13 +127,13 @@ function NxtlvlCali() {
 }
 
 function NxtlvlLift() {
-  const { classes } = useGraphQL();
+  const { nxtlvlLift } = useGraphQL();
   return (
     <TextWithImage
       heading="nXtLvL Lift"
       ctaLink="/timetable/"
       ctaLabel="See our timetable"
-      image={classes.childImageSharp.fluid}
+      image={nxtlvlLift.childImageSharp.fluid}
       reverse
     >
       <p>
@@ -150,13 +151,14 @@ function NxtlvlLift() {
 }
 
 function NxtlvlEdge() {
-  const { classes } = useGraphQL();
+  const { nxtlvlEdge } = useGraphQL();
   return (
     <TextWithImage
       heading="nXtLvL Edge"
       ctaLink="/timetable/"
       ctaLabel="See our timetable"
-      image={classes.childImageSharp.fluid}
+      image={nxtlvlEdge.childImageSharp.fluid}
+      objectPosition="left"
     >
       <p>
         will also be a place where corrective exercises and techniques will be
@@ -170,13 +172,13 @@ function NxtlvlEdge() {
 }
 
 function NxtlvlGrind() {
-  const { classes } = useGraphQL();
+  const { nxtlvlGrind } = useGraphQL();
   return (
     <TextWithImage
       heading="nXtLvL Grind"
       ctaLink="/timetable/"
       ctaLabel="See our timetable"
-      image={classes.childImageSharp.fluid}
+      image={nxtlvlGrind.childImageSharp.fluid}
       reverse
     >
       <p>
@@ -192,13 +194,13 @@ function NxtlvlGrind() {
 }
 
 function NxtlvlKids() {
-  const { classes } = useGraphQL();
+  const { nxtlvlKids } = useGraphQL();
   return (
     <TextWithImage
       heading="nXtLvL Kids"
       ctaLink="/timetable/"
       ctaLabel="See our timetable"
-      image={classes.childImageSharp.fluid}
+      image={nxtlvlKids.childImageSharp.fluid}
     >
       <p>
         45 mins of fun and fitness for primary aged kids. Kids will increase
@@ -209,14 +211,14 @@ function NxtlvlKids() {
   );
 }
 
-function NxtlvlTeen() {
-  const { classes } = useGraphQL();
+function NxtlvlTeens() {
+  const { nxtlvlTeens } = useGraphQL();
   return (
     <TextWithImage
-      heading="nXtLvL Grind"
+      heading="nXtLvL Teens"
       ctaLink="/timetable/"
       ctaLabel="See our timetable"
-      image={classes.childImageSharp.fluid}
+      image={nxtlvlTeens.childImageSharp.fluid}
       reverse
     >
       <p>
