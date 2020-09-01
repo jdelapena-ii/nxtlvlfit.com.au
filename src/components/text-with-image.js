@@ -33,9 +33,9 @@ function TextWithImage({
     );
   }
   return (
-    <article className="relative grid items-center w-full gap-12 px-4 mx-auto lg:grid-cols-2 sm:px-6 lg:px-8">
+    <article className="relative grid items-center w-full max-w-xl gap-12 px-4 mx-auto lg:max-w-none lg:grid-cols-2 sm:px-6 lg:px-8">
       {reverse && <Image />}
-      <div className="flex flex-col justify-center max-w-lg break-words lg:mx-auto">
+      <div className="flex flex-col justify-center break-words lg:mx-auto">
         {eyebrowText && (
           <div className="tracking-widest uppercase sm:tracking-ultra-wide">
             {eyebrowText}
