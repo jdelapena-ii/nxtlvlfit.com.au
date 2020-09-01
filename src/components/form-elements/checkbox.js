@@ -17,7 +17,7 @@ function Checkbox({ label, name, register, errors }) {
               className="inline-flex items-center space-x-1.5"
             >
               <span
-                className={`inline-flex leading-none items-center justify-center w-8 h-8 text-sm tracking-widest uppercase border border-white font-bold transition duration-150 ease-in-out focus-within:shadow-outline ${
+                className={`inline-flex leading-none items-center justify-center w-8 h-8 text-sm tracking-widest uppercase border border-white font-bold transition duration-300 ease-in-out focus-within:shadow-outline ${
                   selection ? 'bg-white text-black' : 'text-white bg-black'
                 }`}
               >

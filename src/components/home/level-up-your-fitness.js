@@ -54,7 +54,7 @@ function LevelUpYourFitness() {
         </div>
         <Link
           to="/membership/"
-          className="block w-full max-w-xs px-4 py-4 mx-auto my-24 text-2xl font-bold leading-none tracking-widest text-center uppercase transition duration-150 ease-in-out border-2 border-white hover:bg-white hover:text-black focus:bg-white focus:text-black"
+          className="block w-full max-w-xs px-4 py-4 mx-auto my-24 text-2xl font-bold leading-none tracking-widest text-center uppercase transition duration-300 ease-in-out border-2 border-white hover:bg-white hover:text-black focus:bg-white focus:text-black"
         >
           Sign up
         </Link>

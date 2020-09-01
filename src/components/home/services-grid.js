@@ -144,7 +144,7 @@ function Service({ children, image, label, slug }) {
               <Link
                 aria-label={`Learn more about ${label}`}
                 to={slug}
-                className="inline-block px-8 py-2 mt-4 text-sm tracking-widest uppercase transition duration-150 ease-in-out border-2 border-white hover:bg-white hover:text-black"
+                className="inline-block px-8 py-2 mt-4 text-sm tracking-widest uppercase transition duration-300 ease-in-out border-2 border-white hover:bg-white hover:text-black"
               >
                 Learn more
               </Link>

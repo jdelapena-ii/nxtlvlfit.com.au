@@ -58,7 +58,7 @@ function MobileMenu({ isMobileMenuOpen, setMobileMenuOpen }) {
                             type="button"
                             onClick={handleClose}
                             aria-label="Close panel"
-                            className="p-2 -mr-2 text-white transition duration-150 ease-in-out hover:bg-gray-900"
+                            className="p-2 -mr-2 text-white transition duration-300 ease-in-out hover:bg-gray-900"
                           >
                             <svg
                               className="w-6 h-6"
@@ -88,7 +88,7 @@ function MobileMenu({ isMobileMenuOpen, setMobileMenuOpen }) {
                                 <div key={navItem.id}>
                                   <Link
                                     to={navItem.slug}
-                                    className="flex items-center w-full py-2 pr-2 text-xl font-medium tracking-widest text-white uppercase transition duration-150 ease-in-out group pl-7 hover:bg-gray-900 focus:outline-none focus:bg-gray-800"
+                                    className="flex items-center w-full py-2 pr-2 text-xl font-medium tracking-widest text-white uppercase transition duration-300 ease-in-out group pl-7 hover:bg-gray-900 focus:outline-none focus:bg-gray-800"
                                   >
                                     {navItem.title}
                                   </Link>
@@ -122,11 +122,11 @@ function SubMenu({ navItem }) {
       <button
         type="button"
         onClick={() => setIsExpanded((prev) => !prev)}
-        className="flex items-center w-full py-2 pr-2 mt-1 text-xl font-medium tracking-widest text-white uppercase transition duration-150 ease-in-out group hover:bg-gray-900 focus:outline-none focus:bg-gray-800"
+        className="flex items-center w-full py-2 pr-2 mt-1 text-xl font-medium tracking-widest text-white uppercase transition duration-300 ease-in-out group hover:bg-gray-900 focus:outline-none focus:bg-gray-800"
       >
         <motion.svg
           animate={{ rotate: isExpanded ? '90deg' : 0 }}
-          className="w-5 h-5 mr-2 transition-colors duration-150 ease-in-out transform group-hover:text-gray-400 group-focus:text-gray-400"
+          className="w-5 h-5 mr-2 transition-colors duration-300 ease-in-out transform group-hover:text-gray-400 group-focus:text-gray-400"
           viewBox="0 0 20 20"
         >
           <path d="M6 6L14 10L6 14V6Z" fill="currentColor" />
@@ -150,7 +150,7 @@ function SubMenu({ navItem }) {
                     ? submenu.slug.current
                     : `/services/${submenu.slug.current}/`
                 }
-                className="flex items-center w-full py-2 pl-10 pr-2 text-xl font-medium tracking-widest text-white uppercase transition duration-150 ease-in-out group hover:bg-gray-900 focus:outline-none focus:bg-gray-800"
+                className="flex items-center w-full py-2 pl-10 pr-2 text-xl font-medium tracking-widest text-white uppercase transition duration-300 ease-in-out group hover:bg-gray-900 focus:outline-none focus:bg-gray-800"
               >
                 {submenu.title}
               </Link>

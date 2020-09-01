@@ -41,7 +41,7 @@ function TextArea({
               ),
             },
           })}
-          className={`block w-full px-4 py-3 text-base tracking-widest text-white placeholder-white uppercase transition duration-150 ease-in-out bg-transparent border-white rounded-none form-input sm:text-sm ${
+          className={`block w-full px-4 py-3 text-base tracking-widest text-white placeholder-white uppercase transition duration-300 ease-in-out bg-transparent border-white rounded-none form-input sm:text-sm ${
             errors[name]
               ? 'border-red-300 focus:border-red-300 focus:shadow-outline-red'
               : ''
