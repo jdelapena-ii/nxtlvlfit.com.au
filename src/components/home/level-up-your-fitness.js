@@ -20,7 +20,7 @@ function LevelUpYourFitness() {
         <Heading eyebrowText="your fitness and mobility" tag="h1" reverse>
           Level up{' '}
         </Heading>
-        <div className="mx-auto mt-12 prose text-white">
+        <div className="mx-auto mt-12 prose text-center text-white">
           <p>
             nXtLvL Functional Movement Centre is your ultimate fitness and
             mobility destination, catering for all ages and fitness levels in a
