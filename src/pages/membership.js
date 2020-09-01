@@ -1,23 +1,15 @@
 import React from 'react';
 
-import {
-  Layout,
-  SEO,
-  Map,
-  PageHero,
-  ContactPageForm,
-  Instagram,
-} from '../components';
+import { Layout, SEO, Map, PageHero, Instagram } from '../components';
 import { useGraphQL } from '../hooks';
 
 function MembershipPage() {
-  const { kateBlush } = useGraphQL();
+  const { membership } = useGraphQL();
 
   return (
     <Layout>
       <SEO title="Membership" />
-      <PageHero image={kateBlush.childImageSharp.fluid} />
-      <ContactPageForm />
+      <PageHero image={membership.childImageSharp.fluid} />
       <Instagram />
       <Map />
     </Layout>
