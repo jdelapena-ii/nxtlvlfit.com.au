@@ -45,7 +45,7 @@ function TimetablePage({
       }
     });
     times.sort(function (a, b) {
-      return new Date('1970/01/01 ' + a[0]) - new Date('1970/01/01 ' + b[0]);
+      return new Date(`1970/01/01 ${a[0]}`) - new Date(`1970/01/01 ${b[0]}`);
     });
     return times;
   }
@@ -57,6 +57,7 @@ function TimetablePage({
     if (node.day === 'Thursday') thursday.push(node);
     if (node.day === 'Friday') friday.push(node);
     if (node.day === 'Saturday') saturday.push(node);
+    return null;
   });
 
   monday = sortTimes(monday);
