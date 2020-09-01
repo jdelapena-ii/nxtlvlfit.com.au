@@ -128,10 +128,11 @@ function TimetablePage({
 
                     <TableRow>
                       <TableCell colSpan={8}>
-                        The first Friday of each month there will be NO 4.30pm
-                        or 5.30pm classes. Instead we will host FRIDAY NIGHT
-                        LIGHTS - Lifting, skills, wood, music, food and BYO
-                        drinks
+                        The first Friday of each month there will be{' '}
+                        <span className="uppercase">no</span> 4.30pm or 5.30pm
+                        classes. Instead we will host{' '}
+                        <span className="uppercase">Friday Night Lights</span> -
+                        Lifting, skills, wood, music, food and BYO drinks
                       </TableCell>
                     </TableRow>
                   </TableBody>
