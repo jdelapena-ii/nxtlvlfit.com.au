@@ -7,16 +7,23 @@ import { useGraphQL } from '../hooks';
 function StartFreeTrial() {
   const { marcosPaulo } = useGraphQL();
   return (
-    <article className="relative">
-      <div className="relative h-0 aspect-ratio-21/9">
+    <article className="relative overflow-hidden">
+      <div className="absolute inset-0 h-0 sm:relative aspect-ratio-21/9">
         <div className="absolute inset-0 flex">
           <GatsbyImage
             fluid={marcosPaulo.childImageSharp.fluid}
             className="flex-1"
           />
+          <div
+            aria-hidden
+            className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-black via-transparent"
+          />
         </div>
       </div>
-      <div className="absolute inset-0 flex flex-col justify-center px-4 space-y-4 sm:px-6 lg:px-8">
+      <div
+        style={{ minHeight: '20rem' }}
+        className="relative inset-0 flex flex-col justify-center px-4 py-4 space-y-4 overflow-hidden sm:absolute sm:px-6 lg:px-8"
+      >
         <h2 className="text-3xl font-bold tracking-widest uppercase text-shadow">
           Need more convincing?
         </h2>
