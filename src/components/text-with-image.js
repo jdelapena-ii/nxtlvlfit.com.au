@@ -18,27 +18,31 @@ function TextWithImage({
   function Image() {
     return (
       <div className="order-first lg:order-none">
-        <div className={`relative h-0 ${aspectRatio}`}>
-          <div className="absolute inset-0 flex">
-            <GatsbyImage
-              fluid={image}
-              imgStyle={{ objectPosition, objectFit }}
-              className="flex-1"
-            />
+        <div className="max-w-lg mx-auto">
+          <div className={`relative h-0 ${aspectRatio}`}>
+            <div className="absolute inset-0 flex">
+              <GatsbyImage
+                fluid={image}
+                imgStyle={{ objectPosition, objectFit }}
+                className="flex-1"
+              />
+            </div>
           </div>
         </div>
       </div>
     );
   }
   return (
-    <article className="relative grid items-center gap-12 px-4 lg:grid-cols-2 sm:px-6 lg:px-8">
+    <article className="relative grid items-center w-full max-w-xl gap-12 px-4 mx-auto lg:max-w-none lg:grid-cols-2 sm:px-6 lg:px-8">
       {reverse && <Image />}
-      <div className="flex flex-col justify-center max-w-lg">
+      <div className="flex flex-col justify-center break-words lg:mx-auto">
         {eyebrowText && (
-          <div className="uppercase tracking-ultra-wide">{eyebrowText}</div>
+          <div className="tracking-widest uppercase sm:tracking-ultra-wide">
+            {eyebrowText}
+          </div>
         )}
         {heading && (
-          <h3 className="mt-4 text-4xl font-bold leading-none uppercase tracking-ultra-wide">
+          <h3 className="mt-4 text-3xl font-bold leading-none tracking-widest uppercase sm:tracking-ultra-wide sm:text-4xl">
             {heading}
           </h3>
         )}

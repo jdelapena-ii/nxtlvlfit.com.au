@@ -26,7 +26,7 @@ function ClassesPage() {
       <GradientContainer>
         <div className="px-4 py-24 sm:px-6 lg:px-8">
           <Heading eyebrowText="Get ready to get">Energised!</Heading>
-          <div className="relative grid max-w-5xl py-12 mx-auto mt-12 border-2 border-white gap-y-24">
+          <div className="relative grid max-w-5xl mx-auto border-2 border-white sm:py-12 gap-y-24">
             <NxtlvlFit />
             <NxtlvlBurn />
             <NxtlvlSkil />

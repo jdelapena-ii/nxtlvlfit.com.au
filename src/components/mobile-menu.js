@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { AnimatePresence, motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 
-import { useOnClickOutside } from '../hooks';
+import { useEventListener, useOnClickOutside } from '../hooks';
 import { Logo } from './vectors';
 import { useMainNavigation } from '../data';
 
@@ -17,6 +17,17 @@ function MobileMenu({ isMobileMenuOpen, setMobileMenuOpen }) {
   const ref = useRef();
   // Call hook passing in the ref and a function to call on outside click
   useOnClickOutside(ref, handleClose);
+
+  function handleEscape(e) {
+    if (e.key === 'Escape') handleClose();
+    return null;
+  }
+
+  const isBrowser = typeof document !== 'undefined';
+
+  useEventListener('keydown', handleEscape, {
+    target: isBrowser ? document : null,
+  });
 
   return (
     <AnimatePresence>
