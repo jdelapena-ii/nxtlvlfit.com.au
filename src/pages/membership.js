@@ -1,6 +1,13 @@
 import React from 'react';
 
-import { Layout, SEO, Map, PageHero, Instagram } from '../components';
+import {
+  Layout,
+  SEO,
+  Map,
+  PageHero,
+  Instagram,
+  MembershipForm,
+} from '../components';
 import { useGraphQL } from '../hooks';
 
 function MembershipPage() {
@@ -10,6 +17,7 @@ function MembershipPage() {
     <Layout>
       <SEO title="Membership" />
       <PageHero image={membership.childImageSharp.fluid} />
+      <MembershipForm />
       <Instagram />
       <Map />
     </Layout>
