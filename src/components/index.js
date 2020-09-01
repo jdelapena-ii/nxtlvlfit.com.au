@@ -14,6 +14,7 @@ export * from './page-hero';
 export * from './privacy-policy';
 export * from './promo-page-form';
 export * from './seo';
+export * from './start-free-trial';
 export * from './table-elements';
 export * from './text-with-image';
 export * from './true-protein';

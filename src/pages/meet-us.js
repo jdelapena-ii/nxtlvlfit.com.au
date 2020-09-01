@@ -8,6 +8,7 @@ import {
   GradientContainer,
   TextWithImage,
   Instagram,
+  StartFreeTrial,
   ContactPageForm,
   Map,
 } from '../components';
@@ -30,6 +31,7 @@ function MeetUsPage() {
           <Harry />
         </div>
       </GradientContainer>
+      <StartFreeTrial />
       <Instagram />
       <ContactPageForm />
       <Map />
