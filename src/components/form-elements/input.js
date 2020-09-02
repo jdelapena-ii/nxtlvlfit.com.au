@@ -10,6 +10,7 @@ function Input({
   type = 'text',
   register,
   errors,
+  hidden,
 }) {
   const minLength = type === 'tel' ? 8 : 2;
   return (
@@ -40,7 +41,9 @@ function Input({
               ),
             },
           })}
-          className={`block w-full px-4 py-3 text-base tracking-widest text-white placeholder-white uppercase transition duration-300 ease-in-out bg-transparent border-white rounded-none form-input sm:text-sm ${
+          className={`${
+            hidden ? 'hidden' : 'block'
+          } w-full px-4 py-3 text-base tracking-widest text-white placeholder-white uppercase transition duration-300 ease-in-out bg-transparent border-white rounded-none form-input sm:text-sm ${
             errors[name]
               ? 'border-red-300 focus:border-red-300 focus:shadow-outline-red'
               : ''
@@ -58,6 +61,7 @@ Input.propTypes = {
   register: PropTypes.func.isRequired,
   required: PropTypes.bool,
   type: PropTypes.string,
+  hidden: PropTypes.bool,
 };
 
 export { Input };
