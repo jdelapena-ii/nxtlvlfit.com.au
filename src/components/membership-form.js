@@ -63,14 +63,13 @@ function MembershipForm() {
                 setShowOther={setShowOther}
               />
 
-              {membershipType === 'Other' && (
-                <Input
-                  name="other_type"
-                  label="Other Membership Type"
-                  register={register}
-                  errors={errors}
-                />
-              )}
+              <Input
+                name="other_type"
+                label="Other Membership Type"
+                register={register}
+                errors={errors}
+                hidden={membershipType !== 'Other'}
+              />
 
               <div className="flex justify-end space-y-6 sm:space-x-4 sm:space-y-0">
                 <span className="inline-flex shadow-sm">
