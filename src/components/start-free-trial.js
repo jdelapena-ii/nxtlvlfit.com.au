@@ -1,19 +1,14 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import GatsbyImage from 'gatsby-image';
+import PropTypes from 'prop-types';
 
-import { useGraphQL } from '../hooks';
-
-function StartFreeTrial() {
-  const { marcosPaulo } = useGraphQL();
+function StartFreeTrial({ image }) {
   return (
     <article className="relative overflow-hidden">
       <div className="absolute inset-0 sm:h-0 sm:relative aspect-ratio-21/9">
         <div className="absolute inset-0 flex">
-          <GatsbyImage
-            fluid={marcosPaulo.childImageSharp.fluid}
-            className="flex-1"
-          />
+          <GatsbyImage fluid={image} className="flex-1" />
           <div
             aria-hidden
             className="absolute inset-y-0 left-0 w-1/2 bg-gradient-to-r from-black via-transparent"
@@ -37,5 +32,9 @@ function StartFreeTrial() {
     </article>
   );
 }
+
+StartFreeTrial.propTypes = {
+  image: PropTypes.object.isRequired,
+};
 
 export { StartFreeTrial };
