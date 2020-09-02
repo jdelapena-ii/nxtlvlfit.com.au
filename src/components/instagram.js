@@ -32,7 +32,7 @@ function Instagram() {
               href={post.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative h-0 overflow-hidden aspect-ratio-square"
+              className="relative h-0 overflow-hidden aspect-ratio-square group"
             >
               <img
                 src={post.src}
@@ -41,10 +41,14 @@ function Instagram() {
               />
               <div
                 aria-hidden
-                className="absolute inset-0 p-4 overflow-y-auto break-words transition duration-300 ease-in-out bg-black bg-opacity-75 opacity-0 overscroll-y-auto hover:opacity-100"
+                className="absolute inset-0 p-4 overflow-y-auto break-words transition duration-300 ease-in-out bg-black bg-opacity-75 opacity-0 overscroll-y-auto group-hover:opacity-100"
               >
                 {post.caption}
               </div>
+              <div
+                aria-hidden
+                className="absolute inset-x-0 bottom-0 h-4 opacity-0 pointer-events-none bg-gradient-to-t from-black to-transparent group-hover:opacity-100"
+              />
             </a>
           ))}
         </div>

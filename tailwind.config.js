@@ -64,7 +64,7 @@ module.exports = {
   },
   variants: {
     boxShadow: ['responsive', 'hover', 'focus', 'focus-within'],
-    opacity: ['responsive', 'hover', 'focus', 'focus-within'],
+    opacity: ['responsive', 'hover', 'group-hover', 'focus', 'focus-within'],
   },
   plugins: [tailwindcssAspectRatio, tailwindcssLineClamp, tailwindUI],
 };
