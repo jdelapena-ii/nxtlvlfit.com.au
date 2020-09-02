@@ -78,6 +78,13 @@ function useGraphQL() {
             }
           }
         }
+        deadlift: file(relativePath: { eq: "deadlift.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         functionalFitness: file(relativePath: { eq: "sven-mieke.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
@@ -185,14 +192,7 @@ function useGraphQL() {
             }
           }
         }
-        penguinuhh: file(relativePath: { eq: "penguinuhh.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 1920) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        pexelsBurst: file(relativePath: { eq: "pexels-burst.jpg" }) {
+        medicineBall: file(relativePath: { eq: "medicine-ball.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid
