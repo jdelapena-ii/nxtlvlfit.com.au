@@ -2,12 +2,21 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import GatsbyImage from 'gatsby-image';
 
-function PageHero({ heading, image }) {
+function PageHero({
+  heading,
+  image,
+  objectFit = 'cover',
+  objectPosition = 'center',
+}) {
   return (
     <div className="relative overflow-hidden">
       <div className="absolute inset-0 sm:h-0 sm:relative aspect-ratio-16/9">
         <div className="absolute inset-0 flex">
-          <GatsbyImage fluid={image} className="flex-1" />
+          <GatsbyImage
+            fluid={image}
+            imgStyle={{ objectPosition, objectFit }}
+            className="flex-1"
+          />
           <div
             aria-hidden
             className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-transparent"
@@ -27,8 +36,10 @@ function PageHero({ heading, image }) {
 }
 
 PageHero.propTypes = {
-  image: PropTypes.object.isRequired,
   heading: PropTypes.string.isRequired,
+  image: PropTypes.object.isRequired,
+  objectFit: PropTypes.string,
+  objectPosition: PropTypes.string,
 };
 
 export { PageHero };

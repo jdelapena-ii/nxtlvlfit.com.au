@@ -84,6 +84,8 @@ function ContactPageForm() {
                     <li key={link.id} className="flex">
                       <a
                         href={link.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-block p-1 rounded-full"
                       >
                         <span className="sr-only">{link.label}</span>
