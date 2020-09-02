@@ -6,6 +6,7 @@ import { ContactForm, Input, Select } from './form-elements';
 function MembershipForm() {
   const { register, handleSubmit, errors } = useForm({ mode: 'onBlur' });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showOther, setShowOther] = useState(false);
 
   return (
     <article className="relative px-4 sm:px-6 lg:px-8">
@@ -57,7 +58,16 @@ function MembershipForm() {
                 ]}
                 register={register}
                 errors={errors}
+                setShowOther={setShowOther}
               />
+
+              <Input
+                name="other_type"
+                label="Other Membership Type"
+                register={register}
+                errors={errors}
+              />
+
               <div className="flex justify-end space-y-6 sm:space-x-4 sm:space-y-0">
                 <span className="inline-flex shadow-sm">
                   <button
