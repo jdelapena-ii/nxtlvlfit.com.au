@@ -14,7 +14,7 @@ import {
 import { useGraphQL } from '../hooks';
 
 function MembershipPage() {
-  const { membership } = useGraphQL();
+  const { membership, deadlift } = useGraphQL();
 
   return (
     <Layout>
@@ -24,7 +24,7 @@ function MembershipPage() {
         <div className="grid gap-24">
           <MembershipFirstSection />
           <MembershipPackages />
-          <StartFreeTrial />
+          <StartFreeTrial image={deadlift.childImageSharp.fluid} />
         </div>
       </GradientContainer>
       <Instagram />
@@ -67,14 +67,14 @@ function MembershipBenefits() {
 }
 
 function MembershipPackages() {
-  const { penguinuhh } = useGraphQL();
+  const { medicineBall } = useGraphQL();
   return (
     <TextWithImage
       eyebrowText="See our"
       heading="nXtLvL Memberships &amp; packages"
       ctaLabel="Join now"
       ctaLink="/membership/#membership-form"
-      image={penguinuhh.childImageSharp.fluid}
+      image={medicineBall.childImageSharp.fluid}
       aspectRatio="aspect-ratio-3/4"
       reverse
     >

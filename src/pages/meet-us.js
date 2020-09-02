@@ -12,9 +12,11 @@ import {
   ContactPageForm,
   Map,
 } from '../components';
+import { useGraphQL } from '../hooks';
 
 function MeetUsPage() {
   const { meetUsHeroImage } = useImages();
+  const { marcosPaulo } = useGraphQL();
   return (
     <Layout>
       <SEO title="Meet the nXtLvL Team" />
@@ -31,7 +33,7 @@ function MeetUsPage() {
           <Harry />
         </div>
       </GradientContainer>
-      <StartFreeTrial />
+      <StartFreeTrial image={marcosPaulo.childImageSharp.fluid} />
       <Instagram />
       <ContactPageForm />
       <Map />
@@ -152,7 +154,7 @@ export function useImages() {
             }
           }
         }
-        meetUsHeroImage: file(relativePath: { eq: "meet-us-hero-image.jpg" }) {
+        meetUsHeroImage: file(relativePath: { eq: "meet-us.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid
