@@ -45,12 +45,12 @@ function MembershipFirstSection() {
 function MembershipBenefits() {
   return (
     <div className="flex items-center flex-1 px-4 py-4 sm:px-6 lg:px-8">
-      <div className="prose text-white text-shadow">
+      <div className="mx-auto prose text-white text-shadow">
         <h2 className="text-lg font-bold uppercase">
           The First 50 people to sign up as members of nXtLvL will receive the
           following:
         </h2>
-        <ul>
+        <ul className="sm:col-count-2 lg:col-count-1">
           <li>1x free PT session (30 mins)</li>
           <li>1x free sauna session (option to bring a friend)</li>
           <li>1x 50% off sauna session</li>
