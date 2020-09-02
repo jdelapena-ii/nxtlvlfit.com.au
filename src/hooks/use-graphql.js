@@ -78,6 +78,13 @@ function useGraphQL() {
             }
           }
         }
+        functionalFitness: file(relativePath: { eq: "sven-mieke.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         infraredSauna: file(relativePath: { eq: "infrared-sauna.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
@@ -178,6 +185,13 @@ function useGraphQL() {
             }
           }
         }
+        penguinuhh: file(relativePath: { eq: "penguinuhh.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         pexelsBurst: file(relativePath: { eq: "pexels-burst.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
@@ -193,13 +207,6 @@ function useGraphQL() {
           }
         }
         sportsMassage: file(relativePath: { eq: "sports-massage.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 1920) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        functionalFitness: file(relativePath: { eq: "sven-mieke.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid

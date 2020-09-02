@@ -67,14 +67,14 @@ function MembershipBenefits() {
 }
 
 function MembershipPackages() {
-  const { nxtlvlGrind } = useGraphQL();
+  const { penguinuhh } = useGraphQL();
   return (
     <TextWithImage
       eyebrowText="See our"
       heading="nXtLvL Memberships &amp; packages"
       ctaLabel="Join now"
       ctaLink="/membership/#membership-form"
-      image={nxtlvlGrind.childImageSharp.fluid}
+      image={penguinuhh.childImageSharp.fluid}
       aspectRatio="aspect-ratio-3/4"
       reverse
     >
