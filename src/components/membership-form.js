@@ -66,6 +66,7 @@ function MembershipForm() {
                 label="Other Membership Type"
                 register={register}
                 errors={errors}
+                hidden={!showOther}
               />
 
               <div className="flex justify-end space-y-6 sm:space-x-4 sm:space-y-0">
