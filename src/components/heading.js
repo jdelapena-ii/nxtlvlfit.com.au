@@ -11,9 +11,9 @@ function Heading({ children, eyebrowText, reverse, tag = 'h2' }) {
     </>
   );
   return (
-    <Tag className="relative font-bold leading-none tracking-widest text-center uppercase sm:text-2xl">
+    <Tag className="relative font-bold leading-none tracking-widest text-center uppercase sm:text-xl">
       {eyebrowText && !reverse && <EyebrowText />}
-      <span className="text-4xl sm:text-6xl">{children}</span>
+      <span className="text-4xl sm:text-5xl">{children}</span>
       {eyebrowText && reverse && <EyebrowText />}
     </Tag>
   );

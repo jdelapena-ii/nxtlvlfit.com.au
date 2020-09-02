@@ -55,6 +55,8 @@ function NavBar() {
                   <li key={link.id} className="flex">
                     <a
                       href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="inline-block p-2 rounded-full"
                     >
                       <span className="sr-only">{link.title}</span>
@@ -73,8 +75,6 @@ function NavBar() {
                 aria-expanded="false"
                 className="inline-flex items-center justify-center p-2 text-white hover:bg-gray-900 focus:bg-gray-900"
               >
-                {/* Icon when menu is closed. */}
-                {/* Menu open: "hidden", Menu closed: "block" */}
                 <svg
                   className="block w-6 h-6"
                   fill="none"
@@ -86,21 +86,6 @@ function NavBar() {
                     strokeLinejoin="round"
                     strokeWidth={2}
                     d="M4 6h16M4 12h16M4 18h16"
-                  />
-                </svg>
-                {/* Icon when menu is open. */}
-                {/* Menu open: "block", Menu closed: "hidden" */}
-                <svg
-                  className="hidden w-6 h-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
                   />
                 </svg>
               </button>

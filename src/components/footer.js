@@ -118,7 +118,12 @@ export function Footer() {
             <ul className="flex justify-center space-x-4 text-xl tracking-widest uppercase">
               {socialLinks.map((link) => (
                 <li key={link.id}>
-                  <a href={link.url} className="inline-block rounded-full">
+                  <a
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block rounded-full"
+                  >
                     <span className="sr-only">{link.title}</span>
                     <link.icon />
                   </a>

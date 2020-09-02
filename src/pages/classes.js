@@ -22,6 +22,7 @@ function ClassesPage() {
       <PageHero
         heading="nXtLvL Classes"
         image={classes.childImageSharp.fluid}
+        objectPosition="top"
       />
       <GradientContainer>
         <div className="px-4 py-24 sm:px-6 lg:px-8">
@@ -117,7 +118,7 @@ function NxtlvlCali() {
     >
       <p>
         Catering from the beginner through to advanced, nXtLvL Cali is Port’s
-        first and only calisthenics training facility.Whether your goals are to
+        first and only calisthenics training facility. Whether your goals are to
         improve your strength and flexibility, become a Ninja Warrior or build
         skills such as strict muscle up, handstand or planche we have the tools
         and highly skilled coaching to get you there.

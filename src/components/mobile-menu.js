@@ -34,7 +34,7 @@ function MobileMenu({ isMobileMenuOpen, setMobileMenuOpen }) {
       {isMobileMenuOpen && (
         <div
           key={isMobileMenuOpen}
-          className="fixed inset-0 overflow-hidden lg:hidden"
+          className="fixed inset-0 z-20 overflow-hidden lg:hidden"
         >
           <AnimatePresence>
             <motion.div
