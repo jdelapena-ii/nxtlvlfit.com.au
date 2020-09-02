@@ -107,8 +107,8 @@ function TimetablePage({
                       <TableCell>{friday[0][2]}</TableCell>
                       <TableCell>{saturday[0][2]}</TableCell>
                       <TableCell rowSpan={monday.length}>
-                        nXt LvL REST <br />
-                        &amp; RESTORE
+                        nXtLvL <span className="uppercase">Rest</span> <br />
+                        &amp; <span className="uppercase">Restore</span>
                       </TableCell>
                     </TableRow>
                     {/* Create the rest of the rows */}
