@@ -145,7 +145,7 @@ export function useImages() {
             }
           }
         }
-        kez: file(relativePath: { eq: "kez.jpg" }) {
+        kez: file(relativePath: { eq: "kez-randall.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid
