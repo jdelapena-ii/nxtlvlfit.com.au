@@ -3,15 +3,7 @@ import React from 'react';
 
 import { Error } from './error';
 
-function Select({
-  errors,
-  label,
-  name,
-  options,
-  register,
-  required = true,
-  setShowOther,
-}) {
+function Select({ errors, label, name, options, register, required = true }) {
   if (options.length <= 0) return null;
   return (
     <div>
@@ -20,10 +12,6 @@ function Select({
         <label htmlFor={name}>
           <span className="sr-only">{label}</span>
           <select
-            onChange={(e) => {
-              if (e.target.value === 'Other') setShowOther(true);
-              else setShowOther(false);
-            }}
             name={name}
             id={name}
             defaultValue=""
@@ -63,7 +51,6 @@ Select.propTypes = {
   register: PropTypes.func.isRequired,
   required: PropTypes.bool,
   options: PropTypes.any,
-  setShowOther: PropTypes.func,
 };
 
 export { Select };

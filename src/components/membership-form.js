@@ -4,9 +4,11 @@ import { useForm } from 'react-hook-form';
 import { ContactForm, Input, Select } from './form-elements';
 
 function MembershipForm() {
-  const { register, handleSubmit, errors } = useForm({ mode: 'onBlur' });
+  const { register, watch, handleSubmit, errors } = useForm({ mode: 'onBlur' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showOther, setShowOther] = useState(false);
+
+  const membershipType = watch('membership_type');
 
   return (
     <article className="relative px-4 sm:px-6 lg:px-8">
@@ -61,13 +63,14 @@ function MembershipForm() {
                 setShowOther={setShowOther}
               />
 
-              <Input
-                name="other_type"
-                label="Other Membership Type"
-                register={register}
-                errors={errors}
-                hidden={!showOther}
-              />
+              {membershipType === 'Other' && (
+                <Input
+                  name="other_type"
+                  label="Other Membership Type"
+                  register={register}
+                  errors={errors}
+                />
+              )}
 
               <div className="flex justify-end space-y-6 sm:space-x-4 sm:space-y-0">
                 <span className="inline-flex shadow-sm">
