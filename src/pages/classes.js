@@ -22,6 +22,7 @@ function ClassesPage() {
       <PageHero
         heading="nXtLvL Classes"
         image={classes.childImageSharp.fluid}
+        objectPosition="top"
       />
       <GradientContainer>
         <div className="px-4 py-24 sm:px-6 lg:px-8">
