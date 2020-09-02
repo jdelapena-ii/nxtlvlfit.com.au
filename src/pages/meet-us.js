@@ -52,6 +52,7 @@ function Kez() {
     >
       <ul>
         <li>Functional Fitness</li>
+        <li>Sports Massage</li>
         <li>Australian Weightlifting Federation Level 1</li>
         <li>CrossFit Level 1</li>
       </ul>
