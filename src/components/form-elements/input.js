@@ -31,7 +31,9 @@ function Input({
           placeholder={`${label}${required ? '*' : ''}`}
           aria-invalid={errors[name] ? 'true' : 'false'}
           ref={register({
-            required: <Error message={`${label} is a required field`} />,
+            required: required ? (
+              <Error message={`${label} is a required field`} />
+            ) : null,
             minLength: {
               value: minLength,
               message: (

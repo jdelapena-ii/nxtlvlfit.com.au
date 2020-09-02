@@ -6,7 +6,7 @@ import { ContactForm, Input, Select } from './form-elements';
 function MembershipForm() {
   const { register, watch, handleSubmit, errors } = useForm({ mode: 'onBlur' });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [showOther, setShowOther] = useState(false);
+  const [otherRequired, setOtherRequired] = useState(false);
 
   const membershipType = watch('membership_type');
 
@@ -60,7 +60,7 @@ function MembershipForm() {
                 ]}
                 register={register}
                 errors={errors}
-                setShowOther={setShowOther}
+                setOtherRequired={setOtherRequired}
               />
 
               <Input
@@ -68,6 +68,7 @@ function MembershipForm() {
                 label="Other Membership Type"
                 register={register}
                 errors={errors}
+                required={otherRequired}
                 hidden={membershipType !== 'Other'}
               />
 
