@@ -9,7 +9,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Background } from './background';
-import { Banner } from './banner';
 import { Hero } from './hero';
 import { NavBar } from './navbar';
 import { Footer } from './footer';
@@ -20,7 +19,6 @@ function Layout({ children, isHome }) {
       <div className="flex flex-col w-full min-h-screen mx-auto max-w-7xl">
         <div className="relative flex flex-col flex-1">
           <Background isHome={isHome} />
-          <Banner />
           {isHome ? <Hero /> : <NavBar />}
           <main className="relative flex flex-col flex-1">{children}</main>
         </div>

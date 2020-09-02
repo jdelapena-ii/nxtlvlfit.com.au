@@ -4,6 +4,7 @@ import { Menu, MenuButton, MenuList } from '@reach/menu-button';
 import { AnimatePresence, motion } from 'framer-motion';
 import PropTypes from 'prop-types';
 
+import { Banner } from './banner';
 import { Logo } from './vectors';
 import { useMainNavigation, socialLinks } from '../data';
 import { MobileMenu } from './mobile-menu';
@@ -12,7 +13,8 @@ function NavBar() {
   const { mainNavigation } = useMainNavigation();
   const [isMobileMenuOpen, setMobileMenuOpen] = useState();
   return (
-    <nav className="sticky z-10 bg-black shadow-2xl top-8">
+    <nav className="sticky inset-x-0 top-0 z-10 bg-black shadow-2xl">
+      <Banner />
       <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center justify-between flex-1">
