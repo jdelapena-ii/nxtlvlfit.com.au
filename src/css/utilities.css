@@ -7,6 +7,14 @@
   .fill-available {
     min-height: -webkit-fill-available;
   }
+
+  .col-count-1 {
+    column-count: 1;
+  }
+
+  .col-count-2 {
+    column-count: 2;
+  }
 }
 
 @variants hover, focus {
