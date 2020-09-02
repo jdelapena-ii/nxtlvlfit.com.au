@@ -3,6 +3,23 @@
  * with utility classes
  */
 
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper {
+  height: -webkit-fill-available;
+}
+
 body {
   @apply bg-black;
+}
+
+/* Replace default focus styles */
+a:focus,
+button:focus {
+  @apply shadow-outline outline-none;
+}
+
+:root {
+  --reach-menu-button: 1;
 }

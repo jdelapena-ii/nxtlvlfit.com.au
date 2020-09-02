@@ -10,15 +10,18 @@ import PropTypes from 'prop-types';
 
 import { Background } from './background';
 import { Hero } from './hero';
+import { NavBar } from './navbar';
 import { Footer } from './footer';
 
-export function Layout({ children, isHome }) {
+function Layout({ children, isHome }) {
   return (
-    <div className="font-sans antialiased text-white bg-black">
-      <Background isHome={isHome} />
+    <div className="font-sans antialiased text-white bg-black fill-available">
       <div className="flex flex-col w-full min-h-screen mx-auto max-w-7xl">
-        <Hero isHome={isHome} />
-        <main className="relative flex flex-1">{children}</main>
+        <div className="relative flex flex-col flex-1">
+          <Background isHome={isHome} />
+          {isHome ? <Hero /> : <NavBar />}
+          <main className="relative flex flex-col flex-1">{children}</main>
+        </div>
         <Footer />
       </div>
     </div>
@@ -29,3 +32,5 @@ Layout.propTypes = {
   children: PropTypes.node.isRequired,
   isHome: PropTypes.bool,
 };
+
+export { Layout };

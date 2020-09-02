@@ -6,8 +6,7 @@
 module.exports = {
   root: true,
   extends: ['lukebennett'],
-  // rules: {
-  //   'arrow-body-style': 0,
-  //   'react/no-danger': 0,
-  // },
+  rules: {
+    'no-use-before-define': 0,
+  },
 };

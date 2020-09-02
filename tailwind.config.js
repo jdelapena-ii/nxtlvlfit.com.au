@@ -1,9 +1,27 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
+const tailwindcssAspectRatio = require('tailwindcss-aspect-ratio');
+const tailwindcssLineClamp = require('tailwindcss-line-clamp');
 const tailwindUI = require('@tailwindcss/ui');
 
 module.exports = {
   purge: ['./src/**/*.js'],
+  future: {
+    removeDeprecatedGapUtilities: true,
+  },
   theme: {
+    aspectRatio: {
+      none: 0,
+      square: [1, 1], // or 1 / 1, or simply 1
+      '16/9': [16, 9], // or 16 / 9
+      '4/3': [4, 3], // or 4 / 3
+      '3/4': [3, 4], // or 4 / 3
+      '21/9': [21, 9], // or 21 / 9
+    },
+    lineClamp: {
+      1: 1,
+      2: 2,
+      3: 3,
+    },
     typography: (theme) => ({
       default: {
         css: {
@@ -38,8 +56,15 @@ module.exports = {
       fontFamily: {
         sans: ['Josefin Sans', ...defaultTheme.fontFamily.sans],
       },
+      letterSpacing: {
+        'ultra-wide': '0.3em',
+        insane: '0.7em',
+      },
     },
   },
-  variants: { boxShadow: ['responsive', 'hover', 'focus', 'focus-within'] },
-  plugins: [tailwindUI],
+  variants: {
+    boxShadow: ['responsive', 'hover', 'focus', 'focus-within'],
+    opacity: ['responsive', 'hover', 'focus', 'focus-within'],
+  },
+  plugins: [tailwindcssAspectRatio, tailwindcssLineClamp, tailwindUI],
 };

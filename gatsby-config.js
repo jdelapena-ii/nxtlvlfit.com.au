@@ -13,6 +13,8 @@ dotenv.config({
   path: `.env.${process.env.NODE_ENV}`,
 });
 
+const isProd = process.env.NODE_ENV === 'production';
+
 module.exports = {
   siteMetadata: {
     title: 'nXtLvL Functional Movement Centre',
@@ -26,12 +28,25 @@ module.exports = {
       state: 'NSW',
       postcode: '2444',
     },
+    phone: {
+      rich: '0422 767 889',
+      kez: '0402 322 131',
+    },
+    social: {
+      instagram: {
+        handle: '@nxtlvl_pmq',
+        url: 'https://www.instagram.com/nxtlvl_pmq/',
+      },
+      facebook: {
+        handle: '@nxtlvlpmq',
+        url: 'https://www.facebook.com/nxtlvlpmq/',
+      },
+    },
   },
   plugins: [
     'gatsby-plugin-netlify',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-robots-txt',
-    'gatsby-plugin-sharp',
     'gatsby-plugin-sitemap',
     'gatsby-transformer-sharp',
     {
@@ -73,7 +88,7 @@ module.exports = {
         background_color: fullConfig.theme.colors.black,
         theme_color: fullConfig.theme.colors.black,
         display: 'minimal-ui',
-        icon: 'src/images/favicon.png', // This path is relative to the root of the site.
+        icon: 'src/images/favicon.jpg', // This path is relative to the root of the site.
       },
     },
     {
@@ -88,10 +103,39 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-plugin-sharp',
+      options: {
+        useMozJpeg: false,
+        stripMetadata: true,
+        defaultQuality: 90,
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
         path: 'src/images',
+      },
+    },
+    {
+      resolve: 'gatsby-source-sanity',
+      options: {
+        projectId: process.env.GATSBY_SANITY_PROJECT_ID,
+        dataset: process.env.GATSBY_SANITY_DATASET,
+        // a token with read permissions is required
+        // if you have a private dataset
+        // Set to `true` in order for drafts to replace their published version. By default, drafts will be skipped.
+        // overlayDrafts: !isProd,
+
+        // Set to `true` to keep a listener open and update with the latest changes in realtime. If you add a `token` you will get all content updates down to each keypress.
+        watchMode: !isProd,
+
+        // If the Sanity GraphQL API was deployed using '--tag <name>',
+        // use 'graphqlTag' to specify the tag name. Defaults to 'default'.
+        graphqlTag: 'default',
+
+        // Authentication token for fetching data from private datasets, or when using overlayDrafts
+        // token: process.env.SANITY_TOKEN,
       },
     },
   ],

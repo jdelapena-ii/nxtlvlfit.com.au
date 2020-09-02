@@ -1,3 +1,28 @@
 /**
  * Utility classes
  */
+
+@responsive {
+  /* Used to prevent content being hidden behind bottom menu controls on mobile Safari */
+  .fill-available {
+    min-height: -webkit-fill-available;
+  }
+
+  .col-count-1 {
+    column-count: 1;
+  }
+
+  .col-count-2 {
+    column-count: 2;
+  }
+}
+
+@variants hover, focus {
+  /* Subtle shadow around text to increase contrast */
+  .text-shadow {
+    text-shadow: 0px 0px 2px hsla(0, 0%, 0%, 0.5);
+  }
+  .text-shadow-none {
+    text-shadow: none;
+  }
+}

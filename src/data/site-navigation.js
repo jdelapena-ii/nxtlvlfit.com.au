@@ -1,54 +1,81 @@
-import {
-  HomeIcon,
-  FacebookIcon,
-  InstagramIcon,
-  TwitterIcon,
-  GitHubIcon,
-  DribbbleIcon,
-} from '../components/vectors';
+import { graphql, useStaticQuery } from 'gatsby';
+import { SiFacebook, SiInstagram } from 'react-icons/si';
 
-export const mainNavigation = [
-  {
-    id: '2758f798-cb6f-49cf-ab02-17bbf177e006',
-    label: 'Home',
-    slug: '/',
-    icon: HomeIcon,
-  },
-];
+function useMainNavigation() {
+  const { allSanityService } = useStaticQuery(
+    graphql`
+      {
+        allSanityService(sort: { order: ASC, fields: order }) {
+          nodes {
+            id
+            slug {
+              current
+            }
+            title
+          }
+        }
+      }
+    `
+  );
+  const mainNavigation = [
+    {
+      id: '2957432e-d071-4468-b9a0-c4a2a202743d',
+      title: 'Services',
+      slug: '/services/',
+      submenu: [
+        {
+          id: '7ef6f429-3013-40b7-8cf3-fc1fa2329318',
+          title: 'nXtLvL Services',
+          slug: {
+            current: '/services/',
+          },
+        },
+        ...allSanityService.nodes,
+      ],
+    },
+    {
+      id: '696c5b1e-cbeb-41ea-b48d-ae474ed8ddc9',
+      title: 'nXtLvL Classes',
+      slug: '/classes/',
+    },
+    {
+      id: '548c4a36-7e29-47b3-9046-60914321f3fd',
+      title: 'Meet Us',
+      slug: '/meet-us/',
+    },
+    {
+      id: 'f8d7f0e4-78e6-4288-bd18-1c09183fa0d0',
+      title: 'Membership',
+      slug: '/membership/',
+    },
+    {
+      id: 'c214fe84-a398-4556-a656-74f41578a2ce',
+      title: 'Timetable',
+      slug: '/timetable/',
+    },
+    {
+      id: '6032c728-23e9-4611-8613-48e7973c998c',
+      title: 'Contact',
+      slug: '/contact/',
+    },
+  ];
 
-export const footerNavigation = [
-  { id: '1cb87a4a-d781-4393-81ee-0b1dc604648f', label: 'Home', slug: '/' },
-];
+  return { mainNavigation };
+}
 
-export const socialLinks = [
-  {
-    id: '0f679d69-df8e-4548-94e5-dd5cb1055857',
-    label: 'Facebook',
-    url: 'https://www.facebook.com',
-    icon: FacebookIcon,
-  },
+const socialLinks = [
   {
     id: 'b224c849-eb7d-43d1-873f-065a19a62dc9',
-    label: 'Instagram',
-    url: 'https://www.instagram.com',
-    icon: InstagramIcon,
+    title: 'Instagram',
+    url: 'https://www.instagram.com/nxtlvl_pmq/',
+    icon: SiInstagram,
   },
   {
-    id: '82359cb4-bd0d-47ef-991c-9587d2db249a',
-    label: 'Twitter',
-    url: 'https://www.twitter.com',
-    icon: TwitterIcon,
-  },
-  {
-    id: 'b7c1c8f2-960d-4040-913b-013e4901c1c3',
-    label: 'GitHub',
-    url: 'https://www.github.com',
-    icon: GitHubIcon,
-  },
-  {
-    id: 'c3b7c61f-c16e-4a9a-9b82-1fa31fdfcf0e',
-    label: 'Dribbble',
-    url: 'https://www.dribbble.com',
-    icon: DribbbleIcon,
+    id: '0f679d69-df8e-4548-94e5-dd5cb1055857',
+    title: 'Facebook',
+    url: 'https://www.facebook.com/nxtlvlpmq/',
+    icon: SiFacebook,
   },
 ];
+
+export { useMainNavigation, socialLinks };
