@@ -4,9 +4,10 @@ import {
   Layout,
   SEO,
   NavBar,
-  ContactPageForm,
+  StartFreeTrial,
   TrueProtein,
   Instagram,
+  ContactPageForm,
   Map,
 } from '../components';
 import {
@@ -15,8 +16,10 @@ import {
   MeetYourTeam,
 } from '../components/home';
 import grunge from '../images/background-image-black.jpg';
+import { useGraphQL } from '../hooks';
 
 function IndexPage() {
+  const { deadlift } = useGraphQL();
   return (
     <Layout isHome>
       <SEO title="Home" />
@@ -30,6 +33,7 @@ function IndexPage() {
           <LevelUpYourFitness />
           <ServicesGrid />
           <MeetYourTeam />
+          <StartFreeTrial image={deadlift.childImageSharp.fluid} />
           <TrueProtein />
           <Instagram />
           <ContactPageForm />
