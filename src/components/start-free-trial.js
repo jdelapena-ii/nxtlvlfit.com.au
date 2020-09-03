@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'gatsby';
 import GatsbyImage from 'gatsby-image';
 import PropTypes from 'prop-types';
 
