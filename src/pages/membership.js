@@ -127,7 +127,12 @@ function MembershipPackages() {
           <dd className="inline">$75 per week</dd>
         </div>
         <div>
-          <dt className="font-bold uppercase">Personal training and massage</dt>
+          <dt className="mt-4 font-bold uppercase">Personal training</dt>
+          <dd>1 hour = $80</dd>
+          <dd>&frac12; hour = $50</dd>
+        </div>
+        <div>
+          <dt className="mt-4 font-bold uppercase">Massage</dt>
           <dd>1 hour = $80</dd>
           <dd>&frac12; hour = $50</dd>
         </div>
