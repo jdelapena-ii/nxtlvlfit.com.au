@@ -213,6 +213,13 @@ function useGraphQL() {
             }
           }
         }
+        merchandise: file(relativePath: { eq: "merchandise.jpg" }) {
+          childImageSharp {
+            fluid(maxWidth: 1920) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         trueProtein: file(
           relativePath: { eq: "true-protein-logo-with-text.jpg" }
         ) {
@@ -220,6 +227,21 @@ function useGraphQL() {
             fluid(maxWidth: 1920) {
               ...GatsbyImageSharpFluid
             }
+          }
+        }
+        allMerchandiseJson {
+          nodes {
+            category
+            id
+            image {
+              childImageSharp {
+                fluid(maxWidth: 500, quality: 90) {
+                  ...GatsbyImageSharpFluid_withWebp
+                }
+              }
+            }
+            name
+            price
           }
         }
       }

@@ -10,6 +10,10 @@ body,
   height: -webkit-fill-available;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   @apply bg-black;
 }

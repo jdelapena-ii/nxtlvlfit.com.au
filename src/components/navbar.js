@@ -49,7 +49,7 @@ function NavBar() {
             </div>
           </div>
           <div className="flex items-center space-x-6">
-            <div className="hidden ml-6 sm:block lg:hidden xl:block">
+            <div className="hidden ml-6 sm:block">
               <ul className="flex items-center space-x-4">
                 {socialLinks.map((link) => (
                   <li key={link.id} className="flex">
@@ -149,12 +149,8 @@ function SubMenu({ navItem, isExpanded = false }) {
                   {navItem.submenu.map((submenu) => (
                     <li key={submenu.id} className="flex w-full">
                       <Link
-                        to={
-                          submenu.slug.current === '/services/'
-                            ? submenu.slug.current
-                            : `/services/${submenu.slug.current}/`
-                        }
-                        className="block px-6 py-2 text-sm font-medium tracking-widest text-white uppercase hover:underline focus:underline"
+                        to={submenu.slug}
+                        className="block w-full px-6 py-2 text-sm font-medium tracking-widest text-white uppercase hover:underline focus:underline"
                       >
                         {submenu.title}
                       </Link>

@@ -1,0 +1,74 @@
+[
+  {
+    "name": "nXtLvL Women's Muscle Tank",
+    "image": "./w-tank.jpg",
+    "price": 3500,
+    "category": "clothing"
+  },
+  {
+    "name": "nXtLvL Men's Muscle Tank",
+    "image": "./m-tank.jpg",
+    "price": 3500,
+    "category": "clothing"
+  },
+  {
+    "name": "nXtLvL Women's Tee",
+    "image": "./w-tee.jpg",
+    "price": 4000,
+    "category": "clothing"
+  },
+  {
+    "name": "nXtLvL Men's Tee",
+    "image": "./m-tee.jpg",
+    "price": 4000,
+    "category": "clothing"
+  },
+  {
+    "name": "nXtLvL Women's Cropped Tee",
+    "image": "./womens-cropped-tee.jpg",
+    "price": 3500,
+    "category": "clothing"
+  },
+  {
+    "name": "nXtLvL Cap",
+    "image": "./cap.jpg",
+    "price": 3000,
+    "category": "clothing"
+  },
+  {
+    "name": "nXtLvL Bamboo Insulated Drink Bottle",
+    "image": "./bamboo-bottle.jpg",
+    "price": 2500,
+    "category": "accessories"
+  },
+  {
+    "name": "nXtLvL Mobility Ball",
+    "image": "./mobility-ball.jpg",
+    "price": 1000,
+    "category": "equipment"
+  },
+  {
+    "name": "nXtLvL Protein Shaker",
+    "image": "./protein-shaker.jpg",
+    "price": 1500,
+    "category": "accessories"
+  },
+  {
+    "name": "Morgan Massage Gun",
+    "image": "./massage-gun.jpeg",
+    "price": 29995,
+    "category": "equipment"
+  },
+  {
+    "name": "Morgan Speed Skipping Rope",
+    "image": "./skipping-rope.jpeg",
+    "price": 2995,
+    "category": "equipment"
+  },
+  {
+    "name": "Morgan Lacrosse Ball",
+    "image": "./morgan-lacrosse-ball.jpeg",
+    "price": 1495,
+    "category": "equipment"
+  }
+]

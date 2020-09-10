@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
@@ -6,7 +7,7 @@ import { socialLinks } from '../data';
 import { useGraphQL } from '../hooks';
 import { GradientContainer } from './gradient-container';
 
-function ContactPageForm() {
+function ContactPageForm({ copy, id }) {
   const { register, handleSubmit, errors } = useForm({ mode: 'onBlur' });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -16,18 +17,23 @@ function ContactPageForm() {
 
   return (
     <GradientContainer>
-      <article className="relative px-4 pt-24 pb-12 sm:px-6 lg:px-8 sm:pt-40">
+      <article
+        id={id}
+        className="relative px-4 pt-24 pb-12 sm:px-6 lg:px-8 sm:pt-40"
+      >
         <div className="relative w-full max-w-5xl px-4 py-12 mx-auto bg-black bg-opacity-50 border-4 border-white lg:my-12 sm:px-6 lg:px-8">
           <div className="space-y-6 text-center">
             <h2 className="text-2xl font-bold uppercase tracking-insane">
               Contact Us
             </h2>
             <div className="mx-auto prose text-white">
-              <p>
-                Talk to our Centre Directors Rich or Kez for bookings, sign-ups,
-                or enquiries. <br />
-                Send us a message outside of business hours below.
-              </p>
+              {copy || (
+                <p>
+                  Talk to our Centre Directors Rich or Kez for bookings,
+                  sign-ups, or enquiries. <br />
+                  Send us a message outside of business hours below.
+                </p>
+              )}
             </div>
           </div>
           <div className="mt-12">
@@ -141,5 +147,10 @@ function ContactPageForm() {
     </GradientContainer>
   );
 }
+
+ContactPageForm.propTypes = {
+  copy: PropTypes.node,
+  id: PropTypes.string,
+};
 
 export { ContactPageForm };

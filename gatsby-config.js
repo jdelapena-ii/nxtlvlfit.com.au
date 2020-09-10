@@ -48,6 +48,7 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-robots-txt',
     'gatsby-plugin-sitemap',
+    'gatsby-transformer-json',
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-plugin-canonical-urls',
@@ -108,6 +109,13 @@ module.exports = {
         useMozJpeg: false,
         stripMetadata: true,
         defaultQuality: 90,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'data',
+        path: 'src/data',
       },
     },
     {

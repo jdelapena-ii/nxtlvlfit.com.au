@@ -11,6 +11,7 @@ export * from './intro';
 export * from './layout';
 export * from './map';
 export * from './membership-form';
+export * from './merch-grid-images';
 export * from './navbar';
 export * from './page-hero';
 export * from './privacy-policy';
