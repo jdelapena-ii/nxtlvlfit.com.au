@@ -10,8 +10,9 @@ import { useGraphQL } from '../hooks';
 export function Footer() {
   const {
     site: { siteMetadata },
-    backgroundBlack,
     awf,
+    backgroundBlack,
+    covidSafeBadge,
   } = useGraphQL();
 
   const { mainNavigation } = useMainNavigation();
@@ -104,11 +105,19 @@ export function Footer() {
                 >
                   Sign up
                 </Link>
-                <div>
-                  <GatsbyImage
-                    fixed={awf.childImageSharp.fixed}
-                    className="mx-auto"
-                  />
+                <div className="flex flex-wrap justify-center">
+                  <div>
+                    <GatsbyImage
+                      fixed={awf.childImageSharp.fixed}
+                      className="mx-auto"
+                    />
+                  </div>
+                  <div>
+                    <GatsbyImage
+                      fixed={covidSafeBadge.childImageSharp.fixed}
+                      className="mx-auto"
+                    />
+                  </div>
                 </div>
               </div>
             </nav>

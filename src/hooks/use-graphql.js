@@ -78,6 +78,13 @@ function useGraphQL() {
             }
           }
         }
+        covidSafeBadge: file(relativePath: { eq: "covid-safe-badge.png" }) {
+          childImageSharp {
+            fixed(width: 120) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
         deadlift: file(relativePath: { eq: "deadlift.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 1920) {
