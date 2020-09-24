@@ -12,8 +12,22 @@ function MailchimpForm({
   setIsSubmitting,
   setMessage,
 }) {
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof url != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+      send_to: 'AW-591313295/MPM9CJSx6N4BEI_z-pkC',
+      event_callback: callback,
+    });
+    return false;
+  }
   const onSubmit = (data, event) => {
     event.preventDefault();
+
+    gtag_report_conversion();
     const form = event.target;
     setIsSubmitting(true);
 

@@ -16,8 +16,22 @@ export function useForm(initialState) {
     setState({ ...state, [e.target.name]: e.target.value });
   }
 
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof url != 'undefined') {
+        window.location = url;
+      }
+    };
+    gtag('event', 'conversion', {
+      send_to: 'AW-591313295/MPM9CJSx6N4BEI_z-pkC',
+      event_callback: callback,
+    });
+    return false;
+  }
   function handleSubmit(e) {
     e.preventDefault();
+
+    gtag_report_conversion();
     const form = e.target;
     fetch('/', {
       method: 'POST',
