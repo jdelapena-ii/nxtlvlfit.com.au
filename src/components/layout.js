@@ -40,11 +40,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       </Helmet>
       <noscript>
         <iframe
+          title="gtm"
           src="https://www.googletagmanager.com/ns.html?id=GTM-P6RPBV6"
           height="0"
           width="0"
-          style="display:none;visibility:hidden"
-        ></iframe>
+          style={{ display: 'none', visibility: 'hidden' }}
+        />
       </noscript>
 
       <div className="font-sans antialiased text-white bg-black fill-available">
