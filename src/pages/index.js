@@ -19,10 +19,14 @@ import grunge from '../images/background-image-black.jpg';
 import { useGraphQL } from '../hooks';
 
 function IndexPage() {
-  const { deadlift } = useGraphQL();
+  const { site, deadlift } = useGraphQL();
   return (
     <Layout isHome>
-      <SEO title="Home" />
+      <SEO
+        title={`Port Macquarie Gym | ${site.siteMetadata.title} | Local PMQ GYM`}
+        useTitleTemplate={false}
+        description="The latest Port Macquarie GYM nXtLvL is where you will meet your fitness goals, whilst keeping training diverse, challenging, and fun! All are welcome at nXtLvL Port Macquarie Gym. Sign up now!"
+      />
       <div className="relative pointer-events-none">
         <Spacer />
         <div
